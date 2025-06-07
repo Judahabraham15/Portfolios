@@ -6,7 +6,19 @@
     backdrop-filter: blur(16px);    
     top: 0;
     justify-content: space-between;
-     position: sticky;
+    position: sticky;
+    margin: 2vh auto 0 auto; 
+
+}
+.nav{
+  width: 95%;
+    height: 10vh;
+    display: flex;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(16px);    
+    top: 0;
+    justify-content: space-between;
+    position: sticky;
     margin: 2vh auto 0 auto; 
     border-radius: 16px;      
     box-shadow: 0 4px 16px rgba(0,0,0,0.5); 
