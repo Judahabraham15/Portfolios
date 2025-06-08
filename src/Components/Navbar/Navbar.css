@@ -1,19 +1,17 @@
 .navbar{
-    width: 95%;
-    height: 10vh;
     display: flex;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(16px);    
-    top: 0;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+  background-color: transparent;
     justify-content: space-between;
     position: sticky;
-    margin: 2vh auto 0 auto; 
-
 }
 .nav{
   width: 95%;
     height: 10vh;
     display: flex;
+    color: azure;
     background: rgba(255,255,255,0.2);
     backdrop-filter: blur(16px);    
     top: 0;

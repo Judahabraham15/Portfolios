@@ -4,23 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(
-    145deg,
-    #000000 0%,
-    #0a0a0a 15%,
-    #1a1a1a 30%,
-    #2b2b2b 45%,
-    #3d3d3d 55%,
-    #4f4f4f 65%,
-    #666666 75%,
-    #8c8c8c 90%,
-    #bfbfbf 97%,
-    #f0f0f0 100%
-  );
+background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
     box-sizing: border-box;
    
 }
-
+#ChangeText {
+  transition: opacity 0.5s ease-in-out, color 0.2s ease-in-out;
+}
 .content {
 display: flex;
 justify-content: center;
@@ -33,14 +23,27 @@ font-family: 'Nunito';
 padding-left: 80px;
 }
 
+.content h1{
+ margin-bottom: 15px;
+ width: 100%;
+ max-width: 500px;
+}
+.content p{
+  font-family: 'Nunito';
+  max-width: 500px;
+  width: 100%;
+  line-height: 1.5rem;
+  font-size: 15px;
+}
 .spline {
     width: 450px;
     height: 450px;
     max-width: 40vw;
     max-height: 40vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: 3vw;
-    padding-left: 20px;
+    padding-right: 80px;
+   border: none;
+ 
+   
 }
