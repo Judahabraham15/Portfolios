@@ -2,6 +2,7 @@ import React from 'react'
 import Spline from '@splinetool/react-spline';
 import './Hero.css'
 import { useEffect } from 'react';
+import Button from '../Button/Button';
 const Hero = () => {
   useEffect(()=>{
     const textElement = document.getElementById('ChangeText');
@@ -14,7 +15,7 @@ const Hero = () => {
        textElement.textContent = textArray[textIndex];
        textIndex = (textIndex + 1  ) % textArray.length
        textElement.style.opacity = 1;
-       textElement.style.color = '#2C5364';
+       textElement.style.color = '#2E8B57';
       } , 500)
     }
     const interval = setInterval(()=>{
@@ -25,15 +26,20 @@ ChangeText()
   }, [])
   return (
     <div className='hero'>
-     <div className="content">
-        <h1>Unlock Potential through{''} <span id='ChangeText'>Technology</span> with Judah4Good</h1>
-        <p>As a dedicated and aspiring software developer, I combine technical expertise with creative vision to build software that is both powerful and intuitive. With a focus on quality  , reliability , and user experience, I deliver solutions that meet the highest standards of excellence and drive buisness success.</p>
-     </div>
-     <div className="spline">
-         <Spline
-        scene="https://prod.spline.design/GlU9mQH8ujn-nfgQ/scene.splinecode" 
-      />
+      <div className="spline-bg">
+        <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" />
+        <div className="hero-overlay"></div>
       </div>
+      <div className="content">
+        <h1>
+          Unlock Potential through <span id='ChangeText'>Technology</span> with Judah4Good
+        </h1>
+        <p>
+          As a dedicated and aspiring software developer, I combine technical expertise with creative vision to build software that is both powerful and intuitive. With a focus on quality, reliability, and user experience, I deliver solutions that meet the highest standards of excellence and drive business success.
+        </p>
+        <Button/>
+      </div>
+      
     </div>
   )
 }

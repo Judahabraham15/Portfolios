@@ -1,49 +1,50 @@
 .hero {
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    justify-content: center;
     box-sizing: border-box;
-   
-}
-#ChangeText {
-  transition: opacity 0.5s ease-in-out, color 0.2s ease-in-out;
-}
-.content {
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-direction: column;
-width: 100%;
-height: 100%;
-color: white;
-font-family: 'Nunito';
-padding-left: 80px;
+    overflow: hidden;
 }
 
-.content h1{
- margin-bottom: 15px;
- width: 100%;
- max-width: 500px;
+.spline-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.spline-bg canvas, .spline-bg > div {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(24,24,24,0.3);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.content {
+    position: relative;
+    font-family: 'Nunito';
+    z-index: 2;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background: none;
 }
 .content p{
-  font-family: 'Nunito';
-  max-width: 500px;
-  width: 100%;
-  line-height: 1.5rem;
-  font-size: 15px;
+  font-size: 13px;
 }
-.spline {
-    width: 450px;
-    height: 450px;
-    max-width: 40vw;
-    max-height: 40vw;
-    display: flex;
-    margin-left: 3vw;
-    padding-right: 80px;
-   border: none;
- 
-   
+#ChangeText {
+    transition: opacity 0.5s ease, color 0.5s ease;
 }
