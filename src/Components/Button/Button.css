@@ -45,7 +45,7 @@
 
 .button2:hover:before {
   top: -35%;
-  background-color: whitee;
+  background-color: white;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
