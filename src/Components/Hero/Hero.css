@@ -7,8 +7,8 @@
     justify-content: center;
     box-sizing: border-box;
     overflow: hidden;
+    flex-direction: column;
 }
-
 .spline-bg {
     position: absolute;
     inset: 0;
@@ -16,26 +16,26 @@
     height: 100%;
     z-index: 0;
 }
-
 .spline-bg canvas, .spline-bg > div {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
 }
-
+.dev{
+    color: #2E8B57;
+}
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(24,24,24,0.3);
     z-index: 1;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(0.8px);
 }
-
 .content {
     position: relative;
     font-family: 'Nunito';
     z-index: 2;
-    color: #fff;
+    color: #E0E0E0 ;
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -44,7 +44,59 @@
 }
 .content p{
   font-size: 13px;
+  color: white;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
 }
 #ChangeText {
     transition: opacity 0.5s ease, color 0.5s ease;
+}
+.btn-container{
+    margin-top:30px ;
+    margin-bottom: 30px;    
+}
+.text{
+      display: flex;
+    flex-wrap:nowrap ;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:space-between;
+    width: 30%;
+    margin-left:0px;
+    gap: 10px;
+    font-family:'Nunito';
+  
+}
+.qualities , .socials{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+     width: 30%;
+     padding: 10px;
+     box-sizing: border-box;
+     gap: 8px;
+     color: #2E8B57;
+     z-index: 10;
+}
+.socials{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 18%;
+    margin-left: 0;
+}
+.qualities p{
+color:#E0E0E0 ;
+width: 105%;
+font-size: 14px;
+text-align: center;
+}
+.insta svg , .git svg , .whatsapp svg , .linkedin svg , .x svg{
+    z-index: 1000;
+    fill: #2E8B57;
+    
+}
+.x svg{
+vertical-align: middle;
 }

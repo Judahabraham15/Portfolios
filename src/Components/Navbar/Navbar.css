@@ -1,31 +1,47 @@
-.navbar{
-    display: flex;
-  position: sticky;
-  top: 0;
-  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
-  background-color: transparent;
-    justify-content: space-between;
-    position: sticky;
+.nav {
+  position: absolute;
+  top: 2vh;
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+   background: rgba(255, 255, 255, 0.095);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 0 2rem;
+  font-family: 'Nunito';
 }
-.nav{
-  width: 95%;
-    height: 10vh;
-    display: flex;
-    color: azure;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(16px);    
-    top: 0;
-    justify-content: space-between;
-    position: sticky;
-    margin: 2vh auto 0 auto; 
-    border-radius: 16px;      
-    box-shadow: 0 4px 16px rgba(0,0,0,0.5); 
-    align-items:center;
-    font-family: 'Nunito';
-    opacity: 1;
+
+.nav-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
 }
-.nav-header{
-    font-size: 18px;
-    padding-left: 15px;
-    font-weight: 400;
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color:#2E8B57;
 }
