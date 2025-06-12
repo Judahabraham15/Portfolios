@@ -1,12 +1,23 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline';
 import './Hero.css'
-import { useEffect } from 'react';
+import { useEffect , useRef } from 'react';
 import Button from '../Button/Button';
+import { motion , useScroll , useTransform} from "framer-motion";
 const Hero = () => {
+   const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+
+  // Animate out as user scrolls down
+ const borderRadius = useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]);
+  const scale = useTransform(scrollYProgress, [0, 0.7], [1, 0.95]);
+  const y = useTransform(scrollYProgress, [0, 0.7], [0, -80]);
   useEffect(()=>{
     const textElement = document.getElementById('ChangeText');
-  const textArray = ['Smart Development' ,  'Innovative Solutions' ,'Digital Systems' , 'Technology']
+  const textArray = ['Frontend Engineer', 'Aspiring FullStack Dev' ,'Student' , 'Software Engineer']
     let textIndex = 0;
 
     const ChangeText = () => {
@@ -38,8 +49,13 @@ ChangeText()
    }
   ]
   return (
-    <div className='hero 'id='home'>
-      {/* Navbar section*/}
+   <section ref={heroRef} className="hero" id="home">
+      <motion.div
+        style={{ borderRadius, scale, y }}
+        className="hero-content"
+      >
+        
+      
       <nav className="nav">
       <h1 className='nav-header'>Judah<span className='dev'>4Good</span></h1>
       <ul className="nav-links">
@@ -55,7 +71,7 @@ ChangeText()
       </div>
       <div className="content">
         <h1>
-          Unlock Potential through <span id='ChangeText'>Technology</span> with Judah4Good
+          Hi! I am Judah Abraham. <span id='ChangeText'>Software Engineer</span> 
         </h1>
         <p>
           As a dedicated and aspiring software developer, I combine technical expertise with creative vision to build software that is both powerful and intuitive. With a focus on quality, reliability, and user experience, I deliver solutions that meet the highest standards of excellence and drive business success.
@@ -85,18 +101,10 @@ ChangeText()
                </a>
         </div>
         <div className="whatsapp">
-          <a href='#'>
-              <svg
-        className="whatsapp"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        height="30"
-        width="30"
-      >
-        <path
-          d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.916 9.916 0 0 0 4.737 1.206h.005c5.46 0 9.908-4.448 9.913-9.913A9.872 9.872 0 0 0 19 4.908h.001ZM11.992 20.15A8.216 8.216 0 0 1 7.797 19l-.3-.18-3.117.818.833-3.041-.196-.314a8.2 8.2 0 0 1-1.258-4.381c0-4.533 3.696-8.23 8.239-8.23a8.2 8.2 0 0 1 5.825 2.413 8.196 8.196 0 0 1 2.41 5.825c-.006 4.55-3.702 8.24-8.24 8.24Zm4.52-6.167c-.247-.124-1.463-.723-1.692-.808-.228-.08-.394-.123-.556.124-.166.246-.641.808-.784.969-.143.166-.29.185-.537.062-.247-.125-1.045-.385-1.99-1.23-.738-.657-1.232-1.47-1.38-1.716-.142-.247-.013-.38.11-.504.11-.11.247-.29.37-.432.126-.143.167-.248.248-.413.082-.167.043-.31-.018-.433-.063-.124-.557-1.345-.765-1.838-.2-.486-.404-.419-.557-.425-.142-.009-.309-.009-.475-.009a.911.911 0 0 0-.661.31c-.228.247-.864.845-.864 2.067 0 1.22.888 2.395 1.013 2.56.122.167 1.742 2.666 4.229 3.74.587.257 1.05.408 1.41.523.595.19 1.13.162 1.558.1.475-.072 1.464-.6 1.673-1.178.205-.58.205-1.075.142-1.18-.061-.104-.227-.165-.475-.29Z"
-        ></path>
-      </svg>
+          <a href='#'><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="size-5 text-gray-700 hover:text-gray-600 cursor-pointer" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
+          </svg>
+            
       </a>
         </div>
         <div className="linkedin">
@@ -116,9 +124,14 @@ ChangeText()
        
 
       </div>
+      </motion.div>
+    </section>
+
+       
 
         
-    </div>
+        
+    
   )
 }
 
