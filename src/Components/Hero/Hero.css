@@ -42,6 +42,9 @@
     padding: 2rem;
     background: none;
 }
+.content h1{
+    font-size: 38px;
+}
 .content p{
   font-size: 13px;
   color: white;
@@ -79,24 +82,42 @@
      color: #2E8B57;
      z-index: 10;
 }
-.socials{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 18%;
-    margin-left: 0;
-}
 .qualities p{
 color:#E0E0E0 ;
 width: 105%;
 font-size: 14px;
 text-align: center;
 }
-.insta svg , .git svg , .whatsapp svg , .linkedin svg , .x svg{
-    z-index: 1000;
-    fill: #2E8B57;
+.socials{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 20%;
+    margin-left: 0;
+    gap:10px;
     
 }
-.x svg{
-vertical-align: middle;
+.insta a, .git a, .whatsapp a, .linkedin a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.411) !important; /* subtle blend with dark background */
+   backdrop-filter: blur(8px);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    cursor: pointer;
+    margin-bottom: 4px;
+   line-height: 0;
+}
+.insta a:hover , .git a:hover , .whatsapp a:hover , .linkedin a:hover{
+  box-shadow: 0 0 15px #00ff99;
+}
+.insta svg , .git svg , .whatsapp svg , .linkedin svg {
+    z-index: 1000;
+    fill: #2E8B57;
+    width: 24px;
+    height: 24px;
+    
 }
