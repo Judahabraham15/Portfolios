@@ -18,6 +18,8 @@
   justify-content: center;
   position: relative;
   z-index: 2;
+  transition: border-radius 0.6s cubic-bezier(0.22 , 1, 0.36 , 1) y 0.6s ease-in-out;
+  overflow: hidden;
 }
 .spline-bg {
     position: absolute;
@@ -33,6 +35,10 @@
 }
 .dev{
     color: #2E8B57;
+}
+.devs{
+    font-size:30px !important;
+    font-weight: 700;
 }
 .hero-overlay {
     position: absolute;

@@ -1,5 +1,5 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 2vh;
   left: 0;
   right: 0;
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 100;
    background: rgba(255, 255, 255, 0.095);
   backdrop-filter: blur(12px);
   border-radius: 18px;
@@ -44,4 +44,9 @@
 
 .nav-links li a:hover {
   color:#2E8B57;
+}
+.nav-scrolled{
+  background:black;
+ transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1) ease-in-out;
+  box-shadow: 0 4px 24px rgba(44,83,100,0.18);
 }

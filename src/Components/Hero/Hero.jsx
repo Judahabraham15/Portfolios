@@ -15,6 +15,7 @@ const Hero = () => {
  const borderRadius = useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]);
   const scale = useTransform(scrollYProgress, [0, 0.7], [1, 0.95]);
   const y = useTransform(scrollYProgress, [0, 0.7], [0, -80]);
+  
   useEffect(()=>{
     const textElement = document.getElementById('ChangeText');
   const textArray = ['Frontend Engineer', 'Aspiring FullStack Dev' ,'Student' , 'Software Engineer']
@@ -49,22 +50,16 @@ ChangeText()
    }
   ]
   return (
+    
    <section ref={heroRef} className="hero" id="home">
       <motion.div
         style={{ borderRadius, scale, y }}
         className="hero-content"
+        
       >
         
       
-      <nav className="nav">
-      <h1 className='nav-header'>Judah<span className='dev'>4Good</span></h1>
-      <ul className="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      
       <div className="spline-bg">
         <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" />
         <div className="hero-overlay"></div>
@@ -80,7 +75,7 @@ ChangeText()
          <div className="text">
          {categories.map(({name,texts , idx}) => (
     <div key={idx} className="qualities">
-      <h1>{name}</h1>
+      <span className= 'devs'>{name}</span>
       <p>{texts}</p>
     </div>
   ))}
