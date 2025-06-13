@@ -1,11 +1,15 @@
 import React from 'react'
 import './Button.css'
+import {motion} from 'framer-motion'
 
 
 const Button = ({title , style , className}) => {
   return (
     <div className='btn'>
- <button className={`button2 ${className}`} style={{style}}>{title}
+ <motion.button /*initial = {{ x : 0}}
+  animate = {{x : 200}}
+  transition={{duration: 3 , ease: 'linear' }}*/
+ className={`button2 ${className}`} style={{style}}>{title}
   <div className="icon">
     <svg
       height="24"
@@ -20,7 +24,7 @@ const Button = ({title , style , className}) => {
       ></path>
     </svg>
   </div>
- </button>
+ </motion.button>
     </div>
   )
 }
