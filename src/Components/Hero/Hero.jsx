@@ -1,88 +1,85 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline';
 import './Hero.css'
-import { useEffect , useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Button from '../Button/Button';
-import { motion , useScroll , useTransform} from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+
 const Hero = () => {
-   const heroRef = useRef(null);
+  const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"]
   });
 
-  // Animate out as user scrolls down
- const borderRadius = useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]);
-  const scale = useTransform(scrollYProgress, [0, 0.7], [1, 0.95]);
-  const y = useTransform(scrollYProgress, [0, 0.7], [0, -80]);
-  
-  useEffect(()=>{
+  // Use useSpring for extra smoothness only when scrolling
+  const borderRadius = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]),
+    { stiffness: 60, damping: 18 }
+  );
+  const scale = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], [1, 0.95]),
+    { stiffness: 60, damping: 18 }
+  );
+  const y = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], [0, -80]),
+    { stiffness: 60, damping: 18 }
+  );
+
+  useEffect(() => {
     const textElement = document.getElementById('ChangeText');
-  const textArray = ['Frontend Engineer', 'Aspiring FullStack Dev' ,'Student' , 'Software Engineer']
+    const textArray = ['Frontend Engineer', 'Aspiring FullStack Dev', 'Student', 'Software Engineer']
     let textIndex = 0;
 
     const ChangeText = () => {
-      textElement.style.opacity= 0;
-      setTimeout(()=>{
-       textElement.textContent = textArray[textIndex];
-       textIndex = (textIndex + 1 ) % textArray.length
-       textElement.style.opacity = 1;
-       textElement.style.color = '#2E8B57';
-      } , 500)
+      textElement.style.opacity = 0;
+      setTimeout(() => {
+        textElement.textContent = textArray[textIndex];
+        textIndex = (textIndex + 1) % textArray.length
+        textElement.style.opacity = 1;
+        textElement.style.color = '#2E8B57';
+      }, 500)
     }
-    const interval = setInterval(()=>{
-ChangeText()
-    }  , 2000)
-    return () => clearInterval (interval);
-    
+    const interval = setInterval(() => {
+      ChangeText()
+    }, 2000)
+    return () => clearInterval(interval);
+
   }, [])
-   const categories = [{
-    name: '70%' ,
-    texts: 'Team Player'
-   },
-   {
-    name:'90%',
-    texts: 'Eagerness To Learn'
-   },
-   {
-    name: '54%',
-    texts: 'Coding Skills'
-   }
+
+  const categories = [
+    { name: '70%', texts: 'Team Player' },
+    { name: '90%', texts: 'Eagerness To Learn' },
+    { name: '54%', texts: 'Coding Skills' }
   ]
   return (
-    
-   <section ref={heroRef} className="hero" id="home">
+    <section ref={heroRef} className="hero" id="home">
       <motion.div
         style={{ borderRadius, scale, y }}
         className="hero-content"
-        
       >
-        
-      
-      
-      <div className="spline-bg">
-        <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" />
-        <div className="hero-overlay"></div>
-      </div>
-      <div className="content">
-        <h1>
-          Hi! I am Judah Abraham. <span id='ChangeText'>Software Engineer</span> 
-        </h1>
-        <p>
-          As a dedicated and aspiring software developer, I combine technical expertise with creative vision to build software that is both powerful and intuitive. With a focus on quality, reliability, and user experience, I deliver solutions that meet the highest standards of excellence and drive business success.
-        </p>   
-      </div>
-         <div className="text">
-         {categories.map(({name,texts , idx}) => (
-    <div key={idx} className="qualities">
-      <span className= 'devs'>{name}</span>
-      <p>{texts}</p>
-    </div>
-  ))}
-          </div>
-         
-           <div className="btn-container">
-     <Button title={'Lets Work Together'}/>
+        <div className="spline-bg">
+          <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" />
+          <div className="hero-overlay"></div>
+        </div>
+        <div className="content">
+          <h1>
+            Hi! I am Judah Abraham. <span id='ChangeText'>Software Engineer</span>
+          </h1>
+          <p>
+            As a dedicated and aspiring software developer, I combine technical expertise with creative vision to build software that is both powerful and intuitive. With a focus on quality, reliability, and user experience, I deliver solutions that meet the highest standards of excellence and drive business success.
+          </p>
+        </div>
+        <div className="text">
+          {categories.map(({ name, texts }, idx) => (
+            <div key={idx} className="qualities">
+              <span className='devs'>{name}</span>
+              <p>{texts}</p>
+            </div>
+          ))}
+        </div>
+        <div className="btn-container">
+          <Button title={'Lets Work Together'} />
         </div>
       <div className = 'socials'>
         <div className="insta">

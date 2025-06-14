@@ -17,28 +17,28 @@ const Projects = () => {
           img : Blink,
           title: "Blinkist-Landing Page",
           desc: "A Blinkist-Landing Page  with more features and a modern Login Page",
-          icons : [<FaCss3Alt color='#f1faee' key="css3" />, <FaReact color='#f1faee' key="react" />, <FaJs color='#f1faee' key="js" />],
+          icons : [<FaCss3Alt color='#1a1a1a' key="css3" />, <FaReact color='#1a1a1a' key="react" />, <FaJs color='#1a1a1a' key="js" />],
           link: "https://blinkist-landing-page-seven.vercel.app/"
         },
         {
           img: Sam, 
           title: "Samsung Landing Page",
           desc: "A Samsung Landing Page that showcases the quality of Samsung Products",
-          icons: [<FaCss3Alt color='#f1faee' key="css3" />, <FaReact color='#f1faee' key="react" />, <FaJs color="#f1faee" key="js" />],
+          icons: [<FaCss3Alt color='#1a1a1a' key="css3" />, <FaReact color='#1a1a1a' key="react" />, <FaJs color="#1a1a1a" key="js" />],
           link: "https://samsung-nu.vercel.app/"
         },
         {
           img: Weather,
           title: "Weather App",
           desc: "A Weather App that tells the current weather of a city.",
-          icons: [<FaJs color='#f1faee' key="js" />, <FaHtml5 color='#f1faee' key="html5" />, <FaCss3Alt color='#f1faee' key="css3-2" />],
+          icons: [<FaJs color='#1a1a1a' key="js" />, <FaHtml5 color='#1a1a1a' key="html5" />, <FaCss3Alt color='#1a1a1a' key="css3-2" />],
           link: "https://weather-app-oapd.vercel.app/"
         },
         {
           img: To, 
           title: "To-do-List",
           desc: "An App to store Tasks to be done.",
-          icons: [<FaHtml5 color='#f1faee' key="html5" />, <FaCss3Alt color='#f1faee' key="css3" />, <FaJs color='#f1faee' key="js" />], 
+          icons: [<FaHtml5 color='#1a1a1a' key="html5" />, <FaCss3Alt color='#1a1a1a' key="css3" />, <FaJs color='#1a1a1a' key="js" />], 
           link: "https://to-do-lists-f4xt.vercel.app/"
         }
     ]
@@ -101,7 +101,7 @@ const Projects = () => {
                     {link && (
                       <>
                         <a href={link} target="_blank" rel="noopener noreferrer">
-                          <TbWorldWww color="#f1faee" className='preview' />
+                          <TbWorldWww color="#1a1a1a" className='preview' />
                         </a>
                         <p>Live Preview</p>
                       </>

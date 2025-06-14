@@ -22,8 +22,8 @@
 }
 
 .card {
-  background:  	#1a1a1a; 
- color: #f1faee;
+  background:  	 #e6f4ea; 
+ color :black;
   border-radius: 14px;
   box-shadow: 0 2px 16px rgba(33,136,56,0.08);
   min-height: 320px;
@@ -35,7 +35,11 @@
   padding: 1.5rem 1.2rem 1rem 1.2rem; /* Add padding for spacing */
   box-sizing: border-box;
 }
-
+.card-text h1{
+    color: #2E8B57;
+    font-weight: 700 !important;
+    font-size: 22px !important;
+}
 .img-src {
   width: 100%;
   display: flex;
@@ -50,6 +54,7 @@
   height: auto;
   border-radius: 10px;
   display: block;
+
   margin-bottom: 0.7rem;
   margin-top: 0;
   align-self: center;

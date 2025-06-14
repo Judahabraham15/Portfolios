@@ -5,11 +5,25 @@ import { FaReact, FaNodeJs, FaCss3Alt, FaJsSquare, FaHtml5 } from "react-icons/f
 import { SiTailwindcss } from "react-icons/si";
 import myself from '../../assets/myself.png'
 import Button from '../Button/Button';
+import { FiDownload } from "react-icons/fi";
 
 const About = () => {
-  const ref = useRef(null)
+  const ref = useRef(null) 
   const isInView = useInView(ref, { once: true, margin: '-120px' , }) // triggers a bit before fully in view
 
+  const experience =[{
+    text : '5+', 
+    desc : "Months of Experience"
+  },
+  {
+    text : "7+",
+    desc : "Projects Completed"
+  },
+   {
+    text : "5+",
+    desc :"Technologies"
+   }
+]
   return (
    <motion.div
       className='about'
@@ -31,7 +45,7 @@ const About = () => {
   initial={{ y: -30, opacity: 0 }}
   animate={isInView ? { y: 0, opacity: 0.9 } : {}}
   transition={{ duration: 1, delay: 0.2, type: "spring" }}
-  style={{ position: "absolute", left: "6%", top: "14%" }}
+  style={{ position: "absolute", left: "6%", top: "10%" }}
 >
   <FaReact size={32} color="#61dafb" />
 </motion.span>
@@ -87,8 +101,16 @@ initial={{ y: -30 , opacity: 0}}
                 <br/>
                 At 16 , I have created some projects from a todo-list app to a frontend blinkist website and I am just getting warmed up! I love solving real world problems , adapting easily , handling pressure and I love building modern and functional user interfaces.
                 <br/>
-                <br/>
-             I developed interest in software development in the year 2022. But my journey officially began in 2024.  I am open to freelancing and collaborative jobs and eager to improve my skills and explore.
+                <br/> 
+                <div className="texts">
+                {experience.map(({text , desc} , idx)=>(
+                  <div className="qualitiess" key={idx}>
+                  <span className='devv'> {text}</span>
+                  <p className='para'>{desc}</p>
+                </div>
+                ))}
+                </div>
+                
                  </p>
                  <div className="btn-about-container">
                     <motion.div
@@ -96,7 +118,7 @@ initial={{ y: -30 , opacity: 0}}
   animate={isInView ? { scale: 1, opacity: 1 } : {}}
   transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
 >
-  <Button title={'Explore More'} className={'btn-about'} />
+  <Button title={'Download CV'} className={'btn-about'} icon={<FiDownload size={20} color='white'/>}/>
 </motion.div>
                  </div>
                 

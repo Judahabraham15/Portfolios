@@ -1,11 +1,12 @@
 import React from 'react'
 import './Timeline.css'
 import { FaCode, FaProjectDiagram, FaReact, FaUserFriends } from 'react-icons/fa'
+import { HiBadgeCheck } from "react-icons/hi";
 import { motion } from 'framer-motion'
 
 const Timeline = () => {
   const Timelines = [
-    { title: "Started Coding", desc: "Began my coding journey in 2022, learning HTML and CSS.", side: "left", icon: <FaCode color="#218838" /> },
+    { title: "Started Coding", desc: "Began my coding journey in 2022, learning HTML and CSS.", side: "left", icon: <FaCode color="#218838" />  , text: "Click Icon to View Certificate" , icons : <HiBadgeCheck size={18} color="#2e8b57" style = {{verticalAlign : "middle"}} />},
     { title: "First Project", desc: "Built my first to-do app and a frontend Blinkist clone in 2024.", side: "right", icon: <FaProjectDiagram color="#218838" /> },
     { title: "React & Tailwind", desc: "Dove into React.js and Tailwind CSS for modern UI development.", side: "left", icon: <FaReact color="#218838" /> },
     { title: "Freelancing", desc: "Yet to take collaborative Jobs.", side: "right", icon: <FaUserFriends color="#218838" /> }
@@ -48,7 +49,7 @@ const Timeline = () => {
           />
         ))}
         <div className="timeline-contain">
-          {Timelines.map(({ title, desc, side, icon }, idx) => (
+          {Timelines.map(({ title, desc, side, icon , text , icons }, idx) => (
             <motion.div
               className={`timeline-item ${side}`}
               key={idx}
@@ -63,6 +64,9 @@ const Timeline = () => {
                 {title}
               </h2>
               <p>{desc}</p>
+              <br/>
+              <p>{text}  <a href='https://www.udemy.com/certificate/UC-79960699-3110-46ac-9c86-899685284c83/' target='_blank'>{icons}</a></p>
+             
             </motion.div>
           ))}
         </div>
