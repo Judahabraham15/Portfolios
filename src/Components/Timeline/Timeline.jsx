@@ -1,48 +1,18 @@
 import React from 'react'
 import './Timeline.css'
 import { FaCode, FaProjectDiagram, FaReact, FaUserFriends } from 'react-icons/fa'
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Timeline = () => {
   const Timelines = [
-    {
-      title: "Started Coding",
-      desc: "Began my coding journey in 2022, learning HTML, CSS.",
-      side: "left",
-      icon: <FaCode color="#218838" />
-    },
-    {
-      title: "First Project",
-      desc: "Built my first to-do app and a frontend Blinkist clone in 2024.",
-      side: "right",
-      icon: <FaProjectDiagram color="#218838" />
-    },
-    {
-      title: "React & Tailwind",
-      desc: "Dove into React.js and Tailwind CSS for modern UI development.",
-      side: "left",
-      icon: <FaReact color="#218838" />
-    },
-    {
-      title: "Freelancing",
-      desc: "Yet to take collaborative Jobs.",
-      side: "right",
-      icon: <FaUserFriends color="#218838" />
-    }
-  ]
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.18
-      }
-    }
-  }
+    { title: "Started Coding", desc: "Began my coding journey in 2022, learning HTML and CSS.", side: "left", icon: <FaCode color="#218838" /> },
+    { title: "First Project", desc: "Built my first to-do app and a frontend Blinkist clone in 2024.", side: "right", icon: <FaProjectDiagram color="#218838" /> },
+    { title: "React & Tailwind", desc: "Dove into React.js and Tailwind CSS for modern UI development.", side: "left", icon: <FaReact color="#218838" /> },
+    { title: "Freelancing", desc: "Yet to take collaborative Jobs.", side: "right", icon: <FaUserFriends color="#218838" /> }
+  ];
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 60, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 80, damping: 14 } }
-  }
+  
+  const dotPositions = ['7.5%', '33%', '59%', '86%'];
 
   return (
     <div className='container' id='qualifications'>
@@ -56,21 +26,37 @@ const Timeline = () => {
         <h1>Qualifications</h1>
         <p>Judah<span className='dev'>4Good's</span> Journey</p>
       </motion.div>
-      <div className="timeline">
+      <div className="timeline" style={{ position: 'relative' }}>
+        {/* Animated vertical line */}
         <motion.div
-          className="timeline-contain"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
+          className="timeline-vertical"
+          initial={{ height: 0 }}
+          whileInView={{ height: '100%' }}
+          transition={{ duration: 1, type: "spring" }}
+          viewport={{ once: true }}
+        />
+        {/* Animated dots */}
+        {dotPositions.map((top, idx) => (
+          <motion.div
+            className={`timeline-dot dot${idx + 1}`}
+            key={idx}
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 + idx * 0.15, type: "spring" }}
+            viewport={{ once: true }}
+            style={{ top }}
+          />
+        ))}
+        <div className="timeline-contain">
           {Timelines.map(({ title, desc, side, icon }, idx) => (
             <motion.div
               className={`timeline-item ${side}`}
               key={idx}
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ type: "spring", stiffness: 80, damping: 14, delay: 0.2 + idx * 0.18 }}
+              viewport={{ once: true, amount: 0.3 }}
               whileHover={{ scale: 1.04, boxShadow: "0 4px 24px rgba(33,136,56,0.13)" }}
-              transition={{ type: "spring", stiffness: 120 }}
             >
               <h2>
                 <span style={{ marginRight: 8, verticalAlign: 'middle' }}>{icon}</span>
@@ -79,7 +65,7 @@ const Timeline = () => {
               <p>{desc}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   )
