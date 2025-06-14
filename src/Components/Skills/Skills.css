@@ -10,7 +10,6 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 .skills-wrapper{
-
     width:100%;
     min-height: 80vh;
     background-color: #F0FFF0;
@@ -72,5 +71,17 @@
 
 .skill-level {
   font-size: 0.8rem;
-  color: #eaffd0; /* Matches skill-name for consistency */
+  color: #eaffd0; 
+}
+.ski{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Nunito';
+}
+.devss{
+  font-size: 35px;
+  color: #2E8B57 ;
+  font-weight: 700;
 }

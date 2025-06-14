@@ -33,7 +33,7 @@ const skillVariants = {
 
 const Skills = () => {
   return (
-    <div className="skills-wrapper">
+    <div className="skills-wrapper" id='skills'>
       <motion.div
         className="skills-cont"
         initial={{ opacity: 0, y: -40 }}
@@ -85,6 +85,16 @@ const Skills = () => {
           ))}
         </motion.div>
       </div>
+          <motion.div
+        className="ski"
+        initial={{ opacity: 0, scale: 0.8, y: 40 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <span className='devss'> 7+</span>
+        <p>Completed Projects</p>
+      </motion.div>
     </div>
 
   )
