@@ -1,6 +1,6 @@
 import React from 'react'
 import './Button.css'
-import { motion } from 'framer-motion'
+
 
 const Button = ({ title, style, className, icon }) => {
   return (

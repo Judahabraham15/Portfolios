@@ -5,3 +5,71 @@
   font-family: 'Nunito';
   flex-direction: column;
 }
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; 
+  gap: 16px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 60px;
+}
+.inputs{
+  padding: 18px;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #e6f4ea;
+  border: none;
+  height: 1.5rem;
+}
+.contact-form{
+  width: 360px;
+}
+.contact-forms{
+  position: relative;
+  margin-bottom: 30px;
+}
+.input-section {
+  padding: 1.2rem 1rem;
+  min-width: 220px;
+  width: 100%;
+  height: fit-content;
+  font-family: 'Nunito';
+  margin-top: 20px;
+}
+.input-section h2{
+  margin-bottom: 20px;
+}
+.cards{
+  border-radius: 10px;
+  background:  	 #e6f4ea; 
+  padding: 1.2rem 1rem;
+  margin: 0.5rem 0;
+   box-shadow: 0 2px 16px rgba(33,136,56,0.08);
+  width: 70% !important;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito' , sans-serif;
+}
+.tit{
+  font-size: 14px;
+}
+.gmail{
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.para-icons{
+  font-size: 14px;
+}
