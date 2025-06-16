@@ -9,6 +9,7 @@ import { motion } from "framer-motion"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { AnimatePresence } from "framer-motion";
+import { UserSchema } from '../../Validations/Validation';
 const Contact = () => {
 
   const contacts = [
@@ -69,7 +70,7 @@ const Contact = () => {
   const textareaRef = useRef()
 
 
-  function handleSubmit(e) {
+   async function handleSubmit(e) {
   e.preventDefault();
 
   const name = nameRef.current;
@@ -99,21 +100,41 @@ const Contact = () => {
     textarea.style.border = '2px solid green';
   }
 
-  setErrors(newErrors);
+  const formData = {
+    name: name.value,
+    email: email.value,
+  };
 
-  // Only send email if no errors
-  if (Object.keys(newErrors).length === 0) {
-    sendEmail(e); // ✅ Send with EmailJS
-  }
+  // ❗ Use Yup.validate() instead of isValid to get the actual error message
+  await UserSchema.validate(formData, { abortEarly: false })
+    .then(() => {
+      // if yup passes and no input error, send the email
+      if (Object.keys(newErrors).length === 0) {
+        sendEmail(e);
+      }
+    })
+    .catch((err) => {
+      err.inner.forEach((e) => {
+        newErrors[e.path] = e.message;
+        if (e.path === 'email') {
+          email.style.border = '2px solid red';
+        }
+        if (e.path === 'name') {
+          name.style.border = '2px solid red';
+        }
+      });
+    });
+
+  setErrors(newErrors);
 }
+
 
 const[showpopup , setShowpopup] = useState(false)
 
   const form = useRef();
-const sendEmail = (event) => {
+const sendEmail =  (event) => {
   event.preventDefault();
-  emailjs
-    .sendForm('service_nkorx5h', 'template_z7mj92k', form.current, {
+  emailjs.sendForm('service_nkorx5h', 'template_z7mj92k', form.current, {
       publicKey: 'iN8U8APlcPQw3-zBy',
     })
     .then(() => {
@@ -123,7 +144,6 @@ const sendEmail = (event) => {
       // Reset form fields
       form.current.reset();
 
-
       setTimeout(() => {
         setShowpopup(false);
       }, 3000);
@@ -132,6 +152,7 @@ const sendEmail = (event) => {
       console.log('FAILED...', error.text);
     });
 };
+
   return (
     <div className='contacts' id='contact'>
       <motion.div
@@ -210,7 +231,7 @@ const sendEmail = (event) => {
           viewport={{ once: true }}
         >
           <h2>Lets Discuss Your Project</h2>
-          <form className='contact-form' onSubmit={sendEmail} ref={form}>
+          <form className='contact-form' onSubmit={sendEmail}  ref={form}>
                      <div className="contact-forms">
               <input type='text'id='name' name = "name" ref={nameRef} className='inputs' placeholder='Your Full Name' required />
                {errors.name && <span className="error-mess">{errors.name}</span>}
@@ -251,7 +272,6 @@ const sendEmail = (event) => {
       <AnimatePresence>
   {showpopup && (
     <motion.div
-      key={popup}
       className="popup"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}

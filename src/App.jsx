@@ -13,7 +13,7 @@ function App() {
  
 
   return (
-    <>
+    <div className='app'>
      <Navbar/>
      <Hero/>
      <About/>
@@ -22,7 +22,7 @@ function App() {
      <Projects/>
     <Contacts/>
     <Footer/>
-    </>
+    </div>
   )
 }
 
