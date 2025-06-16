@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects'
 import Skills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
 import Contacts from './Components/Contacts/Contacts'
+import Footer from './Components/Footer/Footer'
 
 function App() {
  
@@ -20,6 +21,7 @@ function App() {
      <Timeline/>
      <Projects/>
     <Contacts/>
+    <Footer/>
     </>
   )
 }

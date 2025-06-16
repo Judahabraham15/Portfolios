@@ -75,6 +75,10 @@
     margin-top:30px ;
     margin-bottom: 30px;    
 }
+.btn-container a{
+text-decoration: none;
+list-style-type:none ;
+}
 .text{
       display: flex;
     flex-wrap:nowrap ;
