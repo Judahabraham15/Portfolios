@@ -50,3 +50,21 @@
  transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1) ease-in-out;
   box-shadow: 0 4px 24px rgba(44,83,100,0.18);
 }
+@media(max-width:480px){
+ .nav{
+  width: 85%;
+ }
+}
+@media(max-width:800px){
+  .HideonMobile{
+    display: none;
+  }
+  .nav-header{
+    font-size: 1.2rem;
+  }
+}
+@media(min-width:801px){
+  .menu{
+    display: none;
+  }
+}

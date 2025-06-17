@@ -1,7 +1,8 @@
 import React, { use } from 'react'
 import './Navbar.css'
 import { useState , useEffect } from 'react'
-
+import { TbMenu2, TbMenuDeep } from "react-icons/tb";
+import Sidebar from '../Sidebar/Sidebar';
 const Navbar = () => {
 
    const [scrolled, setScrolled] = useState(false);
@@ -30,17 +31,25 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+const Opensidebar = (e) => { 
+  e.preventDefault()
+    const sidebars = document.querySelector('.sidebar')
+    sidebars.classList.add('open')
+    sidebars.style.display = 'block'
+   }
 
   return (
     <nav className={`nav${scrolled ? ' nav-scrolled' : ''}`}>
       <h1 className='nav-header'>Judah<span className='dev'>4Good</span></h1>
       <ul className="nav-links">
-        <li><a href="#about">About</a></li>
-           <li><a href="#qualifications">Qualifications</a></li>
-        <li><a href='#skills'> Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+         <TbMenuDeep  color='white' size={25} onClick={Opensidebar} className='menu'><li><a href="#"></a></li></ TbMenuDeep >
+        <li className='HideonMobile'><a href="#about">About</a></li>
+           <li className='HideonMobile'><a href="#qualifications">Experience</a></li>
+        <li className='HideonMobile'><a href='#skills'> Skills</a></li>
+        <li className='HideonMobile'><a href="#projects">Projects</a></li>
+        <li className='HideonMobile'><a href="#contact">Contact</a></li>
       </ul>
+      <Sidebar/>
     </nav>
   )
 }

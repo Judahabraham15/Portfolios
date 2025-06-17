@@ -114,3 +114,8 @@
 .live p{
     align-self:flex-end ;
 }
+@media(max-width:480px){
+  .projects{
+    display: none;
+  }
+}

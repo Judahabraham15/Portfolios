@@ -9,7 +9,7 @@ const Button = ({ title, style, className, icon }) => {
         className={`button2 ${className}`}
         style={{ ...style }}
       >
-        {title}
+      <p>{title}</p>
         <div className="icon">
           {icon ? (icon) : (
             <svg
@@ -17,6 +17,7 @@ const Button = ({ title, style, className, icon }) => {
               width="24"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              style={{color:' #E0E0E0'}}
             >
               <path d="M0 0h24v24H0z" fill="none"></path>
               <path

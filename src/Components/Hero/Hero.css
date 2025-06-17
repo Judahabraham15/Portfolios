@@ -20,6 +20,7 @@
   z-index: 2;
   transition: border-radius 0.6s cubic-bezier(0.22 , 1, 0.36 , 1) y 0.6s ease-in-out;
   overflow: hidden;
+   will-change: transform, border-radius;
 }
 .spline-bg {
     position: absolute;
@@ -147,3 +148,53 @@ text-align: center;
     height: 24px;
     
 }
+@media (max-width: 480px) {
+.spline-bg{
+    min-height: 80vh;
+}
+.content h1{
+    font-size: 25px;
+}
+.content p{
+    font-size: 10px;
+     width: 100%;
+     max-width: 450px;
+     font-weight:200;
+}
+  .text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    gap: 20px;
+  }
+
+  .qualities {
+    width: 90%;
+    padding: 10px;
+  }
+.socials{
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    position: static;
+    margin-top: 1rem;
+}
+  .qualities span{
+  font-size: 20px !important;
+  }
+  .qualities p{
+    font-size: 10px;
+     width: 100%;
+  text-align: center;
+  }
+  .insta a, .git a, .whatsapp a, .linkedin a{
+    width: 30px;
+    height: 30px;
+  }
+  .insta svg , .git svg , .whatsapp svg , .linkedin svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+

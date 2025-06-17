@@ -76,3 +76,8 @@
 .timeline-item h2{
     color: #2E8B57;
 }
+@media(max-width:480px){
+  .time-line{
+    display: none;
+  }
+}

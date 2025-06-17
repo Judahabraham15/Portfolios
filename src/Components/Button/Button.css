@@ -40,5 +40,16 @@
 .button2 .icon svg {
   width: 1.3em;
   transition: transform 0.3s;
- 
+ color: #E0E0E0;
+}
+@media(max-width:480px){
+  .button2{
+    padding: 1.1em;
+    padding-right: 2.5em;
+    font-size: 13px;
+  }
+  .button2 p{
+    font-size: 13px !important;
+    font-weight: 400;
+  }
 }

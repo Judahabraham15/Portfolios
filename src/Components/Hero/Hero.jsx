@@ -59,7 +59,7 @@ const Hero = () => {
         className="hero-content"
       >
         <div className="spline-bg">
-          <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" preserveDrawingBuffer={false} />
+          <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" preservedrawingbuffer='false' />
           <div className="hero-overlay"></div>
         </div>
         <div className="content">

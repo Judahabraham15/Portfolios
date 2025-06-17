@@ -24,7 +24,7 @@ const Timeline = () => {
         transition={{ duration: 0.7, type: "spring" }}
         viewport={{ once: true }}
       >
-        <h1>Qualifications</h1>
+        <h1>Experience</h1>
         <p>Judah<span className='dev'>4Good's</span> Journey</p>
       </motion.div>
       <div className="timeline" style={{ position: 'relative' }}>
