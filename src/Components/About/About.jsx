@@ -102,6 +102,7 @@ initial={{ y: -30 , opacity: 0}}
                 At 16 , I have created some projects from a todo-list app to a frontend blinkist website and I am just getting warmed up! I love solving real world problems , adapting easily , handling pressure and I love building modern and functional user interfaces.
                 <br/>
                 <br/> 
+                </p>
                 <div className="texts">
                 {experience.map(({text , desc} , idx)=>(
                   <div className="qualitiess" key={idx}>
@@ -111,7 +112,7 @@ initial={{ y: -30 , opacity: 0}}
                 ))}
                 </div>
                 
-                 </p>
+                 
                  <div className="btn-about-container">
                     <motion.div
   initial={{ scale: 0.8, opacity: 0 }}

@@ -10,6 +10,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { AnimatePresence } from "framer-motion";
 import { UserSchema } from '../../Validations/Validation';
+
 const Contact = () => {
 
   const contacts = [
