@@ -111,10 +111,12 @@
 }
   @media (max-width: 480px) {
   .about {
-    flex-direction: column;
-    justify-content: center;
+       flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 50px;
+    min-height: auto;
+    gap: 20px;
+    background: linear-gradient(to bottom, #f0fff0, #e6f7e6);
   }
 
   .about-content {
@@ -134,19 +136,17 @@
     max-width: 85%;
     text-align: left;
   }
-
   .texts {
-     flex-direction: row;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    width: 85%;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
   }
 
+
   .qualitiess {
-    width:90%;
-    padding: 10px;
+    min-width: 100px;
   }
 
   .devv {
@@ -158,14 +158,22 @@
     line-height: 1.3rem;
     color: black;
   }
-
-  .img-content {
-    margin-top: 32px;
+ .img-content {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    position: relative;
   }
 
   .image {
-    max-width: 220px;
-    width: 100%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 4px solid #2e8b57;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
 
   .btn-about-container {
@@ -179,7 +187,26 @@
     min-width: 180px !important;
     margin-top: 24px;
   }
-  .about-float-icon{
-    display: none;
+ .about-float-icon {
+    position: absolute;
+    opacity: 0.7;
+    animation: about-float 3s ease-in-out infinite alternate;
+    z-index: 0;
   }
+
+.about-float-icon.html{
+  left: 87% !important;
 }
+.about-float-icon.tailwind{
+    top: 50%;
+    left: 2% !important;
+}
+.about-float-icon.js{
+    top:29% !important;
+}
+.about-float-icon.css{
+    left: 10%;
+    bottom: 23% !important;
+}
+}
+

@@ -67,7 +67,7 @@ initial={{ y: -30 , opacity: 0}}
   <FaNodeJs size={28} color="#3c873a" />
 </motion.span>
 <motion.span
-  className="about-float-icon html"
+  className="about-float-icon tailwind"
   initial={{ x: -30, opacity: 0 }}
   animate={isInView ? { x: 0, opacity: 0.9 } : {}}
   transition={{ duration: 1, delay: 0.6, type: "spring" }}

@@ -86,7 +86,58 @@
   color: #2E8B57 ;
   font-weight: 700;
 }
-@media(max-width:480px){
+@media (max-width: 480px) {
+  .skills-wrapper{
+    margin-top: 60px;
+  }
+  .skills-wrap {
+    max-width: 90%;
+    padding: 1rem;
+  }
 
-  
+  .skills-cont {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill {
+    align-items: center;
+    text-align: center;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 5px;
+    margin: 4px 0;
+    width: 80%;
+  }
+
+  .skill-level {
+    font-size: 0.75rem;
+  }
+
+  .ski {
+    margin-top: 2rem;
+  }
+
+  .devss {
+    font-size: 28px;
+  }
 }

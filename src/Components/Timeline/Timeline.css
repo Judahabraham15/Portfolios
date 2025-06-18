@@ -77,7 +77,15 @@
     color: #2E8B57;
 }
 @media(max-width:480px){
-  .time-line{
-    display: none;
+  .timeline-item h2{
+    font-size: 18px;
+  }
+  .timeline-item p{
+    font-size: 13px;
+    width: 200px;
+  }
+  .timeline-item.left{
+    left: -8%;
+    align-self: flex-start;
   }
 }
