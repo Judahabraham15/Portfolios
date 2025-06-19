@@ -164,7 +164,7 @@ const sendEmail =  (event) => {
         viewport={{ once: true }}
       >
         <h1>Contacts</h1>
-        <p>Whether you have a project in mind or just want to say hi ,I'd love to hear from.</p>
+        <p>Whether you have a project in mind or just want to say hi ,I'd love to hear from you.</p>
       </motion.div>
       <div className="contacts-grid">
         <motion.div
