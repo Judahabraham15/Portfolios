@@ -76,7 +76,7 @@
 .timeline-item h2{
     color: #2E8B57;
 }
-@media (max-width: 480px) {
+@media (max-width: 676px) {
   .timeline {
     padding: 10px 0;
   }

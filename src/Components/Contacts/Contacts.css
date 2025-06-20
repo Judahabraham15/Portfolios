@@ -119,7 +119,7 @@ padding: 6px;
    box-shadow: 0 2px 16px rgba(33,136,56,0.8);
 border-radius: 8px;
 }
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .contacts {
     margin-bottom: 30px;
   }

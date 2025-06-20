@@ -114,7 +114,7 @@
 .live p{
     align-self:flex-end ;
 }
-@media(max-width:480px){
+@media(max-width:576px){
   .projects{
     padding: 0 3rem 0 3rem;
   }

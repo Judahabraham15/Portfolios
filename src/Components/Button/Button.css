@@ -53,3 +53,9 @@
     font-weight: 400;
   }
 }
+@media (max-width:768px){
+  .button2 p{
+    font-size: 16px !important;
+    font-weight: 500;
+  }
+}

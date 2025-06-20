@@ -11,7 +11,7 @@
     font-size: 15px;
     font-weight: 800;
 }
-@media(max-width:480px){
+@media(max-width:576px){
   .footer{
    padding-left: 1.5rem;
    padding-right: 1.5rem;

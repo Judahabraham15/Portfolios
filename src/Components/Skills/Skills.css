@@ -86,7 +86,7 @@
   color: #2E8B57 ;
   font-weight: 700;
 }
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .skills-wrapper{
     margin-top: 60px;
   }
@@ -139,5 +139,10 @@
 
   .devss {
     font-size: 28px;
+  }
+}
+@media(min-width:577px) and (max-width:768px){
+  .skills-wrapper{
+    margin-top: 60px;
   }
 }
