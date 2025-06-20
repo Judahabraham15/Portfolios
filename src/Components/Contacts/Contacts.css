@@ -201,3 +201,85 @@ border-radius: 8px;
   }
 
 }
+@media(min-width:577px) and (max-width:768px){
+ .contacts {
+    margin-bottom: 30px;
+  }
+
+  .contacts-text h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contacts-text p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cards-list {
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .cards {
+    width: 80% !important;
+    padding: 1rem;
+    min-height: 100px;
+  }
+
+  .tit,
+  .gmail,
+  .para-icons {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .iconic {
+    margin-bottom: 8px;
+  }
+
+  .input-section {
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .input-section h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .inputs,
+  .text-area {
+    max-width: 90%;
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .text-area {
+    height: 8rem;
+  }
+
+  .contact-forms {
+    margin-bottom: 20px;
+  }
+
+  .text-btn {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+}

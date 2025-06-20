@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import './About.css'
 import { FaReact, FaNodeJs, FaCss3Alt, FaJsSquare, FaHtml5 } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
-import myself from '../../assets/myself.png'
+import myself from '../../assets/Judahs.jpg'
 import Button from '../Button/Button';
 import { FiDownload } from "react-icons/fi";
 
@@ -80,7 +80,7 @@ initial={{ y: -30 , opacity: 0}}
   initial={{ x: 30, opacity: 0 }}
   animate={isInView ? { x: 0, opacity: 0.9 } : {}}
   transition={{ duration: 1, delay: 0.8, type: "spring" }}
-  style={{ position: "absolute", right: "12%", bottom: "20%" }}
+  style={{ position: "absolute", right: "10%", bottom: "20%" }}
 >
   <FaCss3Alt size={26} color="#264de4" />
 </motion.span>

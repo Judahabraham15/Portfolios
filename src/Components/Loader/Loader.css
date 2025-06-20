@@ -1,0 +1,27 @@
+.loader-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  font-family:'Nunito';
+}
+.tech-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tech-icon {
+  font-size: 32px;
+  color: white;
+  animation-delay: 0.2s;
+}
+

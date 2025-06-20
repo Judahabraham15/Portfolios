@@ -92,13 +92,12 @@
     gap: 32px;
   }
   .timeline-item {
-    align-self: flex-start !important;
+    align-self: center !important;
     padding: 16px 20px;
-    margin-left: 20px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     max-width: 90%;
-    width: auto;
+    width: 80%;
     border-left: 4px solid #2E8B57;
   }
 

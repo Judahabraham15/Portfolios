@@ -57,6 +57,7 @@
     max-width: 290px;
     width: 100%;
     height: auto;
+    border-radius: 20px;
     object-fit: cover;
 }
 .btn-about {
@@ -173,7 +174,7 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
     border: 4px solid #2e8b57;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
@@ -211,7 +212,7 @@
     bottom: 23% !important;
 }
 }
-@media(min-width:577px) and (max-width:768px){
+@media(min-width:577px) and (max-width:936px){
    .about {
        flex-direction: column;
     align-items: center;
@@ -270,10 +271,10 @@
   }
 
   .image {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 60%;
+    object-fit: cover;
     border: 4px solid #2e8b57;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }

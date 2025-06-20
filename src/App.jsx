@@ -8,10 +8,17 @@ import Skills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
 import Contacts from './Components/Contacts/Contacts'
 import Footer from './Components/Footer/Footer'
-// import React, { useEffect } from 'react';
-// import Lenis from '@studio-freight/lenis';
+import React, { useEffect , useState } from 'react';
+import Loader from './Components/Loader/Loader'
+// import Lenis from '@studio-freight/lenis'
+
 function App() {
-  // useEffect(() => {
+  const [isLoading , setisLoading] = useState(true)
+  useEffect(() => {
+  const timer = setTimeout(()=>{
+    setisLoading(false);
+  } , 5000)
+  return () => clearInterval(timer)
   //   const lenis = new Lenis({
   //     duration: 1.2, // control how slow/smooth it scrolls
   //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing function
@@ -24,11 +31,12 @@ function App() {
   //   }
 
   //   requestAnimationFrame(raf)
-  // }, [])
+  }, [])
   return (
     <div className='app'>
+      {isLoading ? <Loader/>: <Hero/>}
      <Navbar/>
-     <Hero/>
+     
      <About/>
      <Skills/>
      <Timeline/>

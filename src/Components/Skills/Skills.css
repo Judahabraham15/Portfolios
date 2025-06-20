@@ -141,7 +141,7 @@
     font-size: 28px;
   }
 }
-@media(min-width:577px) and (max-width:768px){
+@media(min-width:577px) and (max-width:800px){
   .skills-wrapper{
     margin-top: 60px;
   }

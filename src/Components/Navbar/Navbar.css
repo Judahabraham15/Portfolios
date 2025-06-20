@@ -50,7 +50,7 @@
  transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1) ease-in-out;
   box-shadow: 0 4px 24px rgba(44,83,100,0.18);
 }
-@media(max-width:576px){
+@media(max-width:800px){
  .nav{
   width: 85%;
  }

@@ -68,7 +68,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h1> Projects</h1>
-          <p>Check out some of Judah<span className="dev">4Good</span> projects.</p>
+          <p className='ppp'>Check out some of Judah<span className="dev">4Good</span> projects.</p>
         </motion.div>
         <div className="projects-wrap">
           <motion.div
