@@ -40,7 +40,7 @@ const Opensidebar = (e) => {
 
   return (
     <nav className={`nav${scrolled ? ' nav-scrolled' : ''}`}>
-      <h1 className='nav-header'>Judah<span className='dev'>4Good</span></h1>
+      <h1 className=' nav-header'>Judah<span className='dev'>4Good</span></h1>
       <ul className="nav-links">
          <TbMenuDeep  color='white' size={25} onClick={Opensidebar} className='menu'><li><a href="#"></a></li></ TbMenuDeep >
         <li className='HideonMobile'><a href="#about">About</a></li>

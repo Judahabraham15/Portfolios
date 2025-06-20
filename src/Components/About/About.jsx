@@ -7,6 +7,7 @@ import myself from '../../assets/Judahs.jpg'
 import Button from '../Button/Button';
 import { FiDownload } from "react-icons/fi";
 
+
 const About = () => {
   const ref = useRef(null) 
   const isInView = useInView(ref, { once: true, margin: '-120px' , }) // triggers a bit before fully in view
@@ -119,7 +120,10 @@ initial={{ y: -30 , opacity: 0}}
   animate={isInView ? { scale: 1, opacity: 1 } : {}}
   transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
 >
-  <Button title={'Download CV'} className={'btn-about'} icon={<FiDownload size={20} color='white'/>}/>
+  <a href='' download className='ap'>
+    <Button title={'Download CV'} className={'btn-about'} icon={<FiDownload size={20} color='white'/>}/>
+  </a>
+  
 </motion.div>
                  </div>
                 
