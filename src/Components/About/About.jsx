@@ -5,6 +5,7 @@ import { FaReact, FaNodeJs, FaCss3Alt, FaJsSquare, FaHtml5 } from "react-icons/f
 import { SiTailwindcss } from "react-icons/si";
 import myself from '../../assets/Judahs.jpg'
 import Button from '../Button/Button';
+import Judah from '../../assets/JUDAH CV.pdf'
 import { FiDownload } from "react-icons/fi";
 
 
@@ -120,7 +121,7 @@ initial={{ y: -30 , opacity: 0}}
   animate={isInView ? { scale: 1, opacity: 1 } : {}}
   transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
 >
-  <a href='' download className='ap'>
+  <a href={Judah} download className='ap'>
     <Button title={'Download CV'} className={'btn-about'} icon={<FiDownload size={20} color='white'/>}/>
   </a>
   
