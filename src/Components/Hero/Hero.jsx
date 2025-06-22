@@ -4,6 +4,13 @@ import './Hero.css'
 import { useEffect, useRef } from 'react';
 import Button from '../Button/Button';
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { FaCode, FaLaptopCode, FaServer, FaBug, FaCogs, FaDatabase, FaTerminal } from 'react-icons/fa';
+import { MdOutlineDeveloperMode } from 'react-icons/md';
+import { AiOutlineTool } from 'react-icons/ai';
+import { BsGearWideConnected } from 'react-icons/bs';
+import { HiOutlineCpuChip } from 'react-icons/hi2';
+import { PiFlowArrowBold } from 'react-icons/pi';
+
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -53,7 +60,7 @@ const Hero = () => {
     { name: '54%', texts: 'Coding Skills' }
   ]
   return (
-    <section ref={heroRef} className="hero" id="home">
+    <motion.section ref={heroRef} className="hero" id="home" style={{ borderRadius, scale, y }}>
       <motion.div
         style={{ borderRadius, scale, y }}
         className="hero-content"
@@ -115,7 +122,7 @@ const Hero = () => {
         </div>
       </div>
       </motion.div>
-    </section>
+    </motion.section>
 
        
 
