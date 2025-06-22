@@ -4,12 +4,12 @@ import './Hero.css'
 import { useEffect, useRef } from 'react';
 import Button from '../Button/Button';
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { FaCode, FaLaptopCode, FaServer, FaBug, FaCogs, FaDatabase, FaTerminal } from 'react-icons/fa';
-import { MdOutlineDeveloperMode } from 'react-icons/md';
-import { AiOutlineTool } from 'react-icons/ai';
-import { BsGearWideConnected } from 'react-icons/bs';
-import { HiOutlineCpuChip } from 'react-icons/hi2';
-import { PiFlowArrowBold } from 'react-icons/pi';
+// import { FaCode, FaLaptopCode, FaServer, FaBug, FaCogs, FaDatabase, FaTerminal } from 'react-icons/fa';
+// import { MdOutlineDeveloperMode } from 'react-icons/md';
+// import { AiOutlineTool } from 'react-icons/ai';
+// import { BsGearWideConnected } from 'react-icons/bs';
+// import { HiOutlineCpuChip } from 'react-icons/hi2';
+// import { PiFlowArrowBold } from 'react-icons/pi';
 
 
 const Hero = () => {
