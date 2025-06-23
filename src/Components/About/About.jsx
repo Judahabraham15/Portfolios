@@ -137,7 +137,7 @@ initial={{ y: -30 , opacity: 0}}
   animate={isInView ? { scale: 1, opacity: 1 } : {}}
   transition={{ duration: 1, type: "spring" }}
   whileHover={{ scale: 1.05, rotate: 2 }}
-/>
+/> 
       </div>
     </motion.div>
   )
