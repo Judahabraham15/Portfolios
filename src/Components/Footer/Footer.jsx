@@ -33,7 +33,7 @@ const Footer = () => {
           >
             <HiUserGroup color='black' size={18} />
           </motion.span>
-          Ready for Challenges and Collaborations
+          Ready for Challenges and Collaborations.
         </p>
       </motion.div>
     </motion.div>

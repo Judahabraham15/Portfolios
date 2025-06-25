@@ -28,7 +28,6 @@ const About = () => {
 ]
   return (
    <motion.div
-      className='about'
       ref={ref}
       initial={{ opacity: 0, y: 100, scale: 0.95, filter: 'blur(5px)'  }}
       animate={

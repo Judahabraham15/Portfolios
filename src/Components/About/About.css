@@ -1,4 +1,4 @@
-.about{
+#about{
     display: flex;
     align-items: center; 
     justify-content: flex-start;
@@ -116,7 +116,7 @@
   text-decoration: none;
 }
   @media (max-width: 576px) {
-  .about {
+  #about {
        flex-direction: column;
     align-items: center;
     text-align: center;
@@ -216,7 +216,7 @@
 }
 }
 @media(min-width:577px) and (max-width:936px){
-   .about {
+   #about {
        flex-direction: column;
     align-items: center;
     text-align: center;

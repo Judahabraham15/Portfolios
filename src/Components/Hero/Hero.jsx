@@ -1,16 +1,28 @@
-import React from 'react'
-import Spline from '@splinetool/react-spline';
+import React, { useEffect, useRef } from 'react'
 import './Hero.css'
-import { useEffect, useRef } from 'react';
-import Button from '../Button/Button';
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-// import { FaCode, FaLaptopCode, FaServer, FaBug, FaCogs, FaDatabase, FaTerminal } from 'react-icons/fa';
-// import { MdOutlineDeveloperMode } from 'react-icons/md';
-// import { AiOutlineTool } from 'react-icons/ai';
-// import { BsGearWideConnected } from 'react-icons/bs';
-// import { HiOutlineCpuChip } from 'react-icons/hi2';
-// import { PiFlowArrowBold } from 'react-icons/pi';
+import Button from '../Button/Button'
+import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { FaCode, FaLaptopCode, FaServer, FaBug, FaCogs, FaDatabase, FaTerminal } from 'react-icons/fa'
+import { MdOutlineDeveloperMode } from 'react-icons/md'
+import { AiOutlineTool } from 'react-icons/ai'
+import { BsGearWideConnected } from 'react-icons/bs'
+import { HiOutlineCpuChip } from 'react-icons/hi2'
+import { PiFlowArrowBold } from 'react-icons/pi'
 
+const backgroundIcons = [
+  { icon: <FaCode />, style: { top: '12%', left: '8%' , fontSize:'100px' }, color: "black" },
+  { icon: <FaLaptopCode />, style: { top: '30%', left: '85%' }, color: "#1976d2", size : 18 },
+  { icon: <FaServer />, style: { top: '60%', left: '12%' }, color: "#6d4c41" , size : 18},
+  { icon: <FaBug />, style: { top: '70%', left: '80%' }, color: "#d84315" , size : 18},
+  { icon: <FaCogs />, style: { top: '15%', left: '60%' }, color: "#607d8b" },
+  { icon: <FaDatabase />, style: { top: '80%', left: '45%' }, color: "#8d6e63" },
+  { icon: <FaTerminal />, style: { top: '50%', left: '50%' }, color: "#333" },
+  { icon: <MdOutlineDeveloperMode />, style: { top: '25%', left: '35%' }, color: "#43a047" },
+  { icon: <AiOutlineTool />, style: { top: '65%', left: '65%' }, color: "#fbc02d" },
+  { icon: <BsGearWideConnected />, style: { top: '40%', left: '20%' }, color: "#0288d1" },
+  { icon: <HiOutlineCpuChip />, style: { top: '10%', left: '75%' }, color: "#7b1fa2" },
+  { icon: <PiFlowArrowBold />, style: { top: '85%', left: '25%' }, color: "#d81b60" },
+];
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -19,7 +31,7 @@ const Hero = () => {
     offset: ["start start", "end start"]
   });
 
-  // Use useSpring for extra smoothness only when scrolling
+  // Smooth transforms for hero
   const borderRadius = useSpring(
     useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]),
     { stiffness: 60, damping: 18 }
@@ -32,6 +44,15 @@ const Hero = () => {
     useTransform(scrollYProgress, [0, 0.7], [0, -80]),
     { stiffness: 60, damping: 18 }
   );
+
+  // Rotating icons: fast when scrolling up, slow when scrolling down
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360 * 4]);
+  // We'll use a spring for smoothness
+  const smoothRotate = useSpring(rotate, { stiffness: 40, damping: 30 });
+
+  // For slowed down rotation when scrolling down, we can use a second transform
+  const slowedRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const smoothSlowedRotate = useSpring(slowedRotate, { stiffness: 20, damping: 40 });
 
   useEffect(() => {
     const textElement = document.getElementById('ChangeText');
@@ -58,17 +79,47 @@ const Hero = () => {
     { name: '70%', texts: 'Team Player' },
     { name: '90%', texts: 'Eagerness To Learn' },
     { name: '54%', texts: 'Coding Skills' }
-  ]
+  ];
+
+
   return (
-    <motion.section ref={heroRef} className="hero" id="home" style={{ borderRadius, scale, y }}>
+      <motion.section
+      ref={heroRef}
+      className="hero"
+      id="home"
+      style={{ borderRadius, scale, y, position: "relative", overflow: "hidden" }}
+    >
+      
+      {backgroundIcons.map(({style , color , icon} , idx) => (
+        <motion.div
+          key={idx}
+          className="hero-bg-icon"
+          style={{
+            position: "absolute",
+            ...style,
+            zIndex: 0,
+            fontSize: "2.2rem",
+            color: color,
+            pointerEvents: "none",
+            opacity: 0.18,
+          }}
+          animate={{
+            rotate: [0, 360],
+            transition: {
+              repeat: Infinity,
+              duration: 16 - idx, // Stagger speeds for more interest
+              ease: "linear"
+            }
+          }}
+        >
+          {icon}
+        </motion.div>
+      ))}
+
       <motion.div
-        style={{ borderRadius, scale, y }}
+        style={{zIndex: 1 }}
         className="hero-content"
       >
-        <div className="spline-bg">
-          <Spline scene="https://prod.spline.design/UHHVCJtm-7Y3qLyP/scene.splinecode" preservedrawingbuffer='false' />
-          <div className="hero-overlay"></div>
-        </div>
         <div className="content">
           <h1>
             Hi! I am Judah Abraham. <span id='ChangeText'>Software Engineer</span>
@@ -86,8 +137,10 @@ const Hero = () => {
           ))}
         </div>
         <div className="btn-container">
-         <a href='#contact'> <Button title={'Lets Work Together'} /></a>      
-           </div>
+          <a href='#contact'>
+            <Button title={'Lets Work Together'} />
+          </a>
+        </div>
       <div className = 'socials'>
         <div className="insta">
           <a href='https://instagram.com/judahabraham2008' target='_blank'>
