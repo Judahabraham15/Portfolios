@@ -247,7 +247,7 @@ const Contact = () => {
               initial="hidden"
               animate="show"
               whileHover="hover"
-              style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", border: "none", background: "none" }}
+              style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", border: "none", background: "none" , fontFamily :'inherit'}}
               type='submit'
               onClick={handleSubmit}
             >
