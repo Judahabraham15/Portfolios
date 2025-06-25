@@ -16,7 +16,7 @@
   }
 .hero-content {
   width: 100%;
- height: 100%;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,19 +27,6 @@
   overflow: hidden;
    will-change: transform, border-radius;
    position: relative;
-   overflow: hidden;
-}
-.spline-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-.spline-bg canvas, .spline-bg > div {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
 }
 .dev{
     color: #2E8B57;
@@ -48,13 +35,7 @@
     font-size:30px !important;
     font-weight: 700;
 }
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(24,24,24,0.3);
-    z-index: 1;
-    backdrop-filter: blur(0.8px);
-}
+
   .content {
   display: flex;
   flex-direction: column;
@@ -73,7 +54,6 @@
 
 .content h1{
     font-size: 45px;
-    
 }
 .content p{
   font-size: 13px;
@@ -84,8 +64,7 @@
 #ChangeText {
     transition: opacity 0.5s ease, color 0.5s ease;
     display: inline-block;
-    min-width: 200px;
-    text-align: left;
+    min-width: 200px; 
 }
 .btn-container{
     margin-top:30px ;
@@ -164,9 +143,6 @@ text-align: center;
     
 }
 @media (max-width: 576px) {
-.spline-bg{
-    min-height: 80vh;
-}
 .content h1{
     font-size: 25px;
 }
