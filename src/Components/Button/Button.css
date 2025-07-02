@@ -42,7 +42,7 @@
   transition: transform 0.3s;
  color: #E0E0E0;
 }
-@media(max-width:480px){
+@media(max-width:576px){
   .button2{
     padding: 1.1em;
     padding-right: 2.5em;

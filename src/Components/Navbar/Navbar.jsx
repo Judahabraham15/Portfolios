@@ -1,7 +1,7 @@
 import React, { use } from 'react'
 import './Navbar.css'
 import { useState , useEffect } from 'react'
-import { TbMenu2, TbMenuDeep } from "react-icons/tb";
+import {  TbMenuDeep } from "react-icons/tb";
 import Sidebar from '../Sidebar/Sidebar';
 const Navbar = () => {
 
@@ -44,8 +44,8 @@ const Opensidebar = (e) => {
       <ul className="nav-links">
          <TbMenuDeep  color='white' size={25} onClick={Opensidebar} className='menu'><li><a href="#"></a></li></ TbMenuDeep >
         <li className='HideonMobile'><a href="#about">About</a></li>
-           <li className='HideonMobile'><a href="#qualifications">Experience</a></li>
         <li className='HideonMobile'><a href='#skills'> Skills</a></li>
+        <li className='HideonMobile'><a href="#qualifications">Experience</a></li>
         <li className='HideonMobile'><a href="#projects">Projects</a></li>
         <li className='HideonMobile'><a href="#contact">Contact</a></li>
       </ul>

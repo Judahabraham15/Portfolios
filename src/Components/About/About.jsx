@@ -13,7 +13,8 @@ const About = () => {
   const ref = useRef(null) 
   const isInView = useInView(ref, { once: true, margin: '-120px' , }) // triggers a bit before fully in view
 
-  const experience =[{
+  const experience =[
+  {
     text : '5+', 
     desc : "Months of Experience"
   },
@@ -125,8 +126,7 @@ initial={{ y: -30 , opacity: 0}}
   </a>
   
 </motion.div>
-                 </div>
-                
+                 </div>        
       </div>
       <div className="img-content">
        <motion.img
