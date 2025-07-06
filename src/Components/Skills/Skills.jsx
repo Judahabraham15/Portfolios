@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact,
 } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import {
 import './Skills.css'
 import { SiTailwindcss } from 'react-icons/si';
 import { SiFramer } from 'react-icons/si';
-import { motion, percent } from 'framer-motion';
+import { motion , useInView} from 'framer-motion';
 
 const skills = [
   { name: 'HTML', level: 'Advanced', icon: <FaHtml5/>, percent: 100 },
@@ -31,7 +31,37 @@ const skillVariants = {
   show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 80, damping: 12 } }
 };
 
+function useCountUp(isInView, target, duration = 1.2) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) {
+      setCount(0);
+      return;
+    }
+    let start = 0;
+    const end = parseInt(target);
+    if (isNaN(end)) return;
+    const increment = end / (duration * 60); // 60fps
+    let frame = 0;
+
+    function update() {
+      frame++;
+      const next = Math.min(Math.round(start + increment * frame), end);
+      setCount(next);
+      if (next < end) {
+        requestAnimationFrame(update);
+      }
+    }
+    update();
+  }, [isInView, target, duration]);
+
+  return count;
+}
 const Skills = () => {
+   const countRef = useRef(null);
+  const isInView = useInView(countRef, { once: true, margin: '-80px' });
+  const count = useCountUp(isInView, 7);
   return (
     <div className="skills-wrapper" id='skills'>
       <motion.div
@@ -87,12 +117,13 @@ const Skills = () => {
       </div>
           <motion.div
         className="ski"
+         ref={countRef}
         initial={{ opacity: 0, scale: 0.8, y: 40 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <span className='devss'> 7+</span>
+        <span className='devss'>{count}+</span>
         <p>Completed Projects</p>
       </motion.div>
     </div>

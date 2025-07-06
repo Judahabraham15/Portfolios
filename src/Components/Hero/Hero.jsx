@@ -33,7 +33,7 @@ const Hero = () => {
 
   // Smooth transforms for hero
   const borderRadius = useSpring(
-    useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]),
+    useTransform(scrollYProgress, [0, 0.7], ["0px", "90px"]),
     { stiffness: 60, damping: 18 }
   );
   const scale = useSpring(
