@@ -12,8 +12,8 @@ const skills = [
   { name: 'HTML', level: 'Advanced', icon: <FaHtml5/>, percent: 100 },
   { name: 'CSS', level: 'Intermediate', icon: <FaCss3Alt />, percent: 70 },
   { name: 'Javascript', level: 'Beginner', icon: <FaJs />, percent: 40 },
-  { name: 'React.Js', level: 'Beginner', icon: <FaReact />, percent: 40 },
-  { name: 'Tailwind.css', level: 'Beginner', icon: <SiTailwindcss/>, percent: 20 },
+  { name: 'React.Js', level: 'Beginner', icon: <FaReact />, percent: 45 },
+  { name: 'Tailwind.css', level: 'Intermediate', icon: <SiTailwindcss/>, percent: 60 },
   {name: 'Framer Motion' , level: 'Beginner' , icon: <SiFramer/>, percent :20}
 ];
 
