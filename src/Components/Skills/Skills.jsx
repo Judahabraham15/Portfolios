@@ -62,6 +62,7 @@ const Skills = () => {
    const countRef = useRef(null);
   const isInView = useInView(countRef, { once: true, margin: '-80px' });
   const count = useCountUp(isInView, 7);
+  
   return (
     <div className="skills-wrapper" id='skills'>
       <motion.div

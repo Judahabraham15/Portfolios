@@ -76,6 +76,32 @@
 .timeline-item h2{
     color: #2E8B57;
 }
+.time-btn{
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+.time-btn button{
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 0.8rem 1.0rem 0.8rem 1.0rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.active {
+  background-color: grey !important;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem; 
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.div{
+    display: flex;
+    flex-direction: column;
+}
 @media (max-width: 676px) {
   .timeline {
     padding: 10px 0;
