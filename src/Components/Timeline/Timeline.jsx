@@ -1,6 +1,6 @@
 import React from 'react'
 import './Timeline.css'
-import { FaCode, FaProjectDiagram, FaReact, FaUserFriends , FaSchool , FaRegCalendarAlt , FaLaptopCode } from 'react-icons/fa'
+import { FaCode, FaProjectDiagram, FaReact, FaUserFriends , FaSchool , FaRegCalendarAlt , FaLaptopCode , FaBriefcase , FaGraduationCap} from 'react-icons/fa'
 import { HiBadgeCheck } from "react-icons/hi";
 import { MdLocalPharmacy } from "react-icons/md"
 import { motion } from 'framer-motion'
@@ -35,8 +35,8 @@ const Timeline = () => {
         <h1>Experience</h1>
         <p>Judah<span className='dev'>4Good's</span> Journey</p>
         <div className="time-btn">
-          <button onClick={()=> setActiveTab("Experience")} className={activeTab === "Experience" ? "active" : ""}>Experience</button>
-          <button onClick={()=> setActiveTab("Education")} className={activeTab === "Education" ? "active" : ""}>Education</button>
+          <button onClick={()=> setActiveTab("Experience")} className={activeTab === "Experience" ? "active" : ""}> <FaBriefcase size={18} style={{verticalAlign:'middle' , marginRight:'8px'}}/>Experience</button>
+          <button onClick={()=> setActiveTab("Education")} className={activeTab === "Education" ? "active" : ""}> <FaGraduationCap size={18} style ={{ verticalAlign:'middle' , marginRight:'8px'}}/> Education</button>
         </div>
       </motion.div>
       <div className="timeline" style={{ position: 'relative' }}>

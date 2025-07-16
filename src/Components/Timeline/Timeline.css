@@ -144,4 +144,10 @@
     font-size: 0.95rem;
     text-align: center;
   }
+    .tit{
+    font-size: 0.85rem !important;
+  }
+  .ic{
+    font-size: 0.85rem !important;
+  }
 }
