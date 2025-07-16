@@ -97,7 +97,7 @@ const Projects = () => {
                 transition={{ type: "spring", stiffness: 120 }}
               >
                 <div className="img-src">
-                  <img src={img} className='img-blink' alt={title} />
+                  <motion.img src={img} className='img-blink' alt={title} whileHover={{rotate: 2.5 , scale: 1.09 }} />
                 </div>
                 <div className="card-text">
                   <h1>{title}</h1>
