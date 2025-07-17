@@ -4,7 +4,7 @@ import {
 } from 'react-icons/fa';
 
 import './Skills.css'
-import { SiTailwindcss } from 'react-icons/si';
+import { SiTailwindcss ,SiTypescript} from 'react-icons/si';
 import { SiFramer } from 'react-icons/si';
 import { motion , useInView} from 'framer-motion';
 
@@ -14,7 +14,8 @@ const skills = [
   { name: 'Javascript', level: 'Beginner', icon: <FaJs />, percent: 40 },
   { name: 'React.Js', level: 'Beginner', icon: <FaReact />, percent: 50 },
   { name: 'Tailwind.css', level: 'Intermediate', icon: <SiTailwindcss/>, percent: 60 },
-  {name: 'Framer Motion' , level: 'Beginner' , icon: <SiFramer/>, percent :20}
+  {name: 'Framer Motion' , level: 'Beginner' , icon: <SiFramer/>, percent :20},
+  {name: 'TypeScript' , level: 'Beginner' , icon:<SiTypescript/> , percent: 10}
 ];
 
 const containerVariants = {
