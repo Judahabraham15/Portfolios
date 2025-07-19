@@ -1,35 +1,48 @@
-import React, { useEffect, useState, useRef } from 'react'
-import {
-  FaHtml5, FaCss3Alt, FaJs, FaReact,
-} from 'react-icons/fa';
+import React, { useEffect, useState, useRef } from "react";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
 
-import './Skills.css'
-import { SiTailwindcss ,SiTypescript} from 'react-icons/si';
-import { SiFramer } from 'react-icons/si';
-import { motion , useInView} from 'framer-motion';
+import "./Skills.css";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
+import { motion, useInView } from "framer-motion";
 
 const skills = [
-  { name: 'HTML', level: 'Advanced', icon: <FaHtml5/>, percent: 100 },
-  { name: 'CSS', level: 'Intermediate', icon: <FaCss3Alt />, percent: 70 },
-  { name: 'Javascript', level: 'Beginner', icon: <FaJs />, percent: 40 },
-  { name: 'React.Js', level: 'Beginner', icon: <FaReact />, percent: 50 },
-  { name: 'Tailwind.css', level: 'Intermediate', icon: <SiTailwindcss/>, percent: 60 },
-  {name: 'Framer Motion' , level: 'Beginner' , icon: <SiFramer/>, percent :20},
-  {name: 'TypeScript' , level: 'Beginner' , icon:<SiTypescript/> , percent: 10}
+  { name: "HTML", level: "Advanced", icon: <FaHtml5 />, percent: 100 },
+  { name: "CSS", level: "Intermediate", icon: <FaCss3Alt />, percent: 70 },
+  { name: "Javascript", level: "Beginner", icon: <FaJs />, percent: 40 },
+  { name: "React.Js", level: "Beginner", icon: <FaReact />, percent: 50 },
+  {
+    name: "Tailwind.css",
+    level: "Intermediate",
+    icon: <SiTailwindcss />,
+    percent: 60,
+  },
+  { name: "Framer Motion", level: "Beginner", icon: <SiFramer />, percent: 20 },
+  {
+    name: "TypeScript",
+    level: "Beginner",
+    icon: <SiTypescript />,
+    percent: 10,
+  },
 ];
 
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.15
-    }
-  }
+      staggerChildren: 0.15,
+    },
+  },
 };
 
 const skillVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 80, damping: 12 } }
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 80, damping: 12 },
+  },
 };
 
 function useCountUp(isInView, target, duration = 1.2) {
@@ -60,12 +73,12 @@ function useCountUp(isInView, target, duration = 1.2) {
   return count;
 }
 const Skills = () => {
-   const countRef = useRef(null);
-  const isInView = useInView(countRef, { once: true, margin: '-80px' });
+  const countRef = useRef(null);
+  const isInView = useInView(countRef, { once: true, margin: "-80px" });
   const count = useCountUp(isInView, 7);
-  
+
   return (
-    <div className="skills-wrapper" id='skills'>
+    <div className="skills-wrapper" id="skills">
       <motion.div
         className="skills-cont"
         initial={{ opacity: 0, y: -40 }}
@@ -74,7 +87,9 @@ const Skills = () => {
         viewport={{ once: true }}
       >
         <h1>Skills</h1>
-        <p>Why Choose Judah<span className='dev'>4Good?</span></p>
+        <p>
+          Why Choose Judah<span className="dev">4Good?</span>
+        </p>
       </motion.div>
       <div className="skills-wrap">
         <motion.h2
@@ -94,7 +109,12 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {skills.map(({ name, icon, level, percent }, idx) => (
-            <motion.div className="skill" key={name} variants={skillVariants} whileHover={{ scale: 1.05 }}>
+            <motion.div
+              className="skill"
+              key={name}
+              variants={skillVariants}
+              whileHover={{ scale: 1.05 }}
+            >
               <motion.div
                 className="skill-icon"
                 whileHover={{ rotate: [0, -10, 10, 0], scale: 1.2 }}
@@ -108,7 +128,11 @@ const Skills = () => {
                   className="progress-fill"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${percent}%` }}
-                  transition={{ duration: 1, delay: 0.2 + idx * 0.1, type: "spring" }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.2 + idx * 0.1,
+                    type: "spring",
+                  }}
                   viewport={{ once: true }}
                 />
               </div>
@@ -117,21 +141,19 @@ const Skills = () => {
           ))}
         </motion.div>
       </div>
-          <motion.div
+      <motion.div
         className="ski"
-         ref={countRef}
+        ref={countRef}
         initial={{ opacity: 0, scale: 0.8, y: 40 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <span className='devss'>{count}+</span>
+        <span className="devss">{count}+</span>
         <p>Completed Projects</p>
       </motion.div>
     </div>
+  );
+};
 
-  )
-}
-
-
-export default Skills
+export default Skills;

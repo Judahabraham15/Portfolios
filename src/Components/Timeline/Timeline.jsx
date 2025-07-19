@@ -15,7 +15,7 @@ const Timeline = () => {
   ];
     const Education = [
  { title: "Secondary School", desc: "SMC College", side: "left", icon: <FaSchool color="#218838" /> , iconic:<FaRegCalendarAlt color='grey' size={20}/> , texts:'2010 - 2024'},
-    {title:"B.sc Pharmacy" , desc :"Lagos State University" , side: 'right' , icon: <MdLocalPharmacy color="#218838" /> , iconic:<FaRegCalendarAlt color='grey' size={20}/> , texts:'2025 - Present'},
+    {title:"B.sc Mass Comm" , desc :"Lagos State University" , side: 'right' , icon: <MdLocalPharmacy color="#218838" /> , iconic:<FaRegCalendarAlt color='grey' size={20}/> , texts:'2025 - Present'},
     { title: "Web Development", desc: 'Learning and Practicing' ,side: "left", icon: <FaLaptopCode color="#218838" /> , texts:'2024 - Present' , iconic:<FaRegCalendarAlt color='grey' size={20}/>  },
     { title: "React Development", desc: "Learning and practicing", side: "right", icon: <FaReact color="#218838" /> , texts:'2024 - Present' , iconic:<FaRegCalendarAlt color='grey' size={20}/> }
 ];
