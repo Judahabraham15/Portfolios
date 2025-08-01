@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaSpotify } from "react-icons/fa";
 
 import "./Skills.css";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { SiFramer } from "react-icons/si";
-import { motion, useInView } from "framer-motion";
+import { motion, percent, useInView } from "framer-motion";
 
 const skills = [
   { name: "HTML", level: "Advanced", icon: <FaHtml5 />, percent: 100 },
@@ -24,6 +24,12 @@ const skills = [
     icon: <SiTypescript />,
     percent: 10,
   },
+  {
+    name: "Spotify",
+    level : "Advanced",
+    icon : <FaSpotify/>,
+    percent: 100,
+  }
 ];
 
 const containerVariants = {
