@@ -98,7 +98,8 @@ initial={{ y: -30 , opacity: 0}}
        
       <div className="about-content">
             <h1>Who is Judah <span className='dev'>Abraham?</span> </h1>
-            <p>I'm Judah Abraham, Known as "Judah4Good". A passionate 16-year-old self-taught aspiring FullStack Developer with over 5+ months experience and a strong drive to solve real world problems and contribute greatly in the development of both apps and web develpoment. I am a DIY guy.
+            <p>I’m Judah Abraham, also known as “Judah4Good” — a passionate 16-year-old self-taught aspiring Full-Stack Developer with 7+ months of hands-on experience. My main focus is mastering the MERN stack (MongoDB, Express, React, Node.js), where I’m continuously building projects to sharpen my skills and deepen my understanding.
+I love tackling real-world problems through code and pushing myself to grow in both web and app development. As a DIY learner, I thrive on breaking things down, experimenting, and figuring out how to make ideas come to life.
                 <br/>
                 <br/>
                 At 16 , I have created some projects from a todo-list app to a frontend blinkist website and I am just getting warmed up! I love solving real world problems , adapting easily , handling pressure and I love building modern and functional user interfaces.
