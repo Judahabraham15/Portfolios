@@ -9,6 +9,7 @@ import Contacts from "./Components/Contacts";
 import Footer from "./Components/Footer";
 import React, { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
+import IsUnderonstruction from "./Components/IsUnderonstruction";
 // import Lenis from '@studio-freight/lenis'
 
 function App() {
@@ -19,7 +20,11 @@ function App() {
       setisLoading(false);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isUnderConstruction]);
+  
+  if(isUnderConstruction){
+    return <IsUnderonstruction/>
+  }
   return (
     <div className="app">
       {isLoading ? <Loader /> : <Hero />}
