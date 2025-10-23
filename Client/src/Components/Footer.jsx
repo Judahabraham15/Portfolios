@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="flex flex-col lg:flex-row items-center justify-between border-t border-t-black min-h-[10vh] px-5 py-4 text-center lg:text-left"
+      className="flex flex-col lg:flex-row items-center justify-between border-t border-t-black min-h-[10vh] px-6 py-4 text-center lg:text-left"
     >
       <span className="font-bold text-[15px]">
         {year} © Judah <span className="text-[#2E8B57]">Abraham</span>, All Rights Reserved

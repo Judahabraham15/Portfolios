@@ -40,14 +40,16 @@ const Timeline = () => {
       icon: <FaProjectDiagram color="#218838" />,
     },
     {
-      title: "React & Tailwind",
-      desc: "Dove into React.js and Tailwind CSS for modern UI development.",
+      title: "Junior Frontend Engineer",
+      desc: "MedReach",
       side: "left",
-      icon: <FaReact color="#218838" />,
+      icon: <FaLaptopCode color="#218838" />,
+      texts: "2025 - Present",
+      iconic: <FaRegCalendarAlt color="grey" size={20} />,
     },
     {
       title: "Freelancing",
-      desc: "Yet to take collaborative Jobs.",
+      desc: "MedReach Frontend Engineer",
       side: "right",
       icon: <FaUserFriends color="#218838" />,
     },
@@ -183,7 +185,7 @@ const Timeline = () => {
                   boxShadow: "0 4px 24px rgba(33,136,56,0.13)",
                 }}
               >
-                <h2>
+                <h2 className="hh">
                   <span style={{ marginRight: 8, verticalAlign: "middle" }}>
                     {icon}
                   </span>

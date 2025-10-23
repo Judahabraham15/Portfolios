@@ -1,4 +1,3 @@
-import React, { use } from 'react'
 import './Navbar.css'
 import { useState , useEffect } from 'react'
 import {  TbMenuDeep } from "react-icons/tb";
@@ -49,7 +48,7 @@ const Opensidebar = (e) => {
         <li className='HideonMobile'><a href="#projects">Projects</a></li>
         <li className='HideonMobile'><a href="#contact">Contact</a></li>
       </ul>
-      <Sidebar/>
+      {/* <Sidebar/> */}
     </nav>
   )
 }

@@ -102,6 +102,9 @@
     display: flex;
     flex-direction: column;
 }
+.hh{
+  max-width: 300px;
+}
 @media (max-width: 676px) {
   .timeline {
     padding: 10px 0;
