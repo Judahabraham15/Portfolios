@@ -21,7 +21,9 @@ function App() {
     }, 5000);
     return () => clearInterval(timer);
   }, [isUnderConstruction]);
-  
+  if(isUnderConstruction){
+    document.title = "Under Construction | Portfolio"
+  }
   if(isUnderConstruction){
     return <IsUnderonstruction/>
   }
