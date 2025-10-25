@@ -9,7 +9,7 @@ import Contacts from "./Components/Contacts";
 import Footer from "./Components/Footer";
 import React, { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
-import IsUnderonstruction from "./Components/IsUnderonstruction";
+import IsUnderonstruction from "./Components/IsUnderConstruction";
 // import Lenis from '@studio-freight/lenis'
 
 function App() {
