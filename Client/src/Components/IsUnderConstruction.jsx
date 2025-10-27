@@ -137,7 +137,7 @@ const IsUnderonstruction = () => {
                     </motion.div>
                   ))}
                 </div>
-                {/* Features List */}
+                
                 <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl mx-auto">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-center justify-center">
