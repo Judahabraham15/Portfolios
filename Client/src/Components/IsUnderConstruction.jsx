@@ -18,8 +18,8 @@ const IsUnderonstruction = () => {
   ];
   const features = [
     "Improved About Section",
-    "Projects Showcase Gallery",
-    "Dark Mode + Animations",
+    "Improved Timeline Section",
+    "Updated Project Section",
     "Enhanced Contact Page",
     "Loading Transitions",
     "Performance Optimization",
