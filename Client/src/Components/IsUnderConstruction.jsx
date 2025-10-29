@@ -19,9 +19,9 @@ const IsUnderonstruction = () => {
   const features = [
     "Improved About Section",
     "Improved Timeline Section",
-    "Updated Project Section",
-    "Enhanced Contact Page",
-    "Loading Transitions",
+    "Improved Client-side routing",
+    "Tailwind CSS implementation",
+    "Interactive Navbar",
     "Performance Optimization",
     "Mobile Responsiveness",
   ];
@@ -137,7 +137,7 @@ const IsUnderonstruction = () => {
                     </motion.div>
                   ))}
                 </div>
-                
+
                 <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl mx-auto">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-center justify-center">
