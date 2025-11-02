@@ -10,7 +10,17 @@ import {
   FaDatabase,
   FaTerminal,
   FaClock,
+  FaDownload,
+  FaLinkedin,
+  FaInstagram,
 } from "react-icons/fa";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandInstagram,
+  IconBrandX,
+} from "@tabler/icons-react";
+
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { AiOutlineTool } from "react-icons/ai";
 import { BsGearWideConnected } from "react-icons/bs";
@@ -84,9 +94,11 @@ const Hero = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
   const formatTime = (num) => {
-    return num < 10 ? `0${num} ` : num;
+    return num < 10 ? `0${num}` : num;
   };
+
   const hours = formatTime(time.getHours());
   const minutes = formatTime(time.getMinutes());
   const seconds = formatTime(time.getSeconds());
@@ -119,31 +131,6 @@ const Hero = () => {
     damping: 40,
   });
 
-  useEffect(() => {
-    const textElement = document.getElementById("ChangeText");
-    const textArray = [
-      "Frontend Engineer",
-      "Aspiring FullStack Dev",
-      "Student",
-      "Software Engineer",
-    ];
-    let textIndex = 0;
-
-    const ChangeText = () => {
-      textElement.style.opacity = 0;
-      setTimeout(() => {
-        textElement.textContent = textArray[textIndex];
-        textIndex = (textIndex + 1) % textArray.length;
-        textElement.style.opacity = 1;
-        textElement.style.color = "#2E8B57";
-      }, 500);
-    };
-    const interval = setInterval(() => {
-      ChangeText();
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
   const categories = [
     { name: "70%", texts: "Team Player" },
     { name: "90%", texts: "Eagerness To Learn" },
@@ -157,7 +144,6 @@ const Hero = () => {
       id="home"
       style={{ borderRadius, scale, y }}
     >
-     
       {/* Background Icons */}
       {backgroundIcons.map(({ style, color, icon }, idx) => (
         <motion.div
@@ -187,93 +173,85 @@ const Hero = () => {
       {/* Hero Content */}
       <motion.div
         style={{ zIndex: 1 }}
-        className="w-full pr-0 py-[40px] flex flex-col items-center justify-center relative z-[2] transition-[border-radius,y] duration-[0.6s] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden will-change-[transform,border-radius]"
+        className="w-full pr-0 py-[130px] flex flex-col items-center justify-center relative z-[2] transition-[border-radius,y] duration-[0.6s] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden will-change-[transform,border-radius]"
       >
+        <div className="flex items-center justify-center gap-5.5 mb-5 px-6 py-3 rounded-full">
+          {/* Available for Hire */}
+          <div className="flex items-center gap-2 bg-white/6 px-2 py-1.5 md:px-2.5 md:py-2 rounded-full">
+            <div
+              style={{
+                animation: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              }}
+              className="w-3 h-3 bg-[#2E8B57] rounded-full animate-pulse"
+            ></div>
+            <span className="text-white text-[13px] font-medium font-outfit">
+              Available for Hire
+            </span>
+          </div>
+
+          {/* Clock */}
+          <div className="flex items-center gap-1.5">
+            <FaClock className="text-[#888] text-md md:text-lg" />
+            <span className="text-[#E0E0E0] text-md md:text-lg font-outfit font-medium tabular-nums">
+              {hours}:{minutes}:{seconds}
+            </span>
+          </div>
+        </div>
+
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center text-center p-[20px] font-nunito z-[2] text-[#E0E0E0] max-w-[700px] mx-auto relative">
-          <h1 className="text-[45px] max-[576px]:text-[25px] min-[577px]:max-[768px]:text-[2rem] min-[577px]:max-[768px]:break-words min-[577px]:max-[768px]:whitespace-normal font-semibold">
-            Hi! I am Judah Abraham.{" "}
+          {/* Profile Image */}
+          <div className="flex flex-col items-center justify-center mb-6">
+            <div className="w-[130px] h-[130px] rounded-full overflow-hidden border-2 border-white/60">
+              <img
+                src="https://res.cloudinary.com/dydmptpcg/image/upload/v1761944916/image_5_furztz.jpg" // Replace this with the actual path to your uploaded image
+                alt="Judah Abraham"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <h1 className="text-[45px] max-[576px]:text-[25px] min-[577px]:max-[768px]:text-[2rem] min-[577px]:max-[768px]:break-words min-[577px]:max-[768px]:whitespace-normal font-semibold font-outfit">
+            I am Judah Abraham,{" "}
             <span
               id="ChangeText"
-              className="transition-[opacity,color] duration-500 ease-in-out inline-block min-w-[200px] min-[577px]:max-[768px]:min-w-auto min-[577px]:max-[768px]:text-center"
+              className="text-[#2E8B57] transition-[opacity,color] duration-500 ease-in-out inline-block min-w-[200px] min-[577px]:max-[768px]:min-w-auto min-[577px]:max-[768px]:text-center"
             >
               Software Engineer
             </span>
           </h1>
-          <p className="text-[13px] max-[576px]:text-[10px] max-[576px]:w-full max-[576px]:max-w-[450px] max-[576px]:font-[200] min-[577px]:max-[768px]:text-[13px] min-[577px]:max-[768px]:w-full min-[577px]:max-[768px]:max-w-[599px] min-[769px]:max-[800px]:w-full min-[769px]:max-[800px]:max-w-[599px] min-[801px]:max-[1200px]:max-w-[620px] text-white tracking-[0.5px] mt-2.5">
-            As a dedicated and aspiring software developer, I combine technical
-            expertise with creative vision to build software that is both
-            powerful and intuitive. With a focus on quality, reliability, and
-            user experience, I deliver solutions that meet the highest standards
-            of excellence and drive business success.
+          <p className="text-[13px] max-[576px]:text-[10px] max-[576px]:w-full max-[576px]:max-w-[450px] max-[576px]:font-[200] min-[577px]:max-[768px]:text-[13px] min-[577px]:max-[768px]:w-full min-[577px]:max-[768px]:max-w-[599px] min-[769px]:max-[800px]:w-full min-[769px]:max-[800px]:max-w-[599px] min-[801px]:max-[1200px]:max-w-[620px] text-white tracking-[0.5px] mt-2.5 mb-6">
+            I combine technical expertise and creative vision to build intuitive
+            software that prioritizes quality, reliability, and user experience.
           </p>
-        </div>
- {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] rounded-lg border border-[#333]">
-      <FaClock className="text-[#888] text-lg" />
-      <span className="text-[#E0E0E0] text-xl font-nunito font-medium tracking-wide">
-        {hours}:{minutes}:{seconds}
-      </span>
-    </div> */}
-        {/* Qualities/Stats */}
-        <div className="flex flex-nowrap flex-row items-start justify-between w-[30%] max-[576px]:flex-row max-[576px]:items-center max-[576px]:justify-center max-[576px]:w-[85%] max-[576px]:gap-5 min-[577px]:max-[768px]:w-[70%] min-[577px]:max-[768px]:gap-4 min-[769px]:max-[800px]:w-[70%] min-[801px]:max-[1200px]:w-[70%] ml-0 gap-2.5 font-['Nunito']">
-          {categories.map(({ name, texts }, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-start w-[30%] max-[576px]:w-[90%] p-2.5 box-border gap-2 text-[#2E8B57] z-10"
-            >
-              <span className="text-[30px] max-[576px]:!text-[20px] min-[577px]:max-[768px]:!text-[24px] font-bold">
-                {name}
-              </span>
-              <p className="text-[#E0E0E0] w-[105%] max-[576px]:text-[10px] max-[576px]:w-full max-[576px]:text-center min-[577px]:max-[768px]:text-xs min-[577px]:max-[768px]:w-full text-[14px] text-center">
-                {texts}
-              </p>
-            </div>
-          ))}
-        </div>
 
-        {/* Button */}
-        <div className="mt-[30px] mb-[30px] min-[577px]:max-[768px]:mt-5 min-[577px]:max-[768px]:mb-5">
-          <a href="#contact" className="no-underline list-none">
-            <Button title={"Lets Work Together"} />
-          </a>
+          <div className="flex items-center gap-4 mt-2">
+            <div className="flex items-center gap-3 ">
+              <a href="#contact">
+                <button className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium  rounded-md hover:bg-white transition-colors duration-300">
+                  <span className="text-sm md:text-md">Get in touch</span>
+                </button>
+              </a>
+              <a href="/path-to-your-cv.pdf" download>
+                <button className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-white/10 text-[#E0E0E0] font-outfit font-medium  rounded-md hover:bg-[#247a4a] transition-colors duration-300">
+                  <span className="text-sm md:text-md">Download CV</span>
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
-     
+        <p className="text-[#E0E0E0] text-[13px] md:text-[15px] font-extralight font-outfit mt-1.5  ">
+          Connect with me
+        </p>
         {/* Socials */}
-        <div className="fixed top-1/2 left-[15px] -translate-y-1/2 flex flex-col items-center justify-start w-auto ml-0 gap-3.5 z-20 max-[576px]:flex-row max-[576px]:items-center max-[576px]:justify-center max-[576px]:static max-[576px]:mt-4 min-[577px]:max-[768px]:flex-row min-[577px]:max-[768px]:static min-[577px]:max-[768px]:justify-center min-[577px]:max-[768px]:mt-6 min-[577px]:max-[768px]:gap-[18px]">
+        <div className="flex flex-row items-center justify-center gap-4 mt-2 max-[576px]:mt-3 min-[577px]:max-[768px]:mt-4">
           <div className="insta">
             <a
               href="https://instagram.com/judahabraham2008"
               target="_blank"
-              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 rounded-full bg-[rgba(0,0,0,0.411)] backdrop-blur-[8px] transition-[background,box-shadow,transform] duration-300 ease-[0.3s,0.3s,0.2s] cursor-pointer mb-1 leading-[0] hover:shadow-[0_0_15px_#00ff99]"
+              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9  cursor-pointer leading-[0] "
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0,0,256,256"
-                width="30px"
-                height="30px"
-                fillRule="nonzero"
-                className="z-[1000] fill-[#2E8B57] w-6 h-6 max-[576px]:w-5 max-[576px]:h-5 min-[577px]:max-[768px]:w-[22px] min-[577px]:max-[768px]:h-[22px]"
-              >
-                <g
-                  fillRule="nonzero"
-                  stroke="none"
-                  strokeWidth="1"
-                  strokeLinecap="butt"
-                  strokeLinejoin="miter"
-                  strokeMiterlimit="10"
-                  strokeDasharray=""
-                  strokeDashoffset="0"
-                  fontFamily="none"
-                  fontWeight="none"
-                  fontSize="none"
-                  textAnchor="none"
-                >
-                  <g transform="scale(8,8)">
-                    <path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path>
-                  </g>
-                </g>
-              </svg>
+              <FaInstagram className="w-7 h-7 text-white/60 " />
             </a>
           </div>
 
@@ -281,17 +259,9 @@ const Hero = () => {
             <a
               href="https://github.com/JudahAbraham15"
               target="_blank"
-              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 rounded-full bg-[rgba(0,0,0,0.411)] backdrop-blur-[8px] transition-[background,box-shadow,transform] duration-300 ease-[0.3s,0.3s,0.2s] cursor-pointer mb-1 leading-[0] hover:shadow-[0_0_15px_#00ff99]"
+              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 cursor-pointer leading-[0]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 30 30"
-                width="30px"
-                height="30px"
-                className="z-[1000] fill-[#2E8B57] w-6 h-6 max-[576px]:w-5 max-[576px]:h-5 min-[577px]:max-[768px]:w-[22px] min-[577px]:max-[768px]:h-[22px]"
-              >
-                <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
-              </svg>
+              <IconBrandGithub className="w-7 h-7 text-white/60" />
             </a>
           </div>
 
@@ -299,20 +269,9 @@ const Hero = () => {
             <a
               href="https://twitter.com/AbrahamJud10090"
               target="_blank"
-              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 rounded-full bg-[rgba(0,0,0,0.411)] backdrop-blur-[8px] transition-[background,box-shadow,transform] duration-300 ease-[0.3s,0.3s,0.2s] cursor-pointer mb-1 leading-[0] hover:shadow-[0_0_15px_#00ff99]"
+              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 cursor-pointer leading-[0] "
             >
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 512 512"
-                className="z-[1000] fill-[#2E8B57] w-6 h-6 max-[576px]:w-5 max-[576px]:h-5 min-[577px]:max-[768px]:w-[22px] min-[577px]:max-[768px]:h-[22px]"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
-              </svg>
+              <IconBrandX className="w-7 h-7 text-white/60" />
             </a>
           </div>
 
@@ -320,16 +279,9 @@ const Hero = () => {
             <a
               href="https://www.linkedin.com/in/judah-abraham-aaba1b339/"
               target="_blank"
-              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 rounded-full bg-[rgba(0,0,0,0.411)] backdrop-blur-[8px] transition-[background,box-shadow,transform] duration-300 ease-[0.3s,0.3s,0.2s] cursor-pointer mb-1 leading-[0] hover:shadow-[0_0_15px_#00ff99]"
+              className="flex items-center justify-center w-11 h-11 max-[576px]:w-[30px] max-[576px]:h-[30px] min-[577px]:max-[768px]:w-9 min-[577px]:max-[768px]:h-9 cursor-pointer leading-[0] "
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="z-[1000] fill-[#2E8B57] w-6 h-6 max-[576px]:w-5 max-[576px]:h-5 min-[577px]:max-[768px]:w-[22px] min-[577px]:max-[768px]:h-[22px]"
-                height="1.6em"
-                viewBox="0 0 448 512"
-              >
-                <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
-              </svg>
+              <FaLinkedin className="w-7 h-7 text-white/60" />
             </a>
           </div>
         </div>
