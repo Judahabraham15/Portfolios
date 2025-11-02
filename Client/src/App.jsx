@@ -14,7 +14,7 @@ import IsUnderonstruction from "./Components/IsUnderConstruction";
 
 function App() {
   const [isLoading, setisLoading] = useState(true);
-  const isUnderConstruction = false;
+  const isUnderConstruction = true;
   useEffect(() => {
     const timer = setTimeout(() => {
       setisLoading(false);
