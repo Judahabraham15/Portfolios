@@ -1,7 +1,7 @@
 import "./App.css";
 import About from "./Components/About/About";
-import Hero from "./Components/Hero/Hero";
-import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Timeline from "./Components/Timeline/Timeline";
@@ -14,18 +14,18 @@ import IsUnderonstruction from "./Components/IsUnderConstruction";
 
 function App() {
   const [isLoading, setisLoading] = useState(true);
-  const isUnderConstruction = true;
+  const isUnderConstruction = false;
   useEffect(() => {
     const timer = setTimeout(() => {
       setisLoading(false);
     }, 5000);
     return () => clearInterval(timer);
   }, [isUnderConstruction]);
-  if(isUnderConstruction){
-    document.title = "Under Construction | Portfolio"
+  if (isUnderConstruction) {
+    document.title = "Under Construction | Portfolio";
   }
-  if(isUnderConstruction){
-    return <IsUnderonstruction/>
+  if (isUnderConstruction) {
+    return <IsUnderonstruction />;
   }
   return (
     <div className="app">
