@@ -52,11 +52,11 @@ const backgroundIcons = [
     size: 18,
   },
   { icon: <FaCogs />, style: { top: "15%", left: "60%" }, color: "#607d8b" },
-  {
-    icon: <FaDatabase />,
-    style: { top: "80%", left: "45%" },
-    color: "#8d6e63",
-  },
+  //! {
+  //!  icon: <FaDatabase />,
+  //!   style: { top: "80%", left: "45%" },
+  //!   color: "#8d6e63",
+  //! },
   { icon: <FaTerminal />, style: { top: "50%", left: "50%" }, color: "#333" },
   {
     icon: <MdOutlineDeveloperMode />,
@@ -173,10 +173,9 @@ const Hero = () => {
       {/* Hero Content */}
       <motion.div
         style={{ zIndex: 1 }}
-        className="w-full pr-0 py-[130px] flex flex-col items-center justify-center relative z-[2] transition-[border-radius,y] duration-[0.6s] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden will-change-[transform,border-radius]"
+        className="w-full pr-0 py-[115px] flex flex-col items-center justify-center relative z-[2] transition-[border-radius,y] duration-[0.6s] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden will-change-[transform,border-radius]"
       >
         <div className="flex items-center justify-center gap-5.5 mb-5 px-6 py-3 rounded-full">
-          {/* Available for Hire */}
           <div className="flex items-center gap-2 bg-white/6 px-2 py-1.5 md:px-2.5 md:py-2 rounded-full">
             <div
               style={{
@@ -189,7 +188,6 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Clock */}
           <div className="flex items-center gap-1.5">
             <FaClock className="text-[#888] text-md md:text-lg" />
             <span className="text-[#E0E0E0] text-md md:text-lg font-outfit font-medium tabular-nums">
@@ -197,21 +195,30 @@ const Hero = () => {
             </span>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center text-center p-[20px] font-nunito z-[2] text-[#E0E0E0] max-w-[700px] mx-auto relative">
-          {/* Profile Image */}
           <div className="flex flex-col items-center justify-center mb-6">
-            <div className="w-[130px] h-[130px] rounded-full overflow-hidden border-2 border-white/60">
+            <motion.div
+              className="w-[110px] h-[110px] sm:w-[120px] sm:h-[120px] md:w-[130px] md:h-[130px] rounded-full overflow-hidden border-3 border-white/60"
+              initial={{ rotateY: 0, y: -80, opacity: 0 }}
+              whileInView={{ rotateY: 360, y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <img
-                src="https://res.cloudinary.com/dydmptpcg/image/upload/v1761944916/image_5_furztz.jpg" // Replace this with the actual path to your uploaded image
+                src="https://res.cloudinary.com/dydmptpcg/image/upload/v1761944916/image_5_furztz.jpg"
                 alt="Judah Abraham"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
-            </div>
+            </motion.div>
           </div>
-
-          <h1 className="text-[45px] max-[576px]:text-[25px] min-[577px]:max-[768px]:text-[2rem] min-[577px]:max-[768px]:break-words min-[577px]:max-[768px]:whitespace-normal font-semibold font-outfit">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-[45px] max-[576px]:text-[25px] min-[577px]:max-[768px]:text-[2rem] min-[577px]:max-[768px]:break-words min-[577px]:max-[768px]:whitespace-normal font-semibold font-outfit"
+          >
             I am Judah Abraham,{" "}
             <span
               id="ChangeText"
@@ -219,11 +226,17 @@ const Hero = () => {
             >
               Software Engineer
             </span>
-          </h1>
-          <p className="text-[13px] max-[576px]:text-[10px] max-[576px]:w-full max-[576px]:max-w-[450px] max-[576px]:font-[200] min-[577px]:max-[768px]:text-[13px] min-[577px]:max-[768px]:w-full min-[577px]:max-[768px]:max-w-[599px] min-[769px]:max-[800px]:w-full min-[769px]:max-[800px]:max-w-[599px] min-[801px]:max-[1200px]:max-w-[620px] text-white tracking-[0.5px] mt-2.5 mb-6">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-[13px] max-[576px]:text-[10px] max-[576px]:w-full max-[576px]:max-w-[450px] max-[576px]:font-[200] min-[577px]:max-[768px]:text-[13px] min-[577px]:max-[768px]:w-full min-[577px]:max-[768px]:max-w-[599px] min-[769px]:max-[800px]:w-full min-[769px]:max-[800px]:max-w-[599px] min-[801px]:max-[1200px]:max-w-[620px] text-white tracking-[0.5px] mt-2.5 mb-6"
+          >
             I combine technical expertise and creative vision to build intuitive
             software that prioritizes quality, reliability, and user experience.
-          </p>
+          </motion.p>
 
           <div className="flex items-center gap-4 mt-2">
             <div className="flex items-center gap-3 ">
@@ -240,9 +253,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <p className="text-[#E0E0E0] text-[13px] md:text-[15px] font-extralight font-outfit mt-1.5  ">
+        <motion.p
+          initial={{ opacity: 0, y: 2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="text-[#E0E0E0] text-[13px] md:text-[15px] font-extralight font-outfit mt-1.5  "
+        >
           Connect with me
-        </p>
+        </motion.p>
         {/* Socials */}
         <div className="flex flex-row items-center justify-center gap-4 mt-2 max-[576px]:mt-3 min-[577px]:max-[768px]:mt-4">
           <div className="insta">
