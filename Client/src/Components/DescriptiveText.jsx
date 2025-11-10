@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -8,7 +9,33 @@ const DescriptiveText = () => {
     { number: "100%", text: "Clients Satisfaction" },
   ];
 
-  // Animation Variants
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) controls.start("visible");
+  }, [isInView, controls]);
+
+
+  const mainText = "With 1+ years of hands-on experience, I've helped startups and teams build modern, accessible web experiences with cutting-edge frontend technologies.";
+  const words = mainText.split(" ");
+
+
+  const wordVariant = {
+    hidden: { opacity: 0, y: 20, filter: "blur(20px)" },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.5,
+        delay: i * 0.08,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 1) => ({
@@ -22,22 +49,14 @@ const DescriptiveText = () => {
     }),
   };
 
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) controls.start("visible");
-  }, [isInView, controls]);
-
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-center min-h-[50vh] justify-center p-4 px-2 sm:p-6 mx-5 overflow-hidden  mt-[5rem]"
+      className="relative flex items-center min-h-[50vh] justify-center p-4 px-2 sm:p-6 mx-5 overflow-hidden mt-[5rem]"
     >
-      {/* Floating background blobs */}
-      <motion.div
-        className="absolute top-10 left-10 w-32 h-32 bg-[#2E8B57]/10 rounded-full blur-3xl"
+      
+      {/* <motion.div
+        className="absolute top-10 left-10 w-32 h-32 bg-[#2E8B57] rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -49,7 +68,7 @@ const DescriptiveText = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-10 right-10 w-40 h-40 bg-[#2E8B57]/10 rounded-full blur-3xl"
+        className="absolute bottom-10 right-10 w-40 h-40 bg-[#2E8B57] rounded-full blur-3xl"
         animate={{
           scale: [1, 1.4, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -60,49 +79,47 @@ const DescriptiveText = () => {
           ease: "easeInOut",
           delay: 1,
         }}
-      />
+      /> */}
 
-      {/* Content */}
+  
       <div className="relative max-w-4xl text-center z-10">
-        {/* Heading */}
-        <motion.span
-          variants={fadeUp}
-          initial="hidden"
-          animate={controls}
-          custom={1}
-          className="font-inter text-neutral-800 text-center text-[32px] sm:text-[38px] md:text-[40px] font-bold leading-tight tracking-[-2px] mb-6 block"
-        >
-          With{" "}
-          <motion.span
-            className="relative inline-block font-inter tracking-[-2px] text-[#2E8B57]"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : {}}
-            transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
-          >
-            1+ years
-          </motion.span>{" "}
-          of hands-on experience, I've helped startups and teams build modern,
-          accessible web experiences with cutting-edge frontend technologies.
-        </motion.span>
+        
+        <div className="font-inter text-neutral-800 text-center text-[32px] sm:text-[38px] md:text-[40px] font-bold leading-tight tracking-[-2px] mb-6">
+          {words.map((word, index) => (
+            <motion.span
+              key={index}
+              variants={wordVariant}
+              initial="hidden"
+              animate={controls}
+              custom={index}
+              className={`inline-block mr-[0.3em] ${
+                word.includes("1+") || word.includes("years")
+                  ? "text-[#2E8B57]"
+                  : ""
+              }`}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </div>
 
-        {/* Paragraph */}
         <motion.p
           variants={fadeUp}
           initial="hidden"
           animate={controls}
-          custom={2}
+          custom={words.length * 0.08 + 1}
           className="text-center text-neutral-600 text-base sm:text-lg max-w-2xl mx-auto font-outfit leading-relaxed mt-2"
         >
           From concept to deployment, I craft scalable solutions that not only
           meet business goals but also delight users.
         </motion.p>
 
-        {/* Stats */}
+      
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate={controls}
-          custom={3}
+          custom={words.length * 0.08 + 2}
           className="flex flex-wrap justify-center gap-6 sm:gap-12 mt-10"
         >
           {items.map(({ text, number }, idx) => (
@@ -111,7 +128,7 @@ const DescriptiveText = () => {
               variants={fadeUp}
               initial="hidden"
               animate={controls}
-              custom={idx + 4}
+              custom={words.length * 0.08 + 3 + idx}
               className="text-center"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
