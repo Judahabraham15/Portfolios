@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import "./About.css";
+// import "./About.css";
 import {
   FaReact,
   FaNodeJs,
@@ -16,7 +16,7 @@ import { FiDownload } from "react-icons/fi";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-120px" }); // triggers a bit before fully in view
+  const isInView = useInView(ref, { once: true, margin: "-120px" });
 
   const experience = [
     {
@@ -41,8 +41,9 @@ const About = () => {
       }
       transition={{
         duration: 1.5,
-        ease: [0.22, 1, 0.36, 1], // springy ease
+        ease: [0.22, 1, 0.36, 1],
       }}
+      className="flex items-center justify-start relative overflow-hidden w-full min-h-screen text-black font-nunito bg-[#F0FFF0] py-24 max-[576px]:flex-col max-[576px]:items-center max-[576px]:text-center max-[576px]:min-h-auto max-[576px]:gap-5 max-[576px]:bg-gradient-to-b max-[576px]:from-[#f0fff0] max-[576px]:to-[#e6f7e6] min-[577px]:max-[936px]:flex-col min-[577px]:max-[936px]:items-center min-[577px]:max-[936px]:text-center min-[577px]:max-[936px]:min-h-auto min-[577px]:max-[936px]:gap-5 min-[577px]:max-[936px]:bg-gradient-to-b min-[577px]:max-[936px]:from-[#f0fff0] min-[577px]:max-[936px]:to-[#e6f7e6]"
       id="about"
     >
       <motion.span
@@ -100,11 +101,11 @@ const About = () => {
         <FaJsSquare size={26} color="#f7df1e" />
       </motion.span>
 
-      <div className="about-content">
-        <h1>
+      <div className="flex justify-center w-full h-full pl-[50px] mx-12 flex-col items-start max-[576px]:p-0 max-[576px]:m-0 max-[576px]:items-center min-[577px]:max-[936px]:p-0 min-[577px]:max-[936px]:m-0 min-[577px]:max-[936px]:items-center">
+        <h1 className="text-black text-[35px] mt-0 mb-5 max-[576px]:text-[28px] max-[576px]:mb-4 min-[577px]:max-[936px]:text-[32px] min-[577px]:max-[936px]:mb-4">
           Who is Judah <span className="dev">Abraham?</span>{" "}
         </h1>
-        <p>
+        <p className="w-full max-w-[650px] leading-[1.6rem] max-[576px]:text-[14px] max-[576px]:leading-[1.5rem] max-[576px]:max-w-[85%] max-[576px]:text-left min-[577px]:max-[936px]:text-[15px] min-[577px]:max-[936px]:leading-[1.5rem] min-[577px]:max-[936px]:max-w-[85%] min-[577px]:max-[936px]:text-left">
           I'm Judah Abraham, Known as "Judah4Good". A passionate 16-year-old
           self-taught aspiring FullStack Developer with over 5+ months
           experience and a strong drive to solve real world problems and
@@ -119,22 +120,22 @@ const About = () => {
           <br />
           <br />
         </p>
-        <div className="texts">
+        <div className="flex flex-nowrap flex-row items-start justify-between w-[30%] ml-0 gap-[22px] font-nunito mt-5 max-[576px]:flex-row max-[576px]:flex-nowrap max-[576px]:justify-center max-[576px]:gap-[10px] min-[577px]:max-[936px]:flex-row min-[577px]:max-[936px]:flex-nowrap min-[577px]:max-[936px]:justify-center min-[577px]:max-[936px]:gap-[10px]">
           {experience.map(({ text, desc }, idx) => (
-            <div className="qualitiess" key={idx}>
-              <span className="devv"> {text}</span>
-              <p className="para">{desc}</p>
+            <div className="flex flex-col items-start justify-start w-full p-[10px] box-border gap-2 text-[#2E8B57] max-[576px]:min-w-[100px] min-[577px]:max-[936px]:min-w-[100px]" key={idx}>
+              <span className="text-[1.8rem] font-bold max-[576px]:text-[1.5rem]"> {text}</span>
+              <p className="min-w-full w-full text-black text-[13px] leading-[1.2rem] max-[576px]:text-[12px] max-[576px]:leading-[1.3rem] min-[577px]:max-[936px]:text-[12px] min-[577px]:max-[936px]:leading-[1.3rem]">{desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="btn-about-container">
+        <div className="max-[576px]:w-full max-[576px]:flex max-[576px]:justify-center">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={isInView ? { scale: 1, opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
           >
-            <a href={Judah} download className="ap">
+            <a href={Judah} download className="no-underline">
               <Button
                 title={"Download CV"}
                 className={"btn-about"}
@@ -144,10 +145,10 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      <div className="img-content">
+      <div className="w-full flex justify-center items-center mt-6 max-[576px]:order-[-1] max-[576px]:w-full max-[576px]:flex max-[576px]:justify-center max-[576px]:mb-4 max-[576px]:relative min-[577px]:max-[936px]:order-[-1] min-[577px]:max-[936px]:w-full min-[577px]:max-[936px]:flex min-[577px]:max-[936px]:justify-center min-[577px]:max-[936px]:mb-4 min-[577px]:max-[936px]:relative">
         <motion.img
           src={myself}
-          className="image"
+          className="max-w-[290px] w-full h-auto rounded-[20px] object-cover max-[576px]:w-[180px] max-[576px]:h-[180px] max-[576px]:rounded-full max-[576px]:object-cover max-[576px]:border-4 max-[576px]:border-[#2e8b57] max-[576px]:shadow-[0_10px_30px_rgba(0,0,0,0.15)] min-[577px]:max-[936px]:w-[200px] min-[577px]:max-[936px]:h-[200px] min-[577px]:max-[936px]:rounded-[60%] min-[577px]:max-[936px]:object-cover min-[577px]:max-[936px]:border-4 min-[577px]:max-[936px]:border-[#2e8b57] min-[577px]:max-[936px]:shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={isInView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 1, type: "spring" }}
