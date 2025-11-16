@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "./lib/utils";
+import { cn } from "../lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import React, {
   createContext,
@@ -160,8 +160,7 @@ const Overlay = ({ className }) => {
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-    className={`fixed inset-0 h-full w-full bg-black/70 backdrop-blur-sm z-50 ${className}`}
-
+      className={`fixed inset-0 h-full w-full bg-black/70 backdrop-blur-sm z-50 ${className}`}
     ></motion.div>
   );
 };
