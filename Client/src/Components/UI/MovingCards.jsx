@@ -1,3 +1,4 @@
+
 "use client";
 
 import { cn } from "../lib/utils";
@@ -53,7 +54,7 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
-      className={cn("scroller relative z-20 w-full ", className)}
+      className={cn("scroller relative z-20 w-full", className)}
     >
       <ul
         ref={scrollerRef}
@@ -63,18 +64,24 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-       
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="relative min-w-[400px] h-[255px] max-w-full shrink-0 rounded-xl ov border border-zinc-200 dark:border-zinc-700"
+            className="relative  h-[255px] md:min-w-[410px] md:h-[270px] max-w-full shrink-0"
           >
-            <div className =" bg-black p-6">
-            <img
-              src={item.src}
-              alt={item.alt || "image"}
-              className="w-full h-[255px] object-cover"
-            />
+                <div className="w-full h-full bg-[#f0fff0] rounded-[15px] p-7 shadow-[0_8px_30px_rgba(0,0,0,0.15)]">
+            <div className="absolute top-4 left-4 w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              <div className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              <div className="absolute bottom-4 left-4 w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              <div className="absolute bottom-4 right-4 w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              
+              <div className="w-full h-full rounded-2xl overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.alt || "image"}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </li>
         ))}
