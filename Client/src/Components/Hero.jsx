@@ -52,11 +52,7 @@ const backgroundIcons = [
     size: 18,
   },
   { icon: <FaCogs />, style: { top: "15%", left: "60%" }, color: "#607d8b" },
-  //! {
-  //!  icon: <FaDatabase />,
-  //!   style: { top: "80%", left: "45%" },
-  //!   color: "#8d6e63",
-  //! },
+
   { icon: <FaTerminal />, style: { top: "50%", left: "50%" }, color: "#333" },
   {
     icon: <MdOutlineDeveloperMode />,
