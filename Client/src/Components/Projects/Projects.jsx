@@ -1,9 +1,8 @@
 import React from 'react'
-import Blink from '../../assets/Blink.png'
 import Sam from  '../../assets/Sam.png'
 import Weather from '../../assets/Weather.png'
 import To from '../../assets/To.png'
-import port from '../../assets/port.png'
+
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact,
   FaJsSquare,
@@ -11,13 +10,12 @@ import {
 import { TbWorldWww } from 'react-icons/tb'
 import { motion } from 'framer-motion'
 import './Projects.css'
-import { desc } from 'framer-motion/client'
 
 const Projects = () => {
 
     const Projects = [
         {
-          img : Blink,
+          img : "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
           title: "Blinkist-Landing Page",
           desc: "A Blinkist-Landing Page  with more features and a modern Login Page",
           icons : [<FaCss3Alt color='#1a1a1a' key="css3" />, <FaReact color='#1a1a1a' key="react" />, <FaJs color='#1a1a1a' key="js" />],
@@ -25,7 +23,7 @@ const Projects = () => {
         },
          {
           title:'Ikechukwu Portfolio',
-          img:port,
+          img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
           desc:'A website that displays the skills of a pharmacist who transitioned to tech',
           icons: [<FaReact color='#1a1a1a'/> , <FaCss3Alt color='#1a1a1a'/> , <FaJsSquare color='#1a1a1a'/>],
           link:'https://ikechwukwu-portfolio.vercel.app/'
