@@ -6,7 +6,7 @@ import {
   ModalBody,
   ModalContent,
   ModalFooter,
-} from "./AnimatedModal";
+} from "./UI/AnimatedModal.jsx";
 import { MdOutlineUpdate } from "react-icons/md";
 const IsUnderonstruction = () => {
   const images = [
