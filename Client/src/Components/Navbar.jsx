@@ -8,7 +8,7 @@ import {
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
-} from "./ResizableNavbar";
+} from "./UI/ResizableNavbar.jsx";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,7 +30,6 @@ const Navbar = () => {
       name: "Projects",
       link: "#projects",
     },
-  
   ];
 
   useEffect(() => {
@@ -67,7 +66,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-5 left-0 right-0 w-full z-50 px-2">
       <ResizableNavbar className="top-0">
-        {/* Desktop Navigation */}
+       
         <NavBody className="rounded-full">
           <NavbarLogo />
           <NavItems items={navItems} onItemClick={() => {}} />
