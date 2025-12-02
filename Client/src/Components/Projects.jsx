@@ -30,8 +30,8 @@ const Projects = () => {
       link: "https://ikechwukwu-portfolio.vercel.app/",
     },
     {
-      img: "",
-      title: "Samsung Landing Page",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
+      title: "MedicX",
       desc: "A Samsung Landing Page that showcases the quality of Samsung Products",
       icons: [
         <FaCss3Alt color="#1a1a1a" key="css3" />,
@@ -41,8 +41,8 @@ const Projects = () => {
       link: "https://samsung-nu.vercel.app/",
     },
     {
-      img: "",
-      title: "Weather App",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763633342/Screenshot_2025-11-20_105948_vnxvlg.png",
+      title: "JShare",
       desc: "A Weather App that tells the current weather of a city.",
       icons: [
         <FaJs color="#1a1a1a" key="js" />,
@@ -155,15 +155,15 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="mr-[8%] mb-1"
                       >
-                        <button className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium  rounded-md hover:bg-white transition-colors duration-300">
-                          <span className="text-sm md:text-md">
+                        <button className="group px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium rounded-md  transition-all duration-300">
+                          <span className="text-sm md:text-md ">
                             View Project{" "}
+                          </span>
                             <MdKeyboardArrowRight
-                              className="inline-block ml-2 "
+                              className="inline-block  group-hover:pl-2  transition-all duration-300 w-8"
                               size={20}
                               style={{ verticalAlign: "middle" }}
                             />
-                          </span>
                         </button>
                       </a>
                     </>
