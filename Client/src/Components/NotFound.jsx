@@ -1,21 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FiHome } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-import { MdOutlineUpdate } from "react-icons/md";
 const NotFound = () => {
-
   return (
     <motion.section
       className="flex flex-col items-center justify-center min-h-screen w-full relative p-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }} 
+      viewport={{ once: true }}
     >
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center flex-col">
         <motion.span
           initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 0.2 }}
+          whileInView={{ scale: 1, opacity: 0.3 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-[200px] font-bold tracking-tight sm:text-[350px] md:text-[400px] lg:text-[410px] text-center select-none pointer-events-none"
@@ -49,7 +49,7 @@ const NotFound = () => {
               display: "inline-block",
             }}
           >
-            In Development!
+            Whoa!
           </motion.h1>
 
           <motion.h2
@@ -58,20 +58,32 @@ const NotFound = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Perfecting the portfolio.
+            That Didn't Work Out
           </motion.h2>
 
           <motion.p
-            className="text-gray-700 text-center mb-5 sm:text-lg"
+            className="text-gray-700 text-center mb-5 sm:text-lg max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            I'm currently redesigning my portfolio to better showcase my work
-            and skills. Please check back soon for the grand reveal!
+            The page you’re trying to reach doesn’t exist or might be under
+            maintenance.
           </motion.p>
-
-       
+          <Link to={"/"}>
+           <motion.button
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            animate={{ y: 0 }}
+            className="bg-gradient-to-br from-black to-[#2E8B57] text-white px-7 py-3 rounded-xl shadow-lg flex items-center gap-2 mx-auto cursor-pointer font-plus overflow-hidden"
+          >
+            <span><FiHome size={20}/></span>
+            Go To HomePage
+          </motion.button>
+          </Link>
+         
         </motion.div>
       </div>
     </motion.section>
