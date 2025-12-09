@@ -42,12 +42,6 @@ const Sidebar = () => {
     <li><a href='#skills'>
         <FiTool color='white' size={15} style={{verticalAlign:'middle' , marginRight:'5px'}}/>
         Skills</a></li>
-    <li><a href="#projects">
-       <FaProjectDiagram color='white' size={15} style={{verticalAlign:'middle' , marginRight:'5px'}}/>
-        Projects</a></li>
-    <li><a href="#contact">
-        < BiMessageDetail color='white' size={15} style={{verticalAlign:'middle' , marginRight:'5px'}}/> 
-        Contact</a></li>
   </ul>
 </div>
 
