@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="flex items-center justify-center relative overflow-hidden w-full min-h-screen py-36 px-2">
-
-
       <div className="w-full max-w-[650px] px-6 sm:px-0">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -16,19 +14,31 @@ const About = () => {
           About
         </motion.h1>
 
-        <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading-loose">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-gray-700 text-sm sm:text-base leading-relaxed "
+        >
           I love crafting solid and scalable products with exceptional user
           experiences, focusing on innovation and problem-solving across various
           industries.
-        </p>
+        </motion.p>
 
-        <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading- mt-6">
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-gray-700 text-sm sm:text-base leading-relaxed mt-6"
+        >
           I'm Judah Abraham, a 17-year-old Nigerian self-taught software
           developer, with 1+ year experience in web development. I specialize in
           building modern, functional user interfaces and robust applications
-          that solve real-world problems. I'm also looking to expand into app
-          development soon.
-        </p>
+          that solve real-world problems. I'm also looking to expand into App
+          development and AI & Machine learning soon.
+        </motion.p>
 
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading-relaxed mt-6">
           Known as "Judah4Good", I'm passionate about continuous learning and
