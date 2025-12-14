@@ -24,7 +24,7 @@ const projects = [
     link: "https://blinkist-landing-page-seven.vercel.app/",
   },
   {
-    slug: "ikechukwu-portfolio",
+    slug: "ikechukwu",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
     title: "Ikechukwu Portfolio",
     desc: "A website that displays the skills of a pharmacist who transitioned to tech",
