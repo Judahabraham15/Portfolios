@@ -1,5 +1,5 @@
 import React from 'react';
-import { SiStripe, SiNodedotjs, SiJavascript, SiFirebase, SiMongodb, SiPython, SiReact, SiNextdotjs } from 'react-icons/si';
+import { SiNodedotjs, SiJavascript, SiMongodb, SiReact, SiNextdotjs } from 'react-icons/si';
 
 const TechCarousel = () => {
   const logos = [
