@@ -9,6 +9,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "./UI/ResizableNavbar.jsx";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,11 +17,11 @@ const Navbar = () => {
   const navItems = [
     {
       name: "About",
-      link: "#about",
+      link: "/about",
     },
     {
-      name: "Skills",
-      link: "#skills",
+      name: "Blogs",
+      link: "/blog",
     },
     {
       name: "Experience",
@@ -52,21 +53,20 @@ const Navbar = () => {
 
   const NavbarLogo = () => {
     return (
-      <a
-        href="#"
+      <Link
+        to={"/"}
         className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
       >
         <span className="font-medium font-outfit text-[#2E8B57] text-lg md:text-xl">
           Judah<span className="text-white">4Good</span>
         </span>
-      </a>
+      </Link>
     );
   };
 
   return (
     <div className="fixed top-5 left-0 right-0 w-full z-50 px-2">
       <ResizableNavbar className="top-0">
-       
         <NavBody className="rounded-full">
           <NavbarLogo />
           <NavItems items={navItems} onItemClick={() => {}} />
@@ -92,14 +92,14 @@ const Navbar = () => {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
-                href={item.link}
+                to={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
