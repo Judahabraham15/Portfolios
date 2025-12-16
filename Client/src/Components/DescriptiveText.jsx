@@ -82,7 +82,7 @@ const DescriptiveText = () => {
       /> */}
 
   
-      <div className="min-h-[70vh] relative max-w-4xl text-center z-10">
+      <div className="sm:min-h-[50vh] min-h-[70vh]  relative max-w-4xl text-center z-10">
         
         <div className="font-inter text-neutral-800 text-center text-[32px] sm:text-[38px] md:text-[40px] font-bold leading-tight tracking-[-2px] mb-6">
           {words.map((word, index) => (
