@@ -60,17 +60,6 @@ const Projects = () => {
       link: "/projects2/ikechukwu",
     },
 
-    // {
-    //   img: "",
-    //   title: "To-do-List",
-    //   desc: "An App to store Tasks to be done.",
-    //   icons: [
-    //     <FaHtml5 color="#1a1a1a" key="html5" />,
-    //     <FaCss3Alt color="#1a1a1a" key="css3" />,
-    //     <FaJs color="#1a1a1a" key="js" />,
-    //   ],
-    //   link: "https://to-do-lists-f4xt.vercel.app/",
-    // },
   ];
 
   // Animation variants
