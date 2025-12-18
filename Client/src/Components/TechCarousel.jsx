@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import {
-  SiTailwindcss,
-  SiNodedotjs,
-  SiJavascript,
-  SiFirebase,
-  SiMongodb,
-  SiPython,
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-} from "react-icons/si";
-=======
 import React from 'react';
-import { SiNodedotjs, SiJavascript, SiMongodb, SiReact, SiNextdotjs } from 'react-icons/si';
->>>>>>> 5e9f86c93dee410540ddb1a6b4ebdd211879eb18
+import { SiNodedotjs, SiJavascript, SiMongodb, SiReact, SiNextdotjs, SiTypescript , SiTailwindcss } from 'react-icons/si';
 
 const TechCarousel = () => {
   const logos = [
