@@ -3,8 +3,14 @@ const projects = [
     slug: "medicx",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
     title: "MedicX",
-    desc: "A healthcare startup dedicated to improving medical accessibility and quality of life.",
-    icons: ["tailwind", "react", "js", "hubspot"],
+    desc: "Implemented real-time collaboration, user typing indicators, OpenAI-like cloudflare language, and OpenAI chat integration, worked with Liveblocks and Firebase",
+    para1:
+      "MedicX  is a healthcare platform that brings medical services directly to users' doorsteps. Built with React, and Tailwind CSS, featuring a modern interface. HubSpot integration captures early sign-ups before the official launch.",
+    para2:
+      "Many people struggle with fragmented healthcare systems where appointments, records, labs, and consultations are spread across different platforms. This lack of centralization often leads to wasted time, repeated processes, and poor user experience, discouraging people from actively managing their health.",
+    para3:
+     "MedicX eliminates these barriers by bringing qualified healthcare professionals directly to patients' locations. The platform removes the need for commuting and waiting rooms, making healthcare fit seamlessly into users' lives. The waitlist captures early adopters who will receive priority access to this innovative doorstep healthcare service when it launches.",
+    technologies: ["React" , "Tailwind CSS", "HubSpot" , "Javascript" , "Framer Motion", "HTML"],
     link: "https://medicx.app",
   },
   {
@@ -32,4 +38,4 @@ const projects = [
     link: "https://ikechwukwu-portfolio.vercel.app/",
   },
 ];
-export default projects
+export default projects;
