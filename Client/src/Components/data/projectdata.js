@@ -9,9 +9,17 @@ const projects = [
     para2:
       "Many people struggle with fragmented healthcare systems where appointments, records, labs, and consultations are spread across different platforms. This lack of centralization often leads to wasted time, repeated processes, and poor user experience, discouraging people from actively managing their health.",
     para3:
-     "MedicX eliminates these barriers by bringing qualified healthcare professionals directly to patients' locations. The platform removes the need for commuting and waiting rooms, making healthcare fit seamlessly into users' lives. The waitlist captures early adopters who will receive priority access to this innovative doorstep healthcare service when it launches.",
-    technologies: ["React" , "Tailwind CSS", "HubSpot" , "Javascript" , "Framer Motion", "HTML"],
+      "MedicX eliminates these barriers by bringing qualified healthcare professionals directly to patients' locations. The platform removes the need for commuting and waiting rooms, making healthcare fit seamlessly into users' lives. The waitlist captures early adopters who will receive priority access to this innovative doorstep healthcare service when it launches.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "HubSpot",
+      "Javascript",
+      "Framer Motion",
+      "GitHub",
+    ],
     link: "https://medicx.app",
+    githubLink: "https://github.com/MedReach-Africa",
   },
   {
     slug: "jshare",
