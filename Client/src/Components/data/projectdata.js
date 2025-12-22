@@ -3,7 +3,7 @@ const projects = [
     slug: "medicx",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
     title: "MedicX",
-    desc: "Implemented real-time collaboration, user typing indicators, OpenAI-like cloudflare language, and OpenAI chat integration, worked with Liveblocks and Firebase",
+    desc: "Built a healthcare platform with React and Tailwind CSS, featuring HubSpot waitlist integration and Framer Motion animations for doorstep medical services.",
     para1:
       "MedicX  is a healthcare platform that brings medical services directly to users' doorsteps. Built with React, and Tailwind CSS, featuring a modern interface. HubSpot integration captures early sign-ups before the official launch.",
     para2:
@@ -19,15 +19,26 @@ const projects = [
       "GitHub",
     ],
     link: "https://medicx.app",
-    githubLink: "https://github.com/MedReach-Africa",
   },
   {
     slug: "jshare",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763633342/Screenshot_2025-11-20_105948_vnxvlg.png",
     title: "JShare",
     desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
-    icons: ["js", "react", "tailwind", "express"],
-    link: "https://weather-app-oapd.vercel.app/",
+    technologies: [
+      "Typescript",
+      "Javascript",
+      "React",
+      "Tailwind CSS",
+      "Express Js",
+      "Render",
+      "Github",
+      "ImageKit",
+    ],
+    para1:
+      "Jshare is a modern file upload platform built with React, Typescript, Express and ImageKit. It features drap-and-drop functionality, secure cloud storage with a clean, responsive interface.",
+    link: "https://j-upload.vercel.app/",
+    githubLink: "https://github.com/Judahabraham15/J-Uploads",
   },
   {
     slug: "blinkist",
