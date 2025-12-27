@@ -1,27 +1,19 @@
 import "./App.css";
 import About from "./Components/About";
-import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
-import Projects from "./Components/Projects";
-import Skills from "./Components/Skills/Skills";
-import Timeline from "./Components/Timeline/Timeline";
-import Contacts from "./Components/Contacts";
 import Footer from "./Components/Footer";
-import React, { useEffect, useState } from "react";
-import Loader from "./Components/Loader/Loader";
-import IsUnderonstruction from "./Components/IsUnderConstruction";
-import ScrollToTop from "./Components/ScrollToTop";
-import DescriptiveText from "./Components/DescriptiveText";
-import ProjectsGallery from "./Components/ProjectsGallery";
-import Lenis from "lenis";
-function App() {
-  const [isLoading, setisLoading] = useState(true);
-  const isUnderConstruction = true;
+import { useEffect } from "react";
+import IsUnderonstruction from "./Components/Pages/IsUnderConstruction";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-  useEffect(() => {
-    const timer = setTimeout(() => setisLoading(false), 5000);
-    return () => clearTimeout(timer);
-  }, []);
+import Lenis from "lenis";
+import HomePage from "./HomePage";
+import NotFound from "./Components/Pages/NotFound";
+import ProjectDetail from "./Components/Pages/ProjectDetail";
+import Blog from "./Components/Pages/Blog";
+import TopPage from "./Routes/TopPage";
+function App() {
+  const isUnderConstruction = true;
 
   if (isUnderConstruction) {
     document.title = "Under Construction | Portfolio";
@@ -32,7 +24,7 @@ function App() {
       duration: 2.5,
       smooth: true,
     });
-
+    window.lenis = lenis;
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -40,27 +32,25 @@ function App() {
     requestAnimationFrame(raf);
 
     // Cleanup on unmount to prevent memory leaks
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      delete window.lenis;
+    };
   }, []);
   return (
     <div className="app">
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <Navbar />
-          <Hero />
-          <ProjectsGallery />
-          <DescriptiveText />
-          <About />
-          <Projects />
-          <Skills />
-          <Timeline />
-          <Contacts />
-          <Footer />
-          <ScrollToTop />
-        </>
-      )}
+      <>
+        <Navbar />
+        <TopPage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects2/:slug" element={<ProjectDetail />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+        <Footer />
+      </>
     </div>
   );
 }
