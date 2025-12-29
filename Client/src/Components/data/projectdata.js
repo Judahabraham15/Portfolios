@@ -48,7 +48,7 @@ const projects = [
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
     title: "Blinkist-Landing Page",
     desc: "A Blinkist-Landing Page with more features and a modern Login Page",
-    icons: ["css3", "react", "js"],
+    technologies: ["React", "Html", "Css"],
     link: "https://blinkist-landing-page-seven.vercel.app/",
   },
   {
