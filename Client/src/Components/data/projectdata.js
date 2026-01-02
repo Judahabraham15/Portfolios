@@ -56,7 +56,7 @@ const projects = [
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
     title: "Ikechukwu Portfolio",
     desc: "A website that displays the skills of a pharmacist who transitioned to tech",
-    technologies: ["React", "CSS", "js"],
+    technologies: ["React", "CSS", "JavaScript"],
     link: "https://ikechwukwu-portfolio.vercel.app/",
   },
 ];
