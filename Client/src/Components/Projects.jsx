@@ -5,7 +5,8 @@ import { TbWorldWww } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { SiExpress, SiHubspot, SiTailwindcss } from "react-icons/si";
+import { SiExpress, SiHubspot, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { IconBrandTypescript } from "@tabler/icons-react";
 
 const Projects = () => {
   const Projects = [
@@ -29,6 +30,7 @@ const Projects = () => {
       desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
       icons: [
         <FaJs color="#1a1a1a" />,
+        <IconBrandTypescript size={25} color="#1a1a1a"/>,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
         <SiExpress color="#1a1a1a" />,
