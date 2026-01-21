@@ -38,6 +38,20 @@ const Projects = () => {
       link: "/projects2/jshare",
     },
     {
+      slug: "pantheon",
+      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
+      title: "Pantheon",
+      desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
+        icons: [
+        <FaJs color="#1a1a1a" />,
+        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <FaReact color="#1a1a1a" />,
+        <SiTailwindcss color="#1a1a1a" />,
+        <SiExpress color="#1a1a1a" />,
+      ],
+      link: "/projects2/pantheon",
+    },
+    {
       slug: "blinkist",
       img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
       title: "Blinkist-Landing Page",

@@ -39,9 +39,17 @@ const projects = [
       "Jshare is a modern file upload platform built with React, Typescript, Express and ImageKit. It features drap-and-drop functionality, secure cloud storage with a clean, responsive interface.",
     para2:
       "Many people struggle with slow, complicated file sharing tools that create unnecessary delays in their work and communication. Whether it's a cumbersome upload processes, confusing interfaces, or unreliable transfers, these friction points waste time and hinder productivity. There was a clear need for a streamlined solution that makes file sharing genuinely fast and effortless-so I built Jshare using React, Typescript, Express.js, and ImageKit to solve exactly that!",
-    para3: "Jshare eliminates file sharing friction with a fast, intuitive platform built for seamless uploads. Powered by React, Typescript, Express.js, and ImageKit's robust CDN infrastructure, it delivers drag and drop simplicity, and reliable cloud storage. Users can share files instantly without the hassle-no complicated steps, no delays, just effortless uploading that keeps workflows moving.",
+    para3:
+      "Jshare eliminates file sharing friction with a fast, intuitive platform built for seamless uploads. Powered by React, Typescript, Express.js, and ImageKit's robust CDN infrastructure, it delivers drag and drop simplicity, and reliable cloud storage. Users can share files instantly without the hassle-no complicated steps, no delays, just effortless uploading that keeps workflows moving.",
     link: "https://j-upload.vercel.app/",
     githubLink: "https://github.com/Judahabraham15/J-Uploads",
+  },
+  {
+    slug: "pantheon",
+    img: "",
+    title: "Pantheon",
+    des: "",
+    technologies: ["React", "Typescript", "Tailwind Css", "Aceternity UI"],
   },
   {
     slug: "blinkist",
@@ -56,7 +64,7 @@ const projects = [
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
     title: "Ikechukwu Portfolio",
     desc: "A website that displays the skills of a pharmacist who transitioned to tech",
-para1:"",
+    para1: "",
     technologies: ["React", "CSS", "JavaScript"],
     link: "https://ikechwukwu-portfolio.vercel.app/",
   },
