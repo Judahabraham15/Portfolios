@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "react-router-dom";
 import { cn } from "../lib/utils";
 import React, { useEffect, useState } from "react";
 
@@ -74,10 +75,8 @@ export const InfiniteMovingCards = ({
               <div className="absolute bottom-4 right-4 w-2.5 h-2.5 rounded-full bg-gray-300"></div>
               
               <div className="w-full h-full rounded-xl overflow-hidden ">
-                <a 
-                  href={item.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  to={item.link}
                   className="block w-full h-full"
                 >
                   <img
@@ -86,7 +85,7 @@ export const InfiniteMovingCards = ({
                     className="w-full h-full object-cover "
                     loading="lazy"
                   />
-                </a> 
+                </Link> 
               </div>
             </div>
           </li>
