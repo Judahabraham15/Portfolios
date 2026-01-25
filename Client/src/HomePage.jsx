@@ -33,7 +33,7 @@ const HomePage = () => {
           <TechCarousel/>
           <About />
           <Projects />
-          <Skills />
+          {/* <Skills /> */}
           <Timeline />
           <Contacts />
           <ScrollToTop />

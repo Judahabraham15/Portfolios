@@ -1,4 +1,4 @@
-import "./App.css";
+"use client";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
