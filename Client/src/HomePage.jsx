@@ -2,7 +2,6 @@ import React from "react";
 import About from "./Components/About";
 import Hero from "./Components/Hero";
 import Projects from "./Components/Projects";
-import Skills from "./Components/Skills";
 import Timeline from "./Components/Timeline/Timeline";
 import Contacts from "./Components/Contacts";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -33,7 +32,7 @@ const HomePage = () => {
           <TechCarousel/>
           <About />
           <Projects />
-          {/* <Skills /> */}
+         
           <Timeline />
           <Contacts />
           <ScrollToTop />
