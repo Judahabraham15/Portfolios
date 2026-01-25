@@ -13,7 +13,7 @@ import ProjectDetail from "./Components/Pages/ProjectDetail";
 import Blog from "./Components/Pages/Blog";
 import TopPage from "./Routes/TopPage";
 function App() {
-  const isUnderConstruction = true;
+  const isUnderConstruction = false;
 
   if (isUnderConstruction) {
     document.title = "Under Construction | Portfolio";
