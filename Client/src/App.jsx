@@ -5,7 +5,6 @@ import Footer from "./Components/Footer";
 import { useEffect } from "react";
 import IsUnderonstruction from "./Components/Pages/IsUnderConstruction";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Lenis from "lenis";
 import HomePage from "./HomePage";
 import NotFound from "./Components/Pages/NotFound";
@@ -13,7 +12,7 @@ import ProjectDetail from "./Components/Pages/ProjectDetail";
 import Blog from "./Components/Pages/Blog";
 import TopPage from "./Routes/TopPage";
 function App() {
-  const isUnderConstruction = false;
+  const isUnderConstruction = true;
 
   if (isUnderConstruction) {
     document.title = "Under Construction | Portfolio";
