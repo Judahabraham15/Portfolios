@@ -49,7 +49,7 @@ const projects = [
     img: "",
     title: "Pantheon",
     des: "",
-    technologies: ["React", "Typescript", "Tailwind Css", "Aceternity UI"],
+    technologies: ["React", "Typescript", "Tailwind Css", "Aceternity UI", proforms],
   },
   {
     slug: "blinkist",
