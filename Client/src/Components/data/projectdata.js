@@ -46,10 +46,17 @@ const projects = [
   },
   {
     slug: "pantheon",
-    img: "",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
     title: "Pantheon",
-    des: "",
+    desc: "A startup portfolio aimed at market buisness ideas",
     technologies: ["React", "Typescript", "Tailwind Css", "Aceternity UI"],
+  },
+  {
+    slug: "lagos-cricket",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
+    title: "Lagos-Cricket Stakeholder",
+    desc: "",
+    technologies: ["Next.js", "Typescript", "Tailwind Css", "Shadcn UI"],
   },
   {
     slug: "blinkist",
