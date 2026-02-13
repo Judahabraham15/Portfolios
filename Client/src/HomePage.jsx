@@ -10,6 +10,7 @@ import DescriptiveText from "./Components/DescriptiveText";
 import ProjectsGallery from "./Components/ProjectsGallery";
 import { useEffect, useState } from "react";
 import TechCarousel from "./Components/TechCarousel";
+import Vibe from "./Components/Vibe";
 
 
 const HomePage = () => {
@@ -32,7 +33,7 @@ const HomePage = () => {
           <TechCarousel/>
           <About />
           <Projects />
-         
+          <Vibe/>
           <Timeline />
           <Contacts />
           <ScrollToTop />
