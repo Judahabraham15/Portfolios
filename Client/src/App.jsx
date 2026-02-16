@@ -14,7 +14,7 @@ import TopPage from "./Routes/TopPage";
 import ContactModal from "./Components/ContactModal";
 
 function App() {
-  const isUnderConstruction = false;
+  const isUnderConstruction = true;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [lenis, setLenis] = useState(null);
 
