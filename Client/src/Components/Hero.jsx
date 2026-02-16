@@ -26,6 +26,7 @@ import { AiOutlineTool } from "react-icons/ai";
 import { BsGearWideConnected } from "react-icons/bs";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import { PiFlowArrowBold } from "react-icons/pi";
+import ContactModal from "./ContactModal";
 
 const backgroundIcons = [
   {
@@ -81,7 +82,7 @@ const backgroundIcons = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ setIsModalOpen }) => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -107,7 +108,7 @@ const Hero = () => {
 
   const borderRadius = useSpring(
     useTransform(scrollYProgress, [0, 0.7], ["0px", "90px"]),
-    { stiffness: 60, damping: 18 }
+    { stiffness: 60, damping: 18 },
   );
   const scale = useSpring(useTransform(scrollYProgress, [0, 0.7], [1, 0.95]), {
     stiffness: 60,
@@ -236,8 +237,11 @@ const Hero = () => {
 
           <div className="flex items-center gap-4 mt-2">
             <div className="flex items-center gap-3 ">
-              <a href="#contact">
-                <button className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium  rounded-md hover:bg-white transition-colors duration-300">
+              <a>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium  rounded-md hover:bg-white transition-colors duration-300"
+                >
                   <span className="text-sm md:text-md">Get in touch</span>
                 </button>
               </a>
@@ -302,6 +306,7 @@ const Hero = () => {
       </motion.div>
     </motion.section>
   );
+  k;
 };
 
 export default Hero;
