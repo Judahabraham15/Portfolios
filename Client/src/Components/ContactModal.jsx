@@ -106,7 +106,7 @@ export default function ContactModal({ onClose }) {
                     <div className="h-1.5 w-20 rounded-full bg-gray-500/50 transition-all hover:bg-gray-400/70 active:scale-110" />
                   </div>
                 </div>
-                {/* Header */}
+                
                 <div className="flex items-center justify-center lg:justify-between mb-6">
                   <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 font-outfit">
                     Contact Form
@@ -163,7 +163,7 @@ export default function ContactModal({ onClose }) {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="mt-1 w-full rounded-xl border border-gray-600/30 bg-gray-900/20 px-4 py-3 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 transition resize-none text-gray-500 text-[14px] placeholder:text-gray-500"
+                      className="mt-1 w-full rounded-xl border border-gray-600/30 bg-gray-900/20 px-4 py-3 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 transition resize-none text-gray-500 text-[14px] placeholder:text-gray-500 font-outfit"
                     />
                   </div>
 
@@ -197,7 +197,7 @@ export default function ContactModal({ onClose }) {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-gradient-to-br from-black to-[#2E8B57] text-gray-100 font-medium py-2.5 transition shadow-lg"
+                    className="w-full rounded-xl bg-gradient-to-br from-black to-[#2E8B57] text-gray-100 font-medium py-2.5 transition shadow-lg"
                   >
                     Send
                   </button>
