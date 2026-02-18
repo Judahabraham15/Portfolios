@@ -11,7 +11,7 @@ import {
 } from "./UI/ResizableNavbar.jsx";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setIsModalOpen }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -64,6 +64,11 @@ const Navbar = () => {
     );
   };
 
+  const Open = () => {
+    setIsMobileMenuOpen(false);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="fixed top-5 left-0 right-0 w-full z-50 px-2">
       <ResizableNavbar className="top-0">
@@ -71,7 +76,7 @@ const Navbar = () => {
           <NavbarLogo />
           <NavItems items={navItems} onItemClick={() => {}} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary" href="#contact">
+            <NavbarButton variant="primary" onClick={Open}>
               Let's Connect
             </NavbarButton>
           </div>
@@ -102,12 +107,7 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                href="#contact"
-                className="w-full"
-              >
+              <NavbarButton onClick={Open} variant="primary" className="w-full">
                 Let's Connect
               </NavbarButton>
             </div>

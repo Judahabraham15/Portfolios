@@ -26,7 +26,7 @@ import { AiOutlineTool } from "react-icons/ai";
 import { BsGearWideConnected } from "react-icons/bs";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import { PiFlowArrowBold } from "react-icons/pi";
-import ContactModal from "./ContactModal";
+
 
 const backgroundIcons = [
   {
