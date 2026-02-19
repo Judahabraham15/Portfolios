@@ -38,6 +38,14 @@ const Projects = () => {
       link: "/projects2/jshare",
     },
     {
+     slug:"lagos-cricket",
+      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
+      title:"Lagos-Cricket Stakeholder",
+      desc: "A stakeholder management platform for the Lagos Cricket Club.",
+      icons: [],
+      link: "/projects2/lagos-cricket",
+    },
+    {
       slug: "pantheon",
       img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
       title: "Pantheon",
