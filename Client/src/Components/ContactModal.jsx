@@ -120,11 +120,11 @@ export default function ContactModal({ onClose }) {
                   </button>
                 </div>
 
-                <form className="space-y-4">
+                <form className="space-y-4" action="https://app.proforms.top/f/pr31ceecfb" method="POST">
                   {/* Inputs */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
-                      <label className="text-sm text-gray-400 font-outfit">
+                      <label htmlFor="name" className="text-sm text-gray-400 font-outfit">
                         Full Name
                       </label>
                       <input
@@ -133,6 +133,7 @@ export default function ContactModal({ onClose }) {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Enter your Full name"
+                        id="name"
                         className="mt-1 w-full rounded-full border border-gray-600/30 bg-gray-900/20 px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 placeholder:text-[14px] placeholder:font-outfit text-gray-500 placeholder:text-gray-500"
                       />
                     </div>
@@ -144,6 +145,7 @@ export default function ContactModal({ onClose }) {
                       <input
                         type="email"
                         name="email"
+                        id="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="example@email.com"
@@ -159,6 +161,7 @@ export default function ContactModal({ onClose }) {
                     <textarea
                       rows={4}
                       name="message"
+                      id="message"
                       placeholder="Tell us about your project..."
                       value={formData.message}
                       onChange={handleChange}
