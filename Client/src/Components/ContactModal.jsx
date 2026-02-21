@@ -7,6 +7,8 @@ import { FaMobileAlt } from "react-icons/fa";
 export default function ContactModal({ onClose }) {
   const [open, setOpen] = useState(true);
   const [toast, setToast] = useState(false);
+  const [successToast, setSuccessToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -106,7 +108,7 @@ export default function ContactModal({ onClose }) {
                     <div className="h-1.5 w-20 rounded-full bg-gray-500/50 transition-all hover:bg-gray-400/70 active:scale-110" />
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-center lg:justify-between mb-6">
                   <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-200 font-outfit">
                     Contact Form
@@ -120,11 +122,18 @@ export default function ContactModal({ onClose }) {
                   </button>
                 </div>
 
-                <form className="space-y-4" action="https://app.proforms.top/f/pr31ceecfb" method="POST">
+                <form
+                  className="space-y-4"
+                  action="https://app.proforms.top/f/pr31ceecfb"
+                  method="POST"
+                >
                   {/* Inputs */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
-                      <label htmlFor="name" className="text-sm text-gray-400 font-outfit">
+                      <label
+                        htmlFor="name"
+                        className="text-sm text-gray-400 font-outfit"
+                      >
                         Full Name
                       </label>
                       <input
