@@ -3,12 +3,15 @@ import { Phone, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TbBulb, TbWorld } from "react-icons/tb";
 import { FaMobileAlt } from "react-icons/fa";
-
+import { toast } from "react-toastify";
+import { FaReact } from "react-icons/fa";
+import { HiExclamation } from "react-icons/hi";
 export default function ContactModal({ onClose }) {
   const [open, setOpen] = useState(true);
-  const [toast, setToast] = useState(false);
+  const [toasts, setToasts] = useState(false);
   const [successToast, setSuccessToast] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showMessageError, setshowMessageError] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,10 +29,13 @@ export default function ContactModal({ onClose }) {
       ...prev,
       [name]: value,
     }));
+    if(name === "message" && value.trim().length >= 10){
+      setshowMessageError(false);
+    }
   };
 
   const handleTemplateClick = (template) => {
-    setToast(true);
+    setToasts(true);
     const templates = {
       "Mobile app":
         "Hi! I’m looking to develop a mobile app. Here’s a brief overview of the idea: [brief description]. My budget range is [budget], and I’m aiming to launch by [timeline].",
@@ -42,6 +48,53 @@ export default function ContactModal({ onClose }) {
       ...prev,
       message: templates[template],
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    if(formData.message.trim().length < 10){
+      setshowMessageError(true);
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://app.proforms.top/f/pr31ceecfb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        toast.success("Form submitted successfully!", {
+          position: "bottom-right",
+          autoClose: 4000,
+          icon: <FaReact color="#16a34a" size={18} />,
+          className:
+            "bg-green-900/20 max-w-[90%] min-h-fit text-gray-300 font-outfit text-[15px] border border-gray-600/30 px-4 py-3 outline-none",
+        });
+
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+      }
+    } catch (error) {
+      toast.error("Failed to submit the form. Please try again.", {
+        position: "bottom-right",
+        autoClose: 4000,
+        icon: (
+          <div className="flex items-center justify-center w-5 h-5 rounded-full bg-red-600">
+            <HiExclamation className="text-white text-xs" />
+          </div>
+        ),
+        className:
+          "!bg-[#f2dede] !text-red-600 !font-semibold !text-sm !rounded-xl !px-4 !py-3 !shadow-md flex items-center",
+      });
+      console.error("Error Submitting Form:", error);
+    }
+    setIsSubmitting(false);
   };
 
   const items = [
@@ -122,11 +175,7 @@ export default function ContactModal({ onClose }) {
                   </button>
                 </div>
 
-                <form
-                  className="space-y-4"
-                  action="https://app.proforms.top/f/pr31ceecfb"
-                  method="POST"
-                >
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   {/* Inputs */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
@@ -136,7 +185,9 @@ export default function ContactModal({ onClose }) {
                       >
                         Full Name
                       </label>
+
                       <input
+                        required
                         type="text"
                         name="name"
                         value={formData.name}
@@ -152,6 +203,7 @@ export default function ContactModal({ onClose }) {
                         Email
                       </label>
                       <input
+                        required
                         type="email"
                         name="email"
                         id="email"
@@ -167,6 +219,11 @@ export default function ContactModal({ onClose }) {
                     <label className="text-sm text-gray-400 font-outfit">
                       Brief Overview
                     </label>
+                     {showMessageError && (
+                      <p className="text-red-400 text-sm mb-1">
+                        Message must be at least 10 characters
+                      </p>
+                    )}
                     <textarea
                       rows={4}
                       name="message"
@@ -198,7 +255,7 @@ export default function ContactModal({ onClose }) {
                       ))}
                     </div>
                     <div>
-                      {toast && (
+                      {toasts && (
                         <p className="mt-5 w-full rounded-xl border text-gray-300 font-outfit text-[15px] border-gray-600/30 bg-green-900/20 px-4 py-3 outline-none">
                           📝 Please customize the template with your specific
                           details before sending.
@@ -209,11 +266,19 @@ export default function ContactModal({ onClose }) {
 
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-gradient-to-br from-black to-[#2E8B57] text-gray-100 font-medium py-2.5 transition shadow-lg"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center rounded-xl bg-gradient-to-br from-black to-[#2E8B57] text-gray-100 font-medium py-2.5 transition shadow-lg disabled:opacity-60"
                   >
-                    Send
+                    {isSubmitting ? (
+                      <span className="h-4 w-4 rounded-full border-2 border-gray-200 border-t-transparent animate-spin" />
+                    ) : (
+                      "Send"
+                    )}
                   </button>
                 </form>
+                {successToast && (
+                  <div className="bg-white flex items-center justify center "></div>
+                )}
               </div>
             </motion.div>
           </div>
