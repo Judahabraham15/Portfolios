@@ -2,10 +2,10 @@ import React from "react";
 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJsSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { SiExpress, SiHubspot, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiAccenture, SiAcer, SiExpress, SiHubspot, SiLaravel, SiNextdotjs, SiPhp, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { IconBrandTypescript } from "@tabler/icons-react";
 
 const Projects = () => {
@@ -42,20 +42,25 @@ const Projects = () => {
       img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
       title:"Lagos-Cricket Stakeholder",
       desc: "A stakeholder management platform for the Lagos Cricket Club.",
-      icons: [],
+      icons: [
+        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <SiNextdotjs/>,
+        <SiTailwindcss/>,
+        <SiLaravel/>,
+        <SiShadcnui/>
+      ],
       link: "/projects2/lagos-cricket",
     },
     {
       slug: "pantheon",
       img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
       title: "Pantheon",
-      desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
+      desc: "A startup portfolio that shows its aim at marketing buisness and other startup ideas",
         icons: [
         <FaJs color="#1a1a1a" />,
-        <IconBrandTypescript size={25} color="#1a1a1a"/>,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
-        <SiExpress color="#1a1a1a" />,
+        
       ],
       link: "/projects2/pantheon",
     },
