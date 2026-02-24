@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TbBulb, TbWorld } from "react-icons/tb";
 import { FaMobileAlt } from "react-icons/fa";
 import { toast } from "react-toastify";
-import { FaReact } from "react-icons/fa";
-import { HiExclamation } from "react-icons/hi";
+
+import { HiExclamation, HiCheck } from "react-icons/hi";
 export default function ContactModal({ onClose }) {
   const [open, setOpen] = useState(true);
   const [toasts, setToasts] = useState(false);
@@ -29,13 +29,14 @@ export default function ContactModal({ onClose }) {
       ...prev,
       [name]: value,
     }));
-    if(name === "message" && value.trim().length >= 10){
+    if (name === "message" && value.trim().length >= 10) {
       setshowMessageError(false);
     }
   };
 
   const handleTemplateClick = (template) => {
     setToasts(true);
+    setshowMessageError(false);
     const templates = {
       "Mobile app":
         "Hi! I’m looking to develop a mobile app. Here’s a brief overview of the idea: [brief description]. My budget range is [budget], and I’m aiming to launch by [timeline].",
@@ -54,10 +55,12 @@ export default function ContactModal({ onClose }) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if(formData.message.trim().length < 10){
+    if (formData.message.trim().length < 10) {
       setshowMessageError(true);
       setIsSubmitting(false);
       return;
+    } else if (formData.message.trim().length >= 10) {
+      setshowMessageError(false);
     }
 
     try {
@@ -69,14 +72,18 @@ export default function ContactModal({ onClose }) {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        toast.success("Form submitted successfully!", {
+        toast.success("Message submitted successfully!", {
           position: "bottom-right",
           autoClose: 4000,
-          icon: <FaReact color="#16a34a" size={18} />,
+          icon: (
+            <div className="flex items-center justify-center w-5 h-5 rounded-full bg-green-600">
+              <HiCheck className="text-white text-xs" />
+            </div>
+          ),
           className:
-            "bg-green-900/20 max-w-[90%] min-h-fit text-gray-300 font-outfit text-[15px] border border-gray-600/30 px-4 py-3 outline-none",
+            "!bg-[#dff0d8] !text-green-700 !font-semibold !text-[14px] !rounded-xl !px-4 !py-3 !shadow-md flex items-center",
         });
-
+        setToasts(false)
         setFormData({ name: "", email: "", message: "" });
       } else {
       }
@@ -90,7 +97,7 @@ export default function ContactModal({ onClose }) {
           </div>
         ),
         className:
-          "!bg-[#f2dede] !text-red-600 !font-semibold !text-sm !rounded-xl !px-4 !py-3 !shadow-md flex items-center",
+          "!bg-[#f2dede] !text-red-600 !font-semibold !text-[14px]  !rounded-xl !px-4 !py-3 !shadow-md flex items-center",
       });
       console.error("Error Submitting Form:", error);
     }
@@ -194,7 +201,7 @@ export default function ContactModal({ onClose }) {
                         onChange={handleChange}
                         placeholder="Enter your Full name"
                         id="name"
-                        className="mt-1 w-full rounded-full border border-gray-600/30 bg-gray-900/20 px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 placeholder:text-[14px] placeholder:font-outfit text-gray-500 placeholder:text-gray-500"
+                        className="truncate font-outfit text-[14px] mt-1 w-full rounded-full border border-gray-600/30 bg-gray-900/20 px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 placeholder:text-[14px] placeholder:font-outfit text-gray-300 placeholder:text-gray-500"
                       />
                     </div>
 
@@ -210,7 +217,7 @@ export default function ContactModal({ onClose }) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="example@email.com"
-                        className=" placeholder:font-outfit placeholder:text-[14px] mt-1 w-full rounded-full border border-gray-600/30 bg-gray-900/20 px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 text-gray-500 placeholder:text-gray-500"
+                        className="truncate text-[14px] font-outfit placeholder:font-outfit placeholder:text-[14px] mt-1 w-full rounded-full border border-gray-600/30 bg-gray-900/20 px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 text-gray-300 placeholder:text-gray-500"
                       />
                     </div>
                   </div>
@@ -219,11 +226,7 @@ export default function ContactModal({ onClose }) {
                     <label className="text-sm text-gray-400 font-outfit">
                       Brief Overview
                     </label>
-                     {showMessageError && (
-                      <p className="text-red-400 text-sm mb-1">
-                        Message must be at least 10 characters
-                      </p>
-                    )}
+
                     <textarea
                       rows={4}
                       name="message"
@@ -232,12 +235,12 @@ export default function ContactModal({ onClose }) {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="mt-1 w-full rounded-xl border border-gray-600/30 bg-gray-900/20 px-4 py-3 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 transition resize-none text-gray-500 text-[14px] placeholder:text-gray-500 font-outfit"
+                      className="mt-1 w-full rounded-xl border border-gray-600/30 bg-gray-900/20 px-4 py-3 outline-none focus:ring-2 focus:ring-[#2E8B57]/50 transition resize-none text-gray-300 text-[14px] placeholder:text-gray-500 font-outfit"
                     />
                   </div>
 
                   <div>
-                    <p className="text-sm text-gray-400 mb-2">
+                    <p className="text-sm text-gray-400 mb-2 font-outfit">
                       Quick start with a template:
                     </p>
 
@@ -255,6 +258,13 @@ export default function ContactModal({ onClose }) {
                       ))}
                     </div>
                     <div>
+                      {showMessageError ? (
+                        <p className="text-red-400 mt-5 w-full rounded-xl border  font-outfit text-[15px] border-gray-600/30 bg-red-900/20 px-4 py-3 outline-none">
+                          📝 Please give a detailed description
+                        </p>
+                      ) : (
+                        ""
+                      )}
                       {toasts && (
                         <p className="mt-5 w-full rounded-xl border text-gray-300 font-outfit text-[15px] border-gray-600/30 bg-green-900/20 px-4 py-3 outline-none">
                           📝 Please customize the template with your specific
@@ -276,9 +286,9 @@ export default function ContactModal({ onClose }) {
                     )}
                   </button>
                 </form>
-                {successToast && (
+                {/* {successToast && (
                   <div className="bg-white flex items-center justify center "></div>
-                )}
+                )} */}
               </div>
             </motion.div>
           </div>
