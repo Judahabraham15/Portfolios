@@ -12,6 +12,7 @@ import TechCarousel from "./Components/TechCarousel";
 import Vibe from "./Components/Vibe";
 import { Testimonials } from "./Components/Testimonials";
 import Work from "./Components/Work";
+import Contact from "./Components/Contact";
 
 let hasLoaded = false;
 const HomePage = ({ setIsModalOpen }) => {
@@ -40,8 +41,7 @@ const HomePage = ({ setIsModalOpen }) => {
           <Work />
           <Testimonials />
           <Vibe />
-          {/* <Timeline /> */}
-
+          <Contact/>
           <ScrollToTop />
         </>
       )}

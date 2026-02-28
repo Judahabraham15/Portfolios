@@ -8,6 +8,10 @@
   --font-outfit: "Outfit", "sans-serif";
   --font-inter: "Inter", "sans-serif";
 }
+@theme inline {
+  --color-brand-text: #2E8B57;
+  --color-brand-main: #354B21;
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -18,7 +22,8 @@
 }
 
 .animate-scroll {
-  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 }
 body {
   background: #f0fff0;
