@@ -137,7 +137,7 @@ const Hero = ({ setIsModalOpen }) => {
   return (
     <motion.section
       ref={heroRef}
-      className="w-full min-h-screen relative flex items-center justify-center box-border overflow-hidden flex-col bg-[#354B21]"
+      className="w-full min-h-screen relative flex items-center justify-center box-border overflow-hidden flex-col bg-brand-main"
       id="home"
       style={{ borderRadius, scale, y }}
     >
@@ -219,7 +219,7 @@ const Hero = ({ setIsModalOpen }) => {
             I am Judah Abraham,{" "}
             <span
               id="ChangeText"
-              className="text-[#2E8B57] transition-[opacity,color] duration-500 ease-in-out inline-block min-w-[200px] min-[577px]:max-[768px]:min-w-auto min-[577px]:max-[768px]:text-center"
+              className="text-brand-text transition-[opacity,color] duration-500 ease-in-out inline-block min-w-[200px] min-[577px]:max-[768px]:min-w-auto min-[577px]:max-[768px]:text-center"
             >
               Software Engineer
             </span>

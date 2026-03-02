@@ -157,7 +157,7 @@ const Projects = () => {
               </div>
 
               <div className="flex flex-col w-full items-start mt-0 ">
-                <h1 className="text-[#2E8B57] font-semibold text-xl sm:text-[22px] mb-2 font-outfit ">
+                <h1 className="text-brand-text font-semibold text-xl sm:text-[22px] mb-2 font-outfit ">
                   {title}
                 </h1>
                 <p className="text-sm sm:text-[0.9rem] text-gray-700 mb-4 font-nunito">

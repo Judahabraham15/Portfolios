@@ -1,5 +1,4 @@
-
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const DescriptiveText = () => {
@@ -17,10 +16,9 @@ const DescriptiveText = () => {
     if (isInView) controls.start("visible");
   }, [isInView, controls]);
 
-
-  const mainText = "With 1+ years of hands-on experience, I've helped startups and teams build modern, accessible web experiences with cutting-edge frontend technologies.";
+  const mainText =
+    "With 1+ years of hands-on experience, I've helped startups and teams build modern, accessible web experiences with cutting-edge frontend technologies.";
   const words = mainText.split(" ");
-
 
   const wordVariant = {
     hidden: { opacity: 0, y: 20, filter: "blur(20px)" },
@@ -54,36 +52,7 @@ const DescriptiveText = () => {
       ref={sectionRef}
       className="relative flex items-center min-h-[50vh] justify-center p-4 px-2 sm:p-6 mx-5 overflow-hidden mt-[5rem]"
     >
-      
-      {/* <motion.div
-        className="absolute top-10 left-10 w-32 h-32 bg-[#2E8B57] rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-10 right-10 w-40 h-40 bg-[#2E8B57] rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.4, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      /> */}
-
-  
       <div className="sm:min-h-[50vh] min-h-[70vh]  relative max-w-4xl text-center z-10">
-        
         <div className="font-inter text-neutral-800 text-center text-[32px] sm:text-[38px] md:text-[40px] font-bold leading-tight tracking-[-2px] mb-6">
           {words.map((word, index) => (
             <motion.span
@@ -94,7 +63,7 @@ const DescriptiveText = () => {
               custom={index}
               className={`inline-block mr-[0.3em] ${
                 word.includes("1+") || word.includes("years")
-                  ? "text-[#2E8B57]"
+                  ? "text-brand-text"
                   : ""
               }`}
             >
@@ -114,7 +83,6 @@ const DescriptiveText = () => {
           meet business goals but also delight users.
         </motion.p>
 
-      
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -133,7 +101,7 @@ const DescriptiveText = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <motion.div className="text-3xl sm:text-4xl font-bold text-[#2E8B57] font-outfit">
+              <motion.div className="text-3xl sm:text-4xl font-bold text-brand-text font-outfit">
                 {number}
               </motion.div>
               <div className="text-sm text-neutral-600 font-outfit mt-1">
