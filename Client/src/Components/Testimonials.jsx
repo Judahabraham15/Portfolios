@@ -11,7 +11,7 @@ export function Testimonials() {
     },
     {
       quote:
-        "Judah is a curious person who’s always ready to learn, and that mindset is what makes him one of the best developers I know.",
+        "Judah is a curious person who’s always ready to learn, and that mindset is what makes one of the best developers I know.",
       name: "Alao Abdul-Quayum",
       designation: "FullStack Developer at D'ACCUBIN",
       src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1772037226/Quayum_nv3df7.png",
@@ -33,10 +33,10 @@ export function Testimonials() {
 
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Judah thinks beyond implementation — he builds with product impact in mind. The MedicX landing page he developed was visually impressive, well-structured, and intentional. Any team bringing him onboard would be making a strong decision.",
+      name: "Michael Omopekun",
+      designation: "Backend Engineer at MedicX",
+      src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1772195213/Omopekun_nc5ous.png",
     },
   ];
   return (

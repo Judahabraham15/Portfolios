@@ -30,10 +30,10 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className=" font-outfit mx-auto max-w-sm px-4 py-20  antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className=" font-outfit mx-auto max-w-sm px-4 py-20  antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden md:overflow-auto">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-80 w-full ">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -105,7 +105,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             <p className="text-sm text-green-800">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-black">
+            <motion.p className="mt-8 text-lg text-gray-600">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -134,13 +134,13 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-[#2E8B57]"
+              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-brand-text"
             >
               <IconArrowLeft className="h-5 w-5 text-white transition-transform duration-300 group-hover/button:rotate-12" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-[#2E8B57]"
+              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-brand-text"
             >
               <IconArrowRight className="h-5 w-5 text-white transition-transform duration-300 group-hover/button:-rotate-12" />
             </button>

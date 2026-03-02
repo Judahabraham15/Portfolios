@@ -9,7 +9,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Contact() {
+function Contact({ setIsModalOpen }) {
   return (
     <div className="w-full flex justify-center items-center py-16 px-3.5 min-h-[60vh]">
       <motion.div
@@ -19,7 +19,6 @@ function Contact() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-       
         <motion.div
           className="pointer-events-none absolute top-0 left-0 right-0 h-32 select-none opacity-30"
           style={{
@@ -55,7 +54,7 @@ function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Ready to transform 
+          Ready to transform
           <br /> healthcare together?
         </motion.h2>
 
@@ -67,7 +66,7 @@ function Contact() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           We're building the future of connected healthcare, and we'd love to
-          hear from you . 
+          hear from you .
         </motion.p>
 
         <motion.div
@@ -77,18 +76,17 @@ function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
         >
-          <Link to={"/contact"}>
-            <motion.button
-              className="flex flex-row gap-2 px-8 py-3 rounded-lg  cursor-pointer bg-white/10 text-[#E0E0E0] font-outfit font-medium  hover:bg-[#247a4a] transition-colors duration-300"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in Touch
-            </motion.button>
-          </Link>
+          <motion.button
+            onClick={() => setIsModalOpen(true)}
+            className="flex flex-row gap-2 px-8 py-3 rounded-lg  cursor-pointer bg-white/10 text-[#E0E0E0] font-outfit font-medium  hover:bg-[#247a4a] transition-colors duration-300"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get in Touch
+          </motion.button>
         </motion.div>
       </motion.div>
     </div>
