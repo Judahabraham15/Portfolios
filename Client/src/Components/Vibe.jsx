@@ -4,7 +4,7 @@ import { Music } from "lucide-react";
 
 const Vibe = () => {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center px-6 py-20 overflow-hidden">
+    <section className="mb-20 relative flex min-h-screen w-full  items-center justify-center px-6 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#2E8B57]/5 to-transparent pointer-events-none" />
 
       <motion.div
@@ -40,10 +40,10 @@ const Vibe = () => {
           </p>
         </div>
 
-        {/* card */}
-        <div className="relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200 shadow-xl p-4 md:p-6">
-          {/* soft glow ring */}
-          <div className="absolute inset-0 rounded-2xl ring-1 ring-black/5 pointer-events-none" />
+        
+        <div className=" relative rounded-2xl bg-white/70 backdrop-blur-xl border border-gray-200 shadow-xl p-4 md:p-6">
+         
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-black/20 pointer-events-none" />
 
           <iframe
             data-testid="embed-iframe"

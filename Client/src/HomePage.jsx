@@ -2,7 +2,6 @@ import React from "react";
 import About from "./Components/About";
 import Hero from "./Components/Hero";
 import Projects from "./Components/Projects";
-import Timeline from "./Components/Timeline/Timeline";
 import ScrollToTop from "./Components/ScrollToTop";
 import Loader from "./Components/Loader/Loader";
 import DescriptiveText from "./Components/DescriptiveText";
@@ -40,8 +39,9 @@ const HomePage = ({ setIsModalOpen }) => {
           <Projects />
           <Work />
           <Testimonials />
+          <Contact setIsModalOpen={setIsModalOpen} />
           <Vibe />
-          <Contact/>
+          
           <ScrollToTop />
         </>
       )}

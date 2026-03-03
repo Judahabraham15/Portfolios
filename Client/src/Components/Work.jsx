@@ -37,7 +37,7 @@ const experiences = [
   },
   {
     company: "MedicX",
-    role: "Junior Software Engineer",
+    role: "Junior Frontend Engineer",
     period: "2025 — Present",
  
     highlights: [

@@ -54,8 +54,8 @@ function Contact({ setIsModalOpen }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Ready to transform
-          <br /> healthcare together?
+          Your next big thing <br />
+          starts here!
         </motion.h2>
 
         <motion.p
@@ -65,8 +65,8 @@ function Contact({ setIsModalOpen }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          We're building the future of connected healthcare, and we'd love to
-          hear from you .
+          Let's work together to bring your ideas to life. Get in touch today
+          and let's discuss how we can help you achieve your goals.
         </motion.p>
 
         <motion.div

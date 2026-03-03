@@ -11,10 +11,12 @@ import NotFound from "./Components/Pages/NotFound";
 import ProjectDetail from "./Components/Pages/ProjectDetail";
 import Blog from "./Components/Pages/Blog";
 import TopPage from "./Routes/TopPage";
-import ContactModal from "./Components/ContactModal";
+import ContactModal from "./Components/Pages/ContactModal";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const isUnderConstruction = true;
+  const isUnderConstruction = false;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [lenis, setLenis] = useState(null);
 
@@ -55,10 +57,13 @@ function App() {
   return (
     <div className="app">
       <>
-        <Navbar />
+        <Navbar setIsModalOpen={setIsModalOpen} />
         <TopPage setIsModalOpen={setIsModalOpen} />
         <Routes>
-          <Route path="/" element={<HomePage setIsModalOpen={setIsModalOpen} />} />
+          <Route
+            path="/"
+            element={<HomePage setIsModalOpen={setIsModalOpen} />}
+          />
           <Route path="/about" element={<About />} />
           <Route path="/projects2/:slug" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
@@ -66,10 +71,15 @@ function App() {
         </Routes>
         <Footer />
 
-       
-        {isModalOpen && (
-          <ContactModal onClose={() => setIsModalOpen(false)} />
-        )}
+        {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
+        <ToastContainer
+          hideProgressBar
+          closeButton={false}
+          position="bottom-right"
+          toastStyle={{
+            fontStyle: "Nunito, sans-serif",
+          }}
+        />
       </>
     </div>
   );
