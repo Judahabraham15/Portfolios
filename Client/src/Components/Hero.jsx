@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import cvFile from "../assets/Judah_Abraham_CV.pdf";
 import {
   FaCode,
   FaLaptopCode,
@@ -26,7 +27,6 @@ import { AiOutlineTool } from "react-icons/ai";
 import { BsGearWideConnected } from "react-icons/bs";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import { PiFlowArrowBold } from "react-icons/pi";
-
 
 const backgroundIcons = [
   {
@@ -245,7 +245,7 @@ const Hero = ({ setIsModalOpen }) => {
                   <span className="text-sm md:text-md">Get in touch</span>
                 </button>
               </a>
-              <a href="/path-to-your-cv.pdf" download>
+              <a href={cvFile} download="Judah_Abraham_CV.pdf">
                 <button className="px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-white/10 text-[#E0E0E0] font-outfit font-medium  rounded-md hover:bg-[#247a4a] transition-colors duration-300">
                   <span className="text-sm md:text-md">Download CV</span>
                 </button>
