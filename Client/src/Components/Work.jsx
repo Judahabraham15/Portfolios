@@ -218,8 +218,7 @@ export default function Work() {
           Work Experience
         </h1>
         <p className="text-zinc-500 text-sm leading-relaxed max-w-xl text-left">
-          Over a decade building products people use every day — from
-          fast-moving startups to industry-defining platforms.
+         Early in my journey, but already shipping products that solve real problems for real users.
         </p>
       </div>
 
