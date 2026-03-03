@@ -1,7 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import './Loader.css';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+} from "react-icons/fa";
 
 const icons = [FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt];
 
@@ -13,19 +19,19 @@ const generateRandomPosition = () => ({
 const Loader = () => {
   return (
     <motion.div
-      className="loader-wrapper"
+      className="fixed inset-0 h-screen w-screen bg-neutral-950 flex flex-col items-center justify-center text-white z-[9999]"
+      style={{ fontFamily: "Nunito" }}
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
       {/* Spinner with Image */}
-      <motion.div
+      {/* <motion.div
         className="spinner"
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-      >
-      </motion.div>
+      ></motion.div> */}
 
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -41,8 +47,8 @@ const Loader = () => {
         return (
           <motion.div
             key={index}
-            className="floating-icon"
-            style={{ position: 'absolute', ...randomPos }}
+            className="absolute"
+            style={{ position: "absolute", ...randomPos }}
             animate={{
               y: [0, -10, 0],
               opacity: [0, 1, 0],
@@ -55,7 +61,7 @@ const Loader = () => {
               ease: "easeInOut",
             }}
           >
-            <Icon className="tech-icon" />
+            <Icon className="text-3xl text-white" />
           </motion.div>
         );
       })}

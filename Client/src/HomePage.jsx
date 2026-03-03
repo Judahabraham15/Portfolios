@@ -3,7 +3,6 @@ import About from "./Components/About";
 import Hero from "./Components/Hero";
 import Projects from "./Components/Projects";
 import ScrollToTop from "./Components/ScrollToTop";
-import Loader from "./Components/Loader/Loader";
 import DescriptiveText from "./Components/DescriptiveText";
 import ProjectsGallery from "./Components/ProjectsGallery";
 import { useEffect, useState } from "react";
@@ -12,6 +11,7 @@ import Vibe from "./Components/Vibe";
 import { Testimonials } from "./Components/Testimonials";
 import Work from "./Components/Work";
 import Contact from "./Components/Contact";
+import Loader from "./Components/Pages/Loader";
 
 let hasLoaded = false;
 const HomePage = ({ setIsModalOpen }) => {
