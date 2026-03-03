@@ -7,7 +7,6 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 
-
 const Avatar = () => (
   <img
     src="https://res.cloudinary.com/dydmptpcg/image/upload/v1761944916/image_5_furztz.jpg"
@@ -24,9 +23,18 @@ const navLinks = [
 ];
 
 const icons = [
-  { icon: <IconBrandX size={18} />, link: "https://twitter.com/AbrahamJud10090" },
-  { icon: <IconBrandGithub size={18} />, link: "https://github.com/JudahAbraham15" },
-  { icon: <IconBrandLinkedin size={18} />, link: "https://www.linkedin.com/in/judah-abraham-aaba1b339/" },
+  {
+    icon: <IconBrandX size={18} />,
+    link: "https://twitter.com/AbrahamJud10090",
+  },
+  {
+    icon: <IconBrandGithub size={18} />,
+    link: "https://github.com/JudahAbraham15",
+  },
+  {
+    icon: <IconBrandLinkedin size={18} />,
+    link: "https://www.linkedin.com/in/judah-abraham-aaba1b339/",
+  },
   { icon: <IconMail size={18} />, link: "mailto:your@email.com" },
 ];
 
@@ -49,12 +57,12 @@ const Footer = () => {
         >
           <Avatar />
           <p className="mt-4 text-sm md:text-md text-gray-500 max-w-md leading-relaxed">
-            Building fully functional custom software and AI agents in under 5 weeks.
-            A top-rated developer for fast, scalable, SEO-ready solutions.
+            Crafting modern, high-performance web applications with frontend
+            technologies building fast, scalable, user-focused digital
+            experiences that are clean, impactful, and production-ready.
           </p>
         </motion.div>
 
-       
         <motion.nav
           initial={{ opacity: 0, y: 8 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -72,7 +80,6 @@ const Footer = () => {
           ))}
         </motion.nav>
 
-        
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
