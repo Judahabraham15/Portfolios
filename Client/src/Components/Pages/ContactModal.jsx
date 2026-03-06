@@ -29,7 +29,7 @@ const Toast = ({ type, onClose }) => {
           }}
         >
           {isSuccess ? (
-            <FiCheckCircle className="mt-0.5 flex-shrink-0 w-4 h-4 text-[#0F8EA3]" />
+            <FiCheckCircle className="mt-0.5 flex-shrink-0 w-4 h-4 text-brand-text" />
           ) : (
             <FiXCircle className="mt-0.5 flex-shrink-0 w-4 h-4 text-red-400" />
           )}
@@ -37,14 +37,14 @@ const Toast = ({ type, onClose }) => {
           <div className="flex-1">
             <p
               className="text-sm font-medium"
-              style={{ color: isSuccess ? "#0F8EA3" : "#f87171" }}
+              style={{ color: isSuccess ? "#2E8B57" : "#f87171" }}
             >
               {isSuccess ? "Message sent!" : "Something went wrong"}
             </p>
             <p className="text-xs text-white/50 mt-0.5">
               {isSuccess
-                ? "We'll get back to you as soon as possible."
-                : "Please try again or contact us directly."}
+                ? "Message sent successfully! feedback will be provided within 24-48 hours."
+                : "Something went wrong while sending your message. Please try again."}
             </p>
           </div>
 
