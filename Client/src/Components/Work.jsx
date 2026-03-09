@@ -11,6 +11,7 @@ import {
   SiTailwindcss,
   SiNotion,
   SiHubspot,
+  SiExpo,
 } from "react-icons/si";
 import { FaJs, FaHtml5 } from "react-icons/fa";
 
@@ -33,13 +34,14 @@ const experiences = [
       { label: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { label: "Tailwind", icon: SiTailwindcss, color: "#2B7FA0" },
       { label: "Notion", icon: SiNotion, color: "#27272A" },
+      { label: "Expo Go", icon: SiExpo, color: "#000020" },
     ],
   },
   {
     company: "MedicX",
     role: "Junior Frontend Engineer",
     period: "2025 — Present",
- 
+
     highlights: [
       "Built and shipped the MedicX landing page in collaboration with the MedicX team, working closely with designers, developers, and stakeholders to bring the product's vision to life.",
       "Developed and shipped the MedicX Waitlist Form as part of the MedicX team, building out the full functionality to capture and onboard early users ahead of launch.",
@@ -106,8 +108,6 @@ const experiences = [
     ],
   },
 ];
-
-
 
 function TechTag({ tags }) {
   return (
@@ -186,10 +186,6 @@ function ExperienceCard({ exp, index }) {
               {exp.role}
             </p>
           </div>
-
-          {/* <span className="flex items-center gap-1 text-xs text-zinc-400 font-mono mt-1">
-            {exp.location}
-          </span> */}
         </div>
 
         <ul className="space-y-2.5 mb-5">
@@ -218,7 +214,8 @@ export default function Work() {
           Work Experience
         </h1>
         <p className="text-zinc-500 text-sm leading-relaxed max-w-xl text-left">
-         Early in my journey, but already shipping products that solve real problems for real users.
+          Early in my journey, but already shipping products that solve real
+          problems for real users.
         </p>
       </div>
 
