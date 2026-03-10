@@ -61,7 +61,7 @@ export const NavBody = ({ children, className, visible }) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2.5 lg:flex dark:bg-white/4",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2.5 lg:flex",
         visible && "bg-neutral-950/80",
         className,
       )}
