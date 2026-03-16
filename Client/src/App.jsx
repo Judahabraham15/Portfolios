@@ -45,7 +45,7 @@ function App() {
     };
   }, []);
 
-  // Disable/enable scroll when modal is open
+
   useEffect(() => {
     if (isModalOpen && lenis) {
       lenis.stop(); // Disable scrolling
