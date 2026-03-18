@@ -48,9 +48,9 @@ function App() {
 
   useEffect(() => {
     if (isModalOpen && lenis) {
-      lenis.stop(); // Disable scrolling
+      lenis.stop(); 
     } else if (lenis) {
-      lenis.start(); // Enable scrolling
+      lenis.start(); 
     }
   }, [isModalOpen, lenis]);
 
