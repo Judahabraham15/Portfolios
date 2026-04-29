@@ -11,7 +11,7 @@ const TechCarousel = () => {
     { name: "TailwindCss", Icon: SiTailwindcss },
   ];
 
-  // Duplicate the logos array multiple times for truly seamless scrolling
+
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
