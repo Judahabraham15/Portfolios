@@ -33,7 +33,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.5 }}
           className="text-gray-700 text-sm sm:text-base leading-relaxed mt-6"
         >
-          I'm Judah Abraham, a 17-year-old Nigerian self-taught software
+          I'm Judah Abraham, a 18-year-old Nigerian self-taught software
           developer, with 1+ year experience in web development. I specialize in
           building modern, functional user interfaces and robust applications
           that solve real-world problems. I'm also looking to expand into App
@@ -41,7 +41,7 @@ const About = () => {
         </motion.p>
 
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading-relaxed mt-6">
-          Known as "Judah4Good", I'm passionate about continuous learning and
+          Known as "Jayy", I'm passionate about continuous learning and
           pushing my limits. From website clones to fully functional,
           production-ready web applications—I'm just getting warmed up, driven
           by a love for clean code, great design, and making an impact through
@@ -58,7 +58,7 @@ const About = () => {
               />
             </div>
             <p className="text-center text-gray-800 text-sm sm:text-sm mt-2 font-bold font-nunito">
-              @jeflux
+              @jayy
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const About = () => {
               />
             </div>
             <p className="text-center text-gray-800 text-xs sm:text-sm mt-2 font-medium">
-              @judah4good
+              @jayy
             </p>
           </div>
         </div>
