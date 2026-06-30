@@ -20,7 +20,7 @@ const projects = [
     slug: "myright",
     src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
     alt: "MyRight",
-    link: "",
+    link: "/projects2/myright",
   },
   {
     slug: "medicx",
@@ -39,7 +39,7 @@ const projects = [
     slug: "haven",
     src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
     alt: "HAVEN",
-    link: "",
+    link: "/projects2/haven",
   },
   // {
   //   slug: "ikechukwu",

@@ -1,15 +1,46 @@
 import React from "react";
 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJsSquare } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { SiAccenture, SiAcer, SiExpress, SiHubspot, SiLaravel, SiNextdotjs, SiPhp, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiAccenture, SiAcer, SiExpress, SiHubspot, SiLaravel, SiMongodb, SiNextdotjs, SiPhp, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { IconBrandTypescript } from "@tabler/icons-react";
+import { paths } from "../utils/paths";
 
 const Projects = () => {
   const Projects = [
+    {
+      slug:"myright",
+      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+      title:"MyRight",
+      desc:"A legal access platform connecting everyday Nigerians to ADR services and their rights.",
+      icons:[
+        <FaJs color="#1a1a1a" />,
+        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <FaReact color="#1a1a1a" />,
+        <SiTailwindcss color="#1a1a1a" />,
+        <FaNodeJs color="#1a1a1a"/>
+        
+      ],
+      link:"/projects2/myright",
+    },
+    {
+      slug:"haven",
+      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
+      title:"Haven",
+      desc:"A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
+      icons:[
+        <SiMongodb color="#1a1a1a"/>,
+        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <SiNextdotjs color="#1a1a1a" />,
+        <SiTailwindcss color="#1a1a1a" />,
+        <FaNodeJs color="#1a1a1a"/>
+        
+      ],
+      link:"/projects2/haven",
+    },
     {
       slug: "medicx",
       img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
@@ -195,7 +226,9 @@ const Projects = () => {
           ))}
         </motion.div>
         {/* <div className="mt-19">
-         <button className="bg-neutral-950 px-4 py-3 text-white rounded-lg ">View More</button> 
+          <Link to={paths.moreprojects}>
+          <button className="bg-[#E0E0E0] px-8 py-3 text-[#354B21]  rounded-lg cursor-pointer">View More</button> 
+          </Link>
         </div> */}
       </div>
     </div>
