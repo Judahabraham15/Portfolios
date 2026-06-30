@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import projectdata from "../data/projectdata.js";
 import { motion } from "framer-motion";
-import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FiExternalLink } from "react-icons/fi";
 import { IconBrandGithub } from "@tabler/icons-react";
 

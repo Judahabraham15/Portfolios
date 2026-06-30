@@ -17,6 +17,12 @@ const projects = [
     link: "/projects2/lagos-cricket",
   },
   {
+    slug: "myright",
+    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+    alt: "MyRight",
+    link: "",
+  },
+  {
     slug: "medicx",
     src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
     alt: "MEDICX",
@@ -30,11 +36,17 @@ const projects = [
     link: "/projects2/jshare",
   },
   {
-    slug: "ikechukwu",
-    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
-    alt: "DEVCHUKS",
-    link: "/projects2/ikechukwu",
+    slug: "haven",
+    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
+    alt: "HAVEN",
+    link: "",
   },
+  // {
+  //   slug: "ikechukwu",
+  //   src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
+  //   alt: "DEVCHUKS",
+  //   link: "/projects2/ikechukwu",
+  // },
 
   {
     slug: "blinkist",

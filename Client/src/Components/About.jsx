@@ -14,7 +14,7 @@ const About = () => {
           About
         </motion.h1>
 
-        <motion.p
+     <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -42,10 +42,11 @@ const About = () => {
 
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading-relaxed mt-6">
           Known as "Jayy", I'm passionate about continuous learning and
-          pushing my limits. From website clones to fully functional,
-          production-ready web applications—I'm just getting warmed up, driven
-          by a love for clean code, great design, and making an impact through
-          technology.
+          pushing my limits. I've competed in 2 hackathons, winning 1 — proof
+          that I thrive under pressure and love building things that matter fast.
+          From website clones to fully functional, production-ready web
+          applications—I'm just getting warmed up, driven by a love for clean
+          code, great design, and making an impact through technology.
         </p>
 
         <div className="group relative w-full h-[350px] sm:h-[400px] flex items-center justify-center mt-10 cursor-pointer">
