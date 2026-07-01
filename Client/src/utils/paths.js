@@ -5,5 +5,5 @@ export const paths= {
     projects2:"/projects2/:slug",
     contact:"/contact",
     blog:"/blog",
-
+    moreprojects:"/moreprojects"
 }
