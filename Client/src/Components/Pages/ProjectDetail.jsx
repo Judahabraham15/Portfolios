@@ -4,6 +4,8 @@ import projectdata from "../data/projectdata.js";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 import { IconBrandGithub } from "@tabler/icons-react";
+import { FolderX } from "lucide-react";
+import { paths } from "../../utils/paths.js";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -18,14 +20,39 @@ const ProjectDetail = () => {
       window.scrollTo(0, 0);
     }
   }, [slug]);
-  if (!project) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Project not found.</p>
+if (!project) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4 text-center">
+      <div className="rounded-full bg-[#dcf2e3] p-4">
+        <FolderX className="h-8 w-8 text-green-600" aria-hidden="true" />
       </div>
-    );
-  }
 
+      <div className="space-y-1">
+        <h1 className="text-lg font-semibold text-neutral-800 font-outfit">
+          Project not found
+        </h1>
+        <p className="text-sm text-gray-500 font-nunito">
+          This project may have been deleted or the link is incorrect.
+        </p>
+      </div>
+
+      <div className="flex gap-2 mt-2">
+        <Link
+          to="/"
+          className="text-[15px] inline-flex items-center gap-2 border border-gray-300 text-neutral-800 px-4 py-2.5 rounded-lg font-outfit font-normal hover:bg-gray-100 transition-colors"
+        >
+          Go back
+        </Link>
+        <Link
+          to={paths.moreprojects}
+          className="text-[15px] inline-flex items-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg font-outfit font-normal hover:bg-neutral-800 transition-colors"
+        >
+          View all projects
+        </Link>
+      </div>
+    </div>
+  );
+}
   return (
     <motion.section
       className="min-h-screen w-full px-2.5 sm:px-6 md:px-8 "

@@ -21,6 +21,22 @@ const projects = [
     link: "https://medicx.app",
   },
   {
+    slug:"myright",
+    img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+    title:"MyRight",
+    desc:"A legal access platform connecting everyday Nigerians to ADR services and their rights.",
+    technologies:[
+      "JavaScript",
+      "Typescript",
+      "Gemini API Key",
+      "React",
+      "Schdan UI",
+      "Tailwind"
+    ],
+    link:"https://my-right-one.vercel.app/",
+    githubLink:"https://github.com/tech-monarch/MyRight"
+  },
+  {
     slug: "jshare",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763633342/Screenshot_2025-11-20_105948_vnxvlg.png",
     title: "JShare",

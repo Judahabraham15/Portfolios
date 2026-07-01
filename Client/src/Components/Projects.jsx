@@ -1,12 +1,12 @@
 import React from "react";
 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
-import { TbWorldWww } from "react-icons/tb";
+import { TbWorldWww, TbZodiacGemini } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { SiAccenture, SiAcer, SiExpress, SiHubspot, SiLaravel, SiMongodb, SiNextdotjs, SiPhp, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { IconBrandTypescript } from "@tabler/icons-react";
+import { IconBrandTypescript, IconZodiacGemini } from "@tabler/icons-react";
 import { paths } from "../utils/paths";
 
 const Projects = () => {
@@ -21,7 +21,7 @@ const Projects = () => {
         <IconBrandTypescript size={25} color="#1a1a1a"/>,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
-        <FaNodeJs color="#1a1a1a"/>
+        <FaNodeJs color="#1a1a1a"/>,
         
       ],
       link:"/projects2/myright",
