@@ -1,45 +1,63 @@
 import React from "react";
 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJsSquare, FaNodeJs } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaJsSquare,
+  FaNodeJs,
+} from "react-icons/fa";
 import { TbWorldWww, TbZodiacGemini } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { SiAccenture, SiAcer, SiExpress, SiHubspot, SiLaravel, SiMongodb, SiNextdotjs, SiPhp, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiAccenture,
+  SiAcer,
+  SiExpress,
+  SiHubspot,
+  SiLaravel,
+  SiMongodb,
+  SiNextdotjs,
+  SiPhp,
+  SiShadcnui,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { IconBrandTypescript, IconZodiacGemini } from "@tabler/icons-react";
 import { paths } from "../utils/paths";
+import { ChevronRight } from "lucide-react";
 
 const Projects = () => {
   const Projects = [
     {
-      slug:"myright",
-      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
-      title:"MyRight",
-      desc:"A legal access platform connecting everyday Nigerians to ADR services and their rights.",
-      icons:[
+      slug: "myright",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+      title: "MyRight",
+      desc: "A legal access platform connecting everyday Nigerians to ADR services and their rights.",
+      icons: [
         <FaJs color="#1a1a1a" />,
-        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <IconBrandTypescript size={25} color="#1a1a1a" />,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
-        <FaNodeJs color="#1a1a1a"/>,
-        
+        <FaNodeJs color="#1a1a1a" />,
       ],
-      link:"/projects2/myright",
+      link: "/projects2/myright",
     },
     {
-      slug:"haven",
-      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
-      title:"Haven",
-      desc:"A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
-      icons:[
-        <SiMongodb color="#1a1a1a"/>,
-        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+      slug: "haven",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
+      title: "Haven",
+      desc: "A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
+      icons: [
+        <SiMongodb color="#1a1a1a" />,
+        <IconBrandTypescript size={25} color="#1a1a1a" />,
         <SiNextdotjs color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
-        <FaNodeJs color="#1a1a1a"/>
-        
+        <FaNodeJs color="#1a1a1a" />,
       ],
-      link:"/projects2/haven",
+      link: "/projects2/haven",
     },
     {
       slug: "medicx",
@@ -61,7 +79,7 @@ const Projects = () => {
       desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
       icons: [
         <FaJs color="#1a1a1a" />,
-        <IconBrandTypescript size={25} color="#1a1a1a"/>,
+        <IconBrandTypescript size={25} color="#1a1a1a" />,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
         <SiExpress color="#1a1a1a" />,
@@ -69,29 +87,28 @@ const Projects = () => {
       link: "/projects2/jshare",
     },
     {
-     slug:"lagos-cricket",
-      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
-      title:"Lagos-Cricket Stakeholder",
+      slug: "lagos-cricket",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
+      title: "Lagos-Cricket Stakeholder",
       desc: "A stakeholder management platform for the Lagos Cricket Club.",
       icons: [
-        <IconBrandTypescript size={25} color="#1a1a1a"/>,
-        <SiNextdotjs/>,
-        <SiTailwindcss/>,
-        <SiLaravel/>,
-        <SiShadcnui/>
+        <IconBrandTypescript size={25} color="#1a1a1a" />,
+        <SiNextdotjs />,
+        <SiTailwindcss />,
+        <SiLaravel />,
+        <SiShadcnui />,
       ],
       link: "/projects2/lagos-cricket",
     },
     {
       slug: "pantheon",
-      img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
+      img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
       title: "Pantheon",
       desc: "A startup portfolio that shows its aim at marketing buisness and other startup ideas",
-        icons: [
+      icons: [
         <FaJs color="#1a1a1a" />,
         <FaReact color="#1a1a1a" />,
         <SiTailwindcss color="#1a1a1a" />,
-        
       ],
       link: "/projects2/pantheon",
     },
@@ -119,7 +136,6 @@ const Projects = () => {
       ],
       link: "/projects2/ikechukwu",
     },
-
   ];
 
   // Animation variants
@@ -225,11 +241,28 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-        {/* <div className="mt-19">
+        <div className="mt-19">
           <Link to={paths.moreprojects}>
-          <button className="bg-[#E0E0E0] px-8 py-3 text-[#354B21]  rounded-lg cursor-pointer">View More</button> 
+            <motion.button
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+              className="bg-black px-5 py-3.5 text-white font-inter rounded-xl font-medium cursor-pointer flex items-center gap-2"
+            >
+              View All
+              <motion.span
+                variants={{
+                  rest: { x: 0 },
+                  hover: { x: 4 },
+                }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="flex items-center"
+              >
+                <ChevronRight size={21} />
+              </motion.span>
+            </motion.button>
           </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );
