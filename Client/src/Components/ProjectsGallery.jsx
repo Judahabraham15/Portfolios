@@ -11,10 +11,22 @@ const projects = [
     link: "/projects2/pantheon",
   },
   {
-    slug: "lagos-cricket",
-    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
-    alt: "LAGOS-CRICKET",
-    link: "/projects2/lagos-cricket",
+    slug: "shift",
+    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223846_korses.png",
+    alt: "SHIFT",
+    link: "/projects2/shift",
+  },
+    {
+    slug: "page.ai-web",
+    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223954_jqiyrk.png",
+    alt: "Page.ai-Web",
+    link: "/projects2/page.ai-web",
+  },
+  {
+    slug: "page.ai-desktop",
+    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102108/Screenshot_2026-07-24_135212_wr2hi8.png",
+    alt: "Page.ai-Desktop",
+    link: "/projects2/page.ai-desktop",
   },
   {
     slug: "myright",
@@ -48,13 +60,13 @@ const projects = [
   //   link: "/projects2/ikechukwu",
   // },
 
-  {
-    slug: "blinkist",
-    src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
-    alt: "BLINKIST",
-    href: "https://blinkist-landing-page-seven.vercel.app/",
-    link: "/projects2/blinkist",
-  },
+  // {
+  //   slug: "blinkist",
+  //   src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
+  //   alt: "BLINKIST",
+  //   href: "https://blinkist-landing-page-seven.vercel.app/",
+  //   link: "/projects2/blinkist",
+  // },
 ];
 
 const ProjectsGallery = () => {
