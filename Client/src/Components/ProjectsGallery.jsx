@@ -53,20 +53,7 @@ const projects = [
     alt: "HAVEN",
     link: "/projects2/haven",
   },
-  // {
-  //   slug: "ikechukwu",
-  //   src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
-  //   alt: "DEVCHUKS",
-  //   link: "/projects2/ikechukwu",
-  // },
-
-  // {
-  //   slug: "blinkist",
-  //   src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
-  //   alt: "BLINKIST",
-  //   href: "https://blinkist-landing-page-seven.vercel.app/",
-  //   link: "/projects2/blinkist",
-  // },
+ 
 ];
 
 const ProjectsGallery = () => {

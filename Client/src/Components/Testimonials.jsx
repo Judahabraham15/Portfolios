@@ -38,6 +38,9 @@ export function Testimonials() {
       designation: "Backend Engineer at MedicX",
       src: "https://res.cloudinary.com/dydmptpcg/image/upload/v1772195213/Omopekun_nc5ous.png",
     },
+    // {
+    //   quote:""
+    // }
   ];
   return (
     <section className="min-h-screen flex items-center justify-center flex-col">
