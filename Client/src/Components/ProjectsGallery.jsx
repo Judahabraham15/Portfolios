@@ -59,7 +59,7 @@ const projects = [
 const ProjectsGallery = () => {
   return (
     <div className="h-[20rem] mb-[10rem] flex flex-col antialiased items-center justify-center relative overflow-hidden cursor-pointer">
-      <InfiniteMovingCards items={projects} direction="right" speed="slow" />
+      <InfiniteMovingCards items={projects} direction="left" speed="fast" />
     </div>
   );
 };
