@@ -69,7 +69,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <Footer setIsModalOpen={setIsModalOpen} />
 
         {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
         <ToastContainer
