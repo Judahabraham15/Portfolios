@@ -6,6 +6,8 @@ import {
   IconBrandX,
   IconMail,
 } from "@tabler/icons-react";
+import { paths } from "../utils/paths";
+import { Link } from "react-router-dom";
 
 const Avatar = () => (
   <img
@@ -14,13 +16,6 @@ const Avatar = () => (
     className="w-12 h-12 rounded object-cover"
   />
 );
-
-const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Projects", href: "#projects" },
-  { label: "Articles", href: "#articles" },
-  { label: "Contact", href: "#contact" },
-];
 
 const icons = [
   {
@@ -38,11 +33,27 @@ const icons = [
   { icon: <IconMail size={18} />, link: "mailto:your@email.com" },
 ];
 
-const Footer = () => {
+const Footer = ({ setIsModalOpen }) => {
   const footerRef = useRef(null);
   const isInView = useInView(footerRef, { once: true, margin: "-50px" });
   const year = new Date().getFullYear();
+  const Open = () => {
+    setIsModalOpen(true);
+  };
 
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Projects", href: "/projects" },
+    { label: "Blogs", href: "/blog" },
+    {
+      label: "Contact",
+      href: "#",
+      onClick: (e) => {
+        e.preventDefault();
+        Open();
+      },
+    },
+  ];
   return (
     <footer
       ref={footerRef}
@@ -69,13 +80,9 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex flex-wrap gap-x-6  mb-6 pt-2"
         >
-          {navLinks.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              className="text-sm font-medium text-gray-700 hover:text-[#2E8B57] transition-colors duration-150"
-            >
-              {label}
+          {navLinks.map((link) => (
+            <a href={link.href} onClick={link.onClick}>
+              {link.label}
             </a>
           ))}
         </motion.nav>
