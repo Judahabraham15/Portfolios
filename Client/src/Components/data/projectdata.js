@@ -23,7 +23,7 @@ const projects = [
   {
     slug: "myright",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
-    title: "MyRight",
+    title: "MyRight (Hackathon winning project)",
     desc: "A legal access platform connecting everyday Nigerians to ADR services and their rights.",
     para1:
       "MyRight is a legal-access platform that connects everyday Nigerians — tenants, landlords, small business owners — to certified ADR mediators through a guided digital flow instead of a courtroom. A user submits their dispute through an intake form, an AI layer (Gemini) classifies the dispute and recommends a resolution pathway in plain language, and the platform then matches them to a mediator for a live, structured session. When both sides agree on terms, a downloadable settlement document is generated to close it out.",
@@ -41,6 +41,19 @@ const projects = [
     ],
     link: "https://my-right-one.vercel.app/",
     githubLink: "https://github.com/tech-monarch/MyRight",
+  },
+    {
+    slug: "shift-web",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223846_korses.png",
+    title: "Shift Web",
+    technologies: [
+      "Node.Js",
+      "Typescript",
+      "React",
+      "Tailwind Css",
+    ],
+    link: "https://shift-web-ochre.vercel.app",
+    githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
   {
     slug: "jshare",
