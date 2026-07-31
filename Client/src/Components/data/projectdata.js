@@ -21,20 +21,26 @@ const projects = [
     link: "https://medicx.app",
   },
   {
-    slug:"myright",
-    img:"https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
-    title:"MyRight",
-    desc:"A legal access platform connecting everyday Nigerians to ADR services and their rights.",
-    technologies:[
-      "JavaScript",
+    slug: "myright",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+    title: "MyRight",
+    desc: "A legal access platform connecting everyday Nigerians to ADR services and their rights.",
+    para1:
+      "MyRight is a legal-access platform that connects everyday Nigerians — tenants, landlords, small business owners — to certified ADR mediators through a guided digital flow instead of a courtroom. A user submits their dispute through an intake form, an AI layer (Gemini) classifies the dispute and recommends a resolution pathway in plain language, and the platform then matches them to a mediator for a live, structured session. When both sides agree on terms, a downloadable settlement document is generated to close it out.",
+    para2:
+      "Nigeria's courts are drowning — commercial and civil cases can take 2-7 years to resolve — and the ADR system built to relieve that pressure (mediation, arbitration, conciliation) is legally valid but practically invisible. It's physically concentrated in a handful of urban centres, requires in-person attendance, and most Nigerians don't even know it exists as a faster, cheaper alternative to a lawyer. So people just eat the loss: unpaid rent, broken contracts, withheld deposits go unresolved because the proper channel is either a multi-year court case or an unaffordable retainer.",
+    para3:
+      "A working end-to-end ADR platform — users submit a dispute through a guided intake form, Gemini AI classifies it and recommends mediation or arbitration, the platform matches them to a certified mediator, both parties meet in a live structured chatroom to resolve it, and once agreed, a downloadable settlement document is auto-generated. Built with React, TypeScript, Tailwind, and Shadcn UI — the full intake-to-settlement loop works in one flow, from phone to resolution, no lawyer or courtroom needed.",
+    technologies: [
+      "Node.Js",
       "Typescript",
-      "Gemini API Key",
-      "React",
+      "Gemini AI",
+      "React PWA",
       "Schdan UI",
-      "Tailwind"
+      "Tailwind",
     ],
-    link:"https://my-right-one.vercel.app/",
-    githubLink:"https://github.com/tech-monarch/MyRight"
+    link: "https://my-right-one.vercel.app/",
+    githubLink: "https://github.com/tech-monarch/MyRight",
   },
   {
     slug: "jshare",
@@ -65,9 +71,12 @@ const projects = [
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
     title: "Pantheon",
     desc: "A startup portfolio that shows its aim at marketing buisness and other startup ideas",
-    para1:"A sleek portfolio platform for Pantheon, built to present its marketing services and startup ideas to clients and investors with a strong, credible brand identity.",
-    para2:"Most startups and marketing ventures struggle to present their ideas, services, and portfolio in a way that feels credible, cohesive, and compelling to potential clients or investors. Without a strong digital presence, even great ideas get overlooked — and early-stage ventures rarely have the resources to commission expensive agency-built sites that do them justice.",
-    para3:"Pantheon — a startup portfolio platform designed to showcase marketing businesses and startup ideas with clarity and confidence. It gives the venture a professional home to present its mission, highlight its projects, and communicate its value to the right audience, whether that's clients, collaborators, or early backers.",
+    para1:
+      "A sleek portfolio platform for Pantheon, built to present its marketing services and startup ideas to clients and investors with a strong, credible brand identity.",
+    para2:
+      "Most startups and marketing ventures struggle to present their ideas, services, and portfolio in a way that feels credible, cohesive, and compelling to potential clients or investors. Without a strong digital presence, even great ideas get overlooked — and early-stage ventures rarely have the resources to commission expensive agency-built sites that do them justice.",
+    para3:
+      "Pantheon — a startup portfolio platform designed to showcase marketing businesses and startup ideas with clarity and confidence. It gives the venture a professional home to present its mission, highlight its projects, and communicate its value to the right audience, whether that's clients, collaborators, or early backers.",
     technologies: [
       "React",
       "Typescript",
@@ -75,7 +84,7 @@ const projects = [
       "Aceternity UI",
       "Proforms",
     ],
-    link:"https://launchbase.one",
+    link: "https://launchbase.one",
   },
   {
     slug: "lagos-cricket",
@@ -86,7 +95,8 @@ const projects = [
       "A content-managed platform built for the Lagos Cricket Club, enabling admins to publish news and broadcast live match updates to members, sponsors, and fans in one place.",
     para2:
       "The Lagos Cricket Club had no central platform for keeping members, sponsors, and supporters informed. News updates were scattered across social media, live match information was hard to follow in real time, and there was no structured way for leadership to communicate officially with stakeholders. This created confusion, disengagement, and a lack of professionalism around the club's growing brand.",
-      para3:"A dedicated stakeholder management platform where club admins can publish news articles, post live match updates, and keep all stakeholders — members, sponsors, and fans — informed through one clean, organized hub. The platform gives the club a professional digital presence while giving admins full control over content without needing technical skills.",
+    para3:
+      "A dedicated stakeholder management platform where club admins can publish news articles, post live match updates, and keep all stakeholders — members, sponsors, and fans — informed through one clean, organized hub. The platform gives the club a professional digital presence while giving admins full control over content without needing technical skills.",
     technologies: [
       "Next.js",
       "Typescript",
@@ -114,9 +124,12 @@ const projects = [
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
     title: "Ikechukwu Portfolio",
     desc: "A website that displays the skills of a pharmacist who transitioned to tech",
-    para1: "A portfolio website that showcases a pharmacist's transition into tech, presenting their technical skills alongside the unique edge their healthcare background provides.",
-    para2:"Professionals who transition from non-tech fields into tech often struggle to present themselves convincingly online. A pharmacist moving into tech carries a unique and valuable blend of analytical thinking, attention to detail, and domain expertise — but traditional developer portfolios don't make room for that story, leaving a genuinely standout background looking generic or mismatched.",
-    para3:"A personal portfolio website that bridges both worlds — presenting the pharmacist-turned-tech professional's technical skills while weaving in the credibility and precision their healthcare background brings. It tells a compelling career transition story that makes them memorable, not just qualified.",
+    para1:
+      "A portfolio website that showcases a pharmacist's transition into tech, presenting their technical skills alongside the unique edge their healthcare background provides.",
+    para2:
+      "Professionals who transition from non-tech fields into tech often struggle to present themselves convincingly online. A pharmacist moving into tech carries a unique and valuable blend of analytical thinking, attention to detail, and domain expertise — but traditional developer portfolios don't make room for that story, leaving a genuinely standout background looking generic or mismatched.",
+    para3:
+      "A personal portfolio website that bridges both worlds — presenting the pharmacist-turned-tech professional's technical skills while weaving in the credibility and precision their healthcare background brings. It tells a compelling career transition story that makes them memorable, not just qualified.",
     technologies: ["React", "CSS", "JavaScript"],
     link: "https://ikechwukwu-portfolio.vercel.app/",
   },
