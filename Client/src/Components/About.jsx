@@ -42,7 +42,7 @@ const About = () => {
 
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed sm:leading-relaxed mt-6">
           Known as "Jayy", I'm passionate about continuous learning and
-          pushing my limits. I've competed in 2 hackathons, winning 1 — proof
+          pushing my limits. I've competed in 3 hackathons, winning 1 — proof
           that I thrive under pressure and love building things that matter fast.
           From website clones to fully functional, production-ready web
           applications—I'm just getting warmed up, driven by a love for clean

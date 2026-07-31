@@ -1,5 +1,5 @@
 import React from 'react';
-import { SiNodedotjs, SiJavascript, SiMongodb, SiReact, SiNextdotjs, SiTypescript , SiTailwindcss } from 'react-icons/si';
+import { SiNodedotjs, SiJavascript, SiMongodb, SiReact, SiNextdotjs, SiTypescript , SiTailwindcss , SiElectron } from 'react-icons/si';
 
 const TechCarousel = () => {
   const logos = [
@@ -9,6 +9,7 @@ const TechCarousel = () => {
     { name: "React", Icon: SiReact },
     { name: "Next.js", Icon: SiTypescript },
     { name: "TailwindCss", Icon: SiTailwindcss },
+    { name: "Electron", Icon: SiElectron }, 
   ];
 
 

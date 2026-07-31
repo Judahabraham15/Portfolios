@@ -14,6 +14,8 @@ import TopPage from "./Routes/TopPage";
 import ContactModal from "./Components/Pages/ContactModal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { paths } from "./utils/paths";
+import { MoreProjectts } from "./Components/Pages/MoreProjectts";
 
 function App() {
   const isUnderConstruction = false;
@@ -68,6 +70,7 @@ function App() {
           <Route path="/projects2/:slug" element={<ProjectDetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
+          <Route path={paths.moreprojects} element={<MoreProjectts/>}/>
         </Routes>
         <Footer setIsModalOpen={setIsModalOpen} />
 
