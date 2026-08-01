@@ -1,7 +1,253 @@
-import React from 'react'
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaJsSquare,
+  FaNodeJs,
+} from "react-icons/fa";
+import {
+  SiAccenture,
+  SiAcer,
+  SiExpress,
+  SiHubspot,
+  SiLaravel,
+  SiMongodb,
+  SiNextdotjs,
+  SiPhp,
+  SiShadcnui,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { IconBrandTypescript, IconZodiacGemini } from "@tabler/icons-react";
+
+const projects = [
+  {
+    slug: "myright",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674208/Screenshot_2026-06-28_201430_pcnvi3.png",
+    title: "MyRight",
+    desc: "A legal access platform connecting everyday Nigerians to ADR services and their rights.",
+    icons: [
+      <FaJs color="#1a1a1a" />,
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <FaReact color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+      <FaNodeJs color="#1a1a1a" />,
+    ],
+    link: "/projects2/myright",
+  },
+  {
+    slug: "haven",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
+    title: "Haven",
+    desc: "A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
+    icons: [
+      <SiMongodb color="#1a1a1a" />,
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <SiNextdotjs color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+      <FaNodeJs color="#1a1a1a" />,
+    ],
+    link: "/projects2/haven",
+  },
+  {
+    slug: "shift-web",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223846_korses.png",
+    title: "Shift Web",
+    desc: "Shift, a platform that turns your goal into today's one task — and proof you did it.",
+    icons: [
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <FaReact color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+      <FaNodeJs color="#1a1a1a" />,
+    ],
+    link: "/projects2/shift-web",
+  },
+  {
+    slug: "medicx",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",
+    title: "MedicX",
+    desc: "A healthcare startup dedicated to improving medical accessibility and  quality of life.",
+    icons: [
+      <SiTailwindcss color="#1a1a1a" key="css3" />,
+      <FaReact color="#1a1a1a" key="react" />,
+      <FaJs color="#1a1a1a" key="js" />,
+      <SiHubspot />,
+    ],
+    link: "/projects2/medicx",
+  },
+  {
+    slug: "jshare",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763633342/Screenshot_2025-11-20_105948_vnxvlg.png",
+    title: "JShare",
+    desc: "A streamlined file-sharing solution designed for fast, effortless collaboration.",
+    icons: [
+      <FaJs color="#1a1a1a" />,
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <FaReact color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+      <SiExpress color="#1a1a1a" />,
+    ],
+    link: "/projects2/jshare",
+  },
+  {
+    slug: "lagos-cricket",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1770849340/Screenshot_2026-02-11_233226_m7wjmg.png",
+    title: "Lagos-Cricket Stakeholder",
+    desc: "A stakeholder management platform for the Lagos Cricket Club.",
+    icons: [
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <SiNextdotjs />,
+      <SiTailwindcss />,
+      <SiLaravel />,
+      <SiShadcnui />,
+    ],
+    link: "/projects2/lagos-cricket",
+  },
+  {
+    slug: "pantheon",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1768955091/Screenshot_2026-01-21_011811_ftbytq.png",
+    title: "Pantheon",
+    desc: "A startup portfolio that shows its aim at marketing buisness and other startup ideas",
+    icons: [
+      <FaJs color="#1a1a1a" />,
+      <FaReact color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+    ],
+    link: "/projects2/pantheon",
+  },
+  {
+    slug: "blinkist",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627842/Blink_zspbte.png",
+    title: "Blinkist-Landing Page",
+    desc: "A Blinkist-Landing Page with more features and a modern Login Page",
+    icons: [
+      <FaCss3Alt color="#1a1a1a" key="css3" />,
+      <FaReact color="#1a1a1a" key="react" />,
+      <FaJs color="#1a1a1a" key="js" />,
+    ],
+    link: "/projects2/blinkist",
+  },
+  {
+    slug: "ikechukwu",
+    title: "Ikechukwu Portfolio",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763627962/port_ckjluh.png",
+    desc: "A website that displays the skills of a pharmacist who transitioned to tech",
+    icons: [
+      <FaReact color="#1a1a1a" />,
+      <FaCss3Alt color="#1a1a1a" />,
+      <FaJsSquare color="#1a1a1a" />,
+    ],
+    link: "/projects2/ikechukwu",
+  },
+];
 
 export const MoreProjectts = () => {
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.18,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 60, scale: 0.95 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 80, damping: 14 },
+    },
+  };
   return (
-    <div>MoreProjectts</div>
-  )
-}
+    <div className="relative min-h-screen items-center justify-center flex flex-col py-28 md:py-50 bg-[#F0FFF0]  ">
+      <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-[440px] bg-neutral-300 xl:block" />
+      <div className="absolute inset-y-0 left-1/2 hidden w-px translate-x-[440px] bg-neutral-300 xl:block" />
+
+      <motion.div
+        className="flex flex-col justify-center items-center  mb-12 pt-8 px-4"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, type: "spring" }}
+        viewport={{ once: true }}
+      >
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800  font-outfit tracking-tight">
+          {" "}
+          Here's What I've Been Innovating
+        </h1>
+      </motion.div>
+      <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 w-full max-w-3xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {projects.map(({ title, img, desc, icons, link }, index) => (
+            <motion.div
+              className="bg-[#e6f4ea] text-black rounded-2xl shadow-md min-h-[320px]  max-w-[360px] mx-auto  flex flex-col items-start justify-start p-5 sm:p-6"
+              key={index}
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.04,
+                boxShadow: "0 4px 24px rgba(33,136,56,0.13)",
+              }}
+              transition={{ type: "spring", stiffness: 120 }}
+            >
+              <div className="w-full flex flex-col items-center mb-2">
+                <img
+                  src={img}
+                  className="w-full max-w-[300px] h-auto rounded-lg mb-3 object-cover"
+                  alt={title}
+                />
+              </div>
+
+              <div className="flex flex-col w-full items-start mt-0 ">
+                <h1 className="text-brand-text font-semibold text-xl sm:text-[22px] mb-2 font-outfit ">
+                  {title}
+                </h1>
+                <p className="text-sm sm:text-[0.9rem] text-gray-700 mb-4 font-nunito">
+                  {desc}
+                </p>
+
+                <div className="flex justify-start items-center gap-2 mb-auto">
+                  {icons.map((icon, i) => (
+                    <span key={i} className="text-2xl">
+                      {icon}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-col items-end w-full mt-auto pt-3">
+                  {link && (
+                    <>
+                      <Link to={link} className="mr-[8%] mb-1">
+                        <button className="group px-2.5 py-2 md:px-3 md:py-2.5 cursor-pointer bg-[#E0E0E0] text-[#354B21] font-outfit font-medium rounded-md  transition-all duration-300">
+                          <span className="text-sm md:text-md ">
+                            View Project{" "}
+                          </span>
+                          <MdKeyboardArrowRight
+                            className="inline-block  group-hover:pl-2  transition-all duration-300 w-8"
+                            size={20}
+                            style={{ verticalAlign: "middle" }}
+                          />
+                        </button>
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
