@@ -81,7 +81,7 @@ const Footer = ({ setIsModalOpen }) => {
           className="flex flex-wrap gap-x-6  mb-6 pt-2"
         >
           {navLinks.map((link) => (
-            <a href={link.href} onClick={link.onClick}>
+            <a key={link.label} href={link.href} onClick={link.onClick}>
               {link.label}
             </a>
           ))}

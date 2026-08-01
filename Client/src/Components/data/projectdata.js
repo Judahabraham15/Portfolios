@@ -42,19 +42,37 @@ const projects = [
     link: "https://my-right-one.vercel.app/",
     githubLink: "https://github.com/tech-monarch/MyRight",
   },
-    {
+  {
     slug: "shift-web",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223846_korses.png",
     title: "Shift Web",
-    technologies: [
-      "Node.Js",
-      "Typescript",
-      "React",
-      "Tailwind Css",
-    ],
+    desc: "Shift, a platform that turns your goal into today's one task — and proof you did it.",
+    para1:
+      "Shift is a behavior-enforcement mechanism, not a to-do list or organizer. It's built around a Commitment Gap model: a Morning Trigger forces the user to declare their single most important task before they can even start their day, and a Visible Streak publicly tracks consecutive days completed — making consistency something the user is genuinely afraid to break. It's aimed at founders, students, and high-achievers who want unavoidable daily execution, not another passive planner.",
+    para2:
+      "Productivity tools fail not because people can't plan — they fail because there's no real accountability behind the plan. Existing habit trackers are toothless: breaking a 100-day streak costs nothing, so users just quit with no consequence. On top of that, builders face a direct conflict between doing the work (deep, uninterrupted execution) and marketing the work (constant build in public documentation) and the documentation time eats into the execution time. The result is low-stakes software that lets people abandon their goals without friction.",
+    para3:
+      "Two mechanics power the system. The Morning Trigger is a high-priority alarm that forces the user to declare their one Lock-In Task before they can dismiss it and start their day — no vague to-do list, just one committed task each morning. The Visible Streak sits on the home screen tracking consecutive days completed, turning consistency into something the user is genuinely afraid to break rather than a number they can ignore. On top of this free core loop, Shift Pro lets users convert that private streak into shareable, external proof of their discipline — accountability and light marketing built right into the habit itself.",
+    technologies: ["Node.Js", "Typescript", "React", "Tailwind Css"],
     link: "https://shift-web-ochre.vercel.app",
     githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
+  {
+    slug: "haven",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
+    desc: "A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
+    para1:
+      "Haven is a community-backed trust and verified-service platform that digitizes the informal trust networks Nigerians already rely on — churches, mosques, savings cooperatives — instead of trying to build trust from scratch. Artisans get verified by a community leader who actually knows them, not just an uploaded ID. Users interact through a lightweight WhatsApp conversational interface and a low-bandwidth PWA (built for 2G/3G realities), book services, pay into escrow, and release funds via a PIN once the job's done. Disputes get resolved by community leaders acting as mediators rather than courts.",
+    para2:
+      "Nigeria's informal service economy (90%+ of the workforce, $5.17B in gig activity) runs entirely on word-of-mouth trust because formal infrastructure — address databases, credit histories, court systems — barely exists. That means every transaction is a gamble: homeowners can't verify artisans before letting them in, deposits get lost to fraud, so people insist on paying cash only after work is done, or avoid hiring altogether. Meanwhile skilled local talent (plumbers, electricians) stays invisible in their own neighborhoods, and money leaks out to expensive outside contractors. Western marketplace models (TaskRabbit, Upwork) fail here because they assume the underlying trust infrastructure (credit scores, legal recourse) already exists — it doesn't.",
+    para3:
+      "A functional demo combining a simulated WhatsApp conversational booking flow with a client-facing PWA for browsing verified local artisans and tracking jobs, backed by a real Paystack sandbox escrow integration — client pays in, funds are held, and a PIN release triggers payout with automatic commission splits. Identity checks, voice transcription, and live GPS tracking were mocked for the demo, with the full production architecture (FastAPI microservices, PostGIS matching, fraud detection models) scoped as the next build phase rather than shipped in the hackathon version.",
+    title: "Haven",
+    technologies: ["Node.Js", "Typescript", "Next.js", "Tailwind Css"],
+    link: "https://shift-web-ochre.vercel.app",
+    githubLink: "https://github.com/tech-monarch/rccg-hackathon",
+  },
+
   {
     slug: "jshare",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763633342/Screenshot_2025-11-20_105948_vnxvlg.png",
