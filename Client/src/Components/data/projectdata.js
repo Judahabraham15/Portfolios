@@ -58,6 +58,14 @@ const projects = [
     githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
   {
+    slug:"shift-mobile",
+    img:"",
+    title:"Shift Mobile",
+    link:"",
+    githubLink:""
+
+    },
+  {
     slug: "haven",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
     desc: "A marketplace connecting Nigerians with vetted local service providers — with secure escrow payments and verified listings.",
