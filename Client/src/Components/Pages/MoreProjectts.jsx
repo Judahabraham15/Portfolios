@@ -67,6 +67,19 @@ const projects = [
     ],
     link: "/projects2/shift-web",
   },
+  // {
+  //   slug: "shift-mobile",
+  //   img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
+  //   title: "Shift Mobile",
+  //   desc: "The mobile version of the Shift platform, allowing users to manage their goals on the go.",
+  //   icons: [
+  //     <IconBrandTypescript size={25} color="#1a1a1a" />,
+  //     <FaReact color="#1a1a1a" />,
+  //     <SiTailwindcss color="#1a1a1a" />,
+  //     <FaNodeJs color="#1a1a1a" />,
+  //   ],
+  //   link: "/projects2/shift-mobile",
+  // },
   {
     slug: "medicx",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1763632234/Screenshot_2025-11-20_104944_uxotyh.png",

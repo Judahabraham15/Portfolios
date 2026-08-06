@@ -46,7 +46,7 @@ const projects = [
     slug: "shift-web",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223846_korses.png",
     title: "Shift Web",
-    desc: "Shift, a platform that turns your goal into today's one task — and proof you did it.",
+
     para1:
       "Shift is a behavior-enforcement mechanism, not a to-do list or organizer. It's built around a Commitment Gap model: a Morning Trigger forces the user to declare their single most important task before they can even start their day, and a Visible Streak publicly tracks consecutive days completed — making consistency something the user is genuinely afraid to break. It's aimed at founders, students, and high-achievers who want unavoidable daily execution, not another passive planner.",
     para2:
@@ -58,13 +58,12 @@ const projects = [
     githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
   {
-    slug:"shift-mobile",
-    img:"",
-    title:"Shift Mobile",
-    link:"",
-    githubLink:""
-
-    },
+    slug: "shift-mobile",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
+    title: "Shift Mobile",
+    desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
+    link: "",
+  },
   {
     slug: "haven",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
