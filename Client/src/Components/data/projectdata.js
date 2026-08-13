@@ -57,13 +57,13 @@ const projects = [
     link: "https://shift-web-ochre.vercel.app",
     githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
-  {
-    slug: "shift-mobile",
-    // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
-    title: "Shift Mobile",
-    desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
+  // {
+  //   slug: "shift-mobile",
+  //   // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
+  //   title: "Shift Mobile",
+  //   desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
   
-  },
+  // },
   {
     slug: "haven",
     img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1782674606/Screenshot_2026-06-28_202240_j9raa1.png",
