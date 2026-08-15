@@ -59,7 +59,7 @@ const projects = [
   },
   // {
   //   slug: "shift-mobile",
-  //   // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
+   // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
   //   title: "Shift Mobile",
   //   desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
   
