@@ -12,6 +12,7 @@ import {
   SiNotion,
   SiHubspot,
   SiExpo,
+  SiSupabase
 } from "react-icons/si";
 import { FaJs, FaHtml5 } from "react-icons/fa";
 
@@ -105,6 +106,7 @@ const experiences = [
       { label: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { label: "Tailwind", icon: SiTailwindcss, color: "#2B7FA0" },
       { label: "Express.js", icon: SiExpress, color: "#000000" },
+      { label: "Supabase", icon: SiSupabase, color: "#3178C6" },
     ],
   },
 ];
