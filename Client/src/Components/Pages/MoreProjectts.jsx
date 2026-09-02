@@ -67,6 +67,20 @@ const projects = [
     ],
     link: "/projects2/shift-web",
   },
+  {
+    slug: "page.ai-web",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223954_jqiyrk.png",
+    title: "Page.AI Web",
+    desc: "An AI offline tutor.",
+    icons: [
+      <IconBrandTypescript size={25} color="#1a1a1a" />,
+      <SiNextdotjs color="#1a1a1a" />,
+      <SiTailwindcss color="#1a1a1a" />,
+      <SiExpress color="#1a1a1a" />,
+      <SiMongodb color="#1a1a1a" />,
+    ],
+    link: "/projects2/page.ai-web",
+  },
   // {
   //   slug: "shift-mobile",
   //   img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",

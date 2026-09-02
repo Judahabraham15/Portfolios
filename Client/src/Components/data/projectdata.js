@@ -57,12 +57,34 @@ const projects = [
     link: "https://shift-web-ochre.vercel.app",
     githubLink: "https://github.com/Pantheon-launchpad/Shift-Web",
   },
+  // {
+  //   slug: "shift-mobile",
+  // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
+  //   title: "Shift Mobile",
+  //   desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
+
+  // },
   {
-    slug: "shift-mobile",
-    // img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1786022639/shift_login_aujfme.jpg",
-    title: "Shift Mobile",
-    desc: "Shift Mobile App, a platform that turns your goal into today's one task — and proof you did it.",
-  
+    slug: "page.ai-web",
+    desc:"An AI offline tutor.",
+    img: "https://res.cloudinary.com/dydmptpcg/image/upload/v1785102092/Screenshot_2026-07-26_223954_jqiyrk.png",
+    title: "Page.AI",
+    para1:
+      "A friendly offline AI tutor that helps students learn anywhere, with lessons, adaptive quizzes, and AI-powered explanations available even without a network connection.",
+    para2:
+      "Many students have limited or unreliable internet access, making it difficult to consistently access educational resources and AI tutoring.",
+    para3:
+      "An offline-first AI learning platform that provides lessons, quizzes, progress tracking, and an on-device AI tutor without requiring an internet connection.",
+    technologies: [
+      "Express",
+      "Typescript",
+      "Next.js",
+      "Tailwind Css",
+      "MongoDB",
+      "Gemma AI",
+    ],
+    link: "https://page-ai-web.vercel.app/",
+    githubLink: "https://github.com/Pantheon-launchpad/page.ai-web",
   },
   {
     slug: "haven",
@@ -76,7 +98,7 @@ const projects = [
       "A functional demo combining a simulated WhatsApp conversational booking flow with a client-facing PWA for browsing verified local artisans and tracking jobs, backed by a real Paystack sandbox escrow integration — client pays in, funds are held, and a PIN release triggers payout with automatic commission splits. Identity checks, voice transcription, and live GPS tracking were mocked for the demo, with the full production architecture (FastAPI microservices, PostGIS matching, fraud detection models) scoped as the next build phase rather than shipped in the hackathon version.",
     title: "Haven",
     technologies: ["Node.Js", "Typescript", "Next.js", "Tailwind Css"],
-    link: "https://shift-web-ochre.vercel.app",
+    link: "https://rccg-hackathon.vercel.app",
     githubLink: "https://github.com/tech-monarch/rccg-hackathon",
   },
 
